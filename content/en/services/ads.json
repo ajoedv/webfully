@@ -1,0 +1,187 @@
+{
+  "kind": "service",
+  "meta": {
+    "title": "Advertising on Google and Meta — WebFully",
+    "description": "Data-driven campaigns on Google, Facebook and Instagram. A clear budget, our own ads and a focus on business results, not just clicks."
+  },
+  "chapter": {
+    "name": "Ads",
+    "accent": "that reach the right people.",
+    "summary": "Campaigns on Google and Meta with a clear budget and ads made by us. We measure what counts: enquiries and sales.",
+    "button": "Explore ads",
+    "tags": [
+      "Google Ads",
+      "Meta Ads",
+      "Search ads",
+      "Display",
+      "Video",
+      "Retargeting",
+      "Analytics"
+    ]
+  },
+  "sections": [
+    {
+      "type": "service-hero",
+      "label": "Advertising & measurement",
+      "title": "Every krona",
+      "accent": "should show in the result.",
+      "lead": "From local precision to broad reach. Campaigns that combine creative ambition, an open budget and a focus on business results."
+    },
+    {
+      "type": "capabilities",
+      "count": "6 disciplines",
+      "title": "No two clients get",
+      "accent": "the same solution.",
+      "lead": "Every campaign gets its own structure, its own ads and a budget that follows the goal.",
+      "items": [
+        {
+          "title": "Search ads",
+          "text": "Visibility when customers search for exactly what you sell."
+        },
+        {
+          "title": "Social ads",
+          "text": "Facebook and Instagram with the right audience and message."
+        },
+        {
+          "title": "Display",
+          "text": "Banners that build recognition where your audience is."
+        },
+        {
+          "title": "Video",
+          "text": "Short films for YouTube, Reels and Stories."
+        },
+        {
+          "title": "Retargeting",
+          "text": "Reminders to people who have already shown interest."
+        },
+        {
+          "title": "Analytics",
+          "text": "Measuring enquiries, calls and sales."
+        }
+      ]
+    },
+    {
+      "type": "builds",
+      "label": "What we build",
+      "title": "One brief.",
+      "accent": "Every format.",
+      "lead": "A campaign is never stronger than its weakest placement. That is why we produce the full set.",
+      "cards": [
+        {
+          "title": "Search ad",
+          "text": "Text that matches exactly what the customer searches for.",
+          "placeholder": "search ad on Google",
+          "image": "/assets/services/ads-search-ad.webp",
+          "alt": "Google search ad for a construction firm, shown on a laptop",
+          "ratio": "4 / 3",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "title": "Social ad",
+          "text": "An image or film that stops the scroll.",
+          "placeholder": "ad in the Instagram feed",
+          "image": "/assets/services/ads-instagram-ad.webp",
+          "alt": "Instagram feed ad for ceramics on a phone",
+          "ratio": "4 / 5",
+          "width": 960,
+          "height": 1200
+        },
+        {
+          "title": "Report",
+          "text": "Clear numbers every month.",
+          "placeholder": "campaign report with cost per enquiry",
+          "image": "/assets/services/ads-campaign-report.webp",
+          "alt": "Campaign report with ad spend, enquiries and cost per enquiry",
+          "ratio": "4 / 3",
+          "width": 1200,
+          "height": 900
+        }
+      ]
+    },
+    {
+      "type": "phases",
+      "label": "From brief to scale",
+      "title": "Five steps.",
+      "accent": "A campaign of your own.",
+      "lead": "No reused setups. Every step is shaped around the business it is meant to help.",
+      "steps": [
+        {
+          "title": "Goal and budget",
+          "text": "What counts as a result, and what may it cost?"
+        },
+        {
+          "title": "Audience and plan",
+          "text": "Who we reach, where and with which message."
+        },
+        {
+          "title": "Ads",
+          "text": "Text, image and film for every placement."
+        },
+        {
+          "title": "Launch",
+          "text": "The campaign starts with measurement in place."
+        },
+        {
+          "title": "Optimisation",
+          "text": "We adjust every week and scale what works."
+        }
+      ]
+    },
+    {
+      "type": "proof",
+      "label": "Open budget",
+      "title": "You see",
+      "accent": "every krona.",
+      "lead": "The ad budget is paid straight to Google and Meta. You see what is spent and what it brings.",
+      "points": [
+        {
+          "title": "Open",
+          "text": "Ad accounts in your name."
+        },
+        {
+          "title": "Clear",
+          "text": "Cost per enquiry, not just per click."
+        },
+        {
+          "title": "Flexible",
+          "text": "Pause or scale whenever you want."
+        }
+      ],
+      "placeholder": "campaign overview with budget, clicks and enquiries",
+      "image": "/assets/services/ads-campaign-overview.webp",
+      "alt": "Campaign overview with budget, clicks, impressions and enquiries",
+      "width": 1400,
+      "height": 1050
+    },
+    {
+      "type": "faq",
+      "title": "Questions we often get",
+      "accent": "and our answers.",
+      "items": [
+        {
+          "q": "How big a budget is needed?",
+          "a": "It depends on the industry and the goal. We suggest a starting budget after a review."
+        },
+        {
+          "q": "Who owns the ad accounts?",
+          "a": "You do. The accounts are created in your name and you always have full insight."
+        },
+        {
+          "q": "How fast do results come?",
+          "a": "Search ads can bring enquiries in the first week. Social campaigns often need a few weeks to optimise."
+        },
+        {
+          "q": "Do you make the ads yourselves?",
+          "a": "Yes, text, images and film are made by us."
+        }
+      ]
+    },
+    {
+      "type": "related"
+    },
+    {
+      "type": "cta"
+    }
+  ]
+}

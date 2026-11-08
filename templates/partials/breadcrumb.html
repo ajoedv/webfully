@@ -1,0 +1,6 @@
+<nav class="breadcrumb mono" aria-label="{{ common.breadcrumb }}">
+  <ol>
+    {% for crumb in page.breadcrumb %}<li>{% if loop.last %}<span aria-current="page">{{ crumb.name }}</span>{% else %}<a href="{{ crumb.url }}">{{ crumb.name }}</a>{% endif %}</li>
+    {% endfor %}
+  </ol>
+</nav>

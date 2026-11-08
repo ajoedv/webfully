@@ -1,0 +1,26 @@
+/* Fonts, served from the site itself (no request to Google: faster, and nothing sent to a third party).
+   Latin subset (Swedish and English), WOFF. Licences: assets/fonts/*-OFL.txt (SIL Open Font License). */
+
+@font-face {
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url("../assets/fonts/manrope.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Instrument Serif";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../assets/fonts/instrument-serif-italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../assets/fonts/ibm-plex-mono.woff") format("woff");
+}

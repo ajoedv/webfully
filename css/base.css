@@ -1,0 +1,240 @@
+/* Base: tokens, tones, reset, type, reveal */
+
+:root {
+  --brand-coral: #F0624D;      /* the logo's coral: logo, logo dot, every travelling or resting dot */
+  --charcoal: #2A2A2A;
+  --black: #050505;
+  --soft: #111111;
+  --light: #F4F2EF;
+  --gutter: clamp(20px, 5vw, 96px);
+  --container: 1320px;
+  --edge: clamp(20px, 7vw, 150px);
+  --pad: max(var(--gutter), calc((100vw - var(--container)) / 2));
+  --nav-h: 96px;
+  --vh: 100vh;
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+/* Tones. Light theme: tone-b light, tone-a dark. Dark theme: both dark, tone-a slightly lighter.
+   The floating nav and the open mobile menu always use the dark tokens. */
+:root,
+.tone-b {
+  --bg: var(--light);
+  --fg: var(--charcoal);
+  --muted: #69665f;
+  --line: rgba(42, 42, 42, .14);
+  --rule: rgba(42, 42, 42, .22);
+  --coral: #E8573F;            /* coral for text and UI on light backgrounds: 3.2:1 on --light (large text AA) */
+  --accent: var(--charcoal);
+  --guide: rgba(42, 42, 42, .4);
+  --frame-rgb: 42, 42, 42;
+  --is-light: 1;
+}
+
+.tone-a,
+.nav.is-floating,
+.is-menu-open .nav,
+.mobile-menu,
+.nav-services,
+.footer,
+.cookie,
+:root[data-theme="dark"],
+:root[data-theme="dark"] .tone-b {
+  --bg: var(--black);
+  --fg: var(--light);
+  --muted: #a39f99;
+  --line: rgba(244, 242, 239, .14);
+  --rule: rgba(244, 242, 239, .22);
+  --coral: var(--brand-coral);
+  --accent: var(--coral);
+  --guide: rgba(244, 242, 239, .45);
+  --frame-rgb: 244, 242, 239;
+  --is-light: 0;
+}
+
+:root[data-theme="dark"] .tone-a {
+  --bg: var(--soft);
+}
+
+.tone-a,
+.tone-b {
+  background: var(--bg);
+  color: var(--fg);
+}
+
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: Manrope, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+/* Type */
+.mono {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.mono b {
+  font-weight: 400;
+}
+
+em {
+  font-family: "Instrument Serif", serif;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -.01em;
+}
+
+h1 em,
+h2 em {
+  color: var(--coral);
+}
+
+/* Numbered section label: "01 / Name" */
+.section-label {
+  color: var(--muted);
+}
+
+.section-label b {
+  color: var(--accent);
+}
+
+/* Reveal: text fades in from below (classes set by base.js) */
+.motion .reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 1.5s cubic-bezier(.4, 0, .2, 1),
+    transform 1.4s cubic-bezier(.2, .7, .2, 1);
+  transition-delay: var(--reveal-delay, 0s);
+}
+
+.motion .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (max-width: 900px) {
+  :root {
+    --nav-h: 72px;
+  }
+}
+
+/* Accessibility helpers */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: fixed;
+  left: 16px;
+  top: 16px;
+  z-index: 100;
+  padding: 12px 18px;
+  background: var(--coral);
+  color: var(--charcoal);
+  font-weight: 600;
+  transform: translateY(-200%);
+  transition: transform .2s;
+}
+
+.skip-link:focus {
+  transform: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--coral);
+  outline-offset: 3px;
+}
+
+main:focus {
+  outline: none;
+}
+
+/* Shared section heading block */
+.section-head {
+  max-width: 900px;
+}
+
+.section-head h2 {
+  margin-top: 22px;
+  font-weight: 300;
+  font-size: clamp(40px, 5.6vw, 96px);
+  line-height: 1.05;
+  letter-spacing: -.045em;
+}
+
+.section-head .lead {
+  margin-top: clamp(20px, 2.2vw, 30px);
+}
+
+.section-head--split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  align-items: end;
+  gap: clamp(24px, 4vw, 80px);
+  max-width: none;
+}
+
+.lead {
+  max-width: 560px;
+  color: var(--muted);
+  font-size: clamp(15px, 1.15vw, 18px);
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .section-head--split {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Cross-page view transitions (supporting browsers); the logo dot is the shared element */
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-group(wf-dot) {
+  animation-duration: .6s;
+  animation-timing-function: cubic-bezier(.65, 0, .35, 1);
+}

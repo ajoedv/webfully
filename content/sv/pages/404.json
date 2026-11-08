@@ -1,0 +1,34 @@
+{
+  "kind": "error",
+  "noindex": true,
+  "output": "/404.html",
+  "meta": {
+    "title": "Sidan finns inte — WebFully",
+    "description": "Sidan du letar efter finns inte."
+  },
+  "sections": [
+    {
+      "type": "error",
+      "code": "404",
+      "label": "Fel 404",
+      "title": "Här saknas",
+      "accent": "en bit.",
+      "lead": "Sidan du letar efter finns inte, eller har flyttat. Börja om från startsidan eller välj en tjänst nedan.",
+      "lead_en": "The page you are looking for does not exist or has moved.",
+      "button": "Till startsidan",
+      "contact": "Kontakta oss",
+      "digits": [
+        {
+          "d": "4"
+        },
+        {
+          "d": "0",
+          "dot": true
+        },
+        {
+          "d": "4"
+        }
+      ]
+    }
+  ]
+}

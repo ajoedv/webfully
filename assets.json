@@ -1,0 +1,195 @@
+{
+  "bundles": {
+    "fonts.css|base.css|components.css|nav.css|media.css|hero.css|intro.css|chapters.css|process.css|pricing.css|special.css|ticker.css|cta.css|testimonials.css|footer.css|cookie.css": "bundle-9671037005.css",
+    "fonts.css|base.css|components.css|nav.css|media.css|page.css|chapters.css|accordion.css|cta.css|footer.css|cookie.css": "bundle-3e9da1e195.css",
+    "fonts.css|base.css|components.css|nav.css|media.css|page.css|chapters.css|contact.css|footer.css|cookie.css": "bundle-5659edb342.css",
+    "fonts.css|base.css|components.css|nav.css|media.css|page.css|chapters.css|legal.css|footer.css|cookie.css": "bundle-4483124be7.css",
+    "fonts.css|base.css|components.css|nav.css|media.css|error.css|footer.css|cookie.css": "bundle-2faff99735.css"
+  },
+  "sections": {
+    "hero-scene": [
+      [
+        "hero.css",
+        "intro.css"
+      ],
+      [
+        "vendor/gsap.min.js",
+        "vendor/ScrollTrigger.min.js",
+        "hero.js"
+      ]
+    ],
+    "chapters": [
+      [
+        "chapters.css"
+      ],
+      [
+        "vendor/gsap.min.js",
+        "vendor/ScrollTrigger.min.js",
+        "chapters.js"
+      ]
+    ],
+    "process": [
+      [
+        "process.css"
+      ],
+      []
+    ],
+    "pricing": [
+      [
+        "pricing.css"
+      ],
+      [
+        "pricing.js"
+      ]
+    ],
+    "special-teaser": [
+      [
+        "special.css"
+      ],
+      []
+    ],
+    "ticker": [
+      [
+        "ticker.css"
+      ],
+      []
+    ],
+    "cta": [
+      [
+        "cta.css"
+      ],
+      [
+        "cta.js"
+      ]
+    ],
+    "testimonials": [
+      [
+        "testimonials.css"
+      ],
+      [
+        "testimonials.js"
+      ]
+    ],
+    "service-hero": [
+      [
+        "page.css",
+        "chapters.css"
+      ],
+      [
+        "sign.js"
+      ]
+    ],
+    "page-hero": [
+      [
+        "page.css",
+        "chapters.css"
+      ],
+      [
+        "sign.js"
+      ]
+    ],
+    "capabilities": [
+      [
+        "page.css",
+        "accordion.css"
+      ],
+      [
+        "accordion.js"
+      ]
+    ],
+    "builds": [
+      [
+        "page.css"
+      ],
+      []
+    ],
+    "phases": [
+      [
+        "page.css"
+      ],
+      []
+    ],
+    "proof": [
+      [
+        "page.css"
+      ],
+      []
+    ],
+    "faq": [
+      [
+        "page.css",
+        "accordion.css"
+      ],
+      [
+        "accordion.js"
+      ]
+    ],
+    "related": [
+      [
+        "page.css"
+      ],
+      []
+    ],
+    "columns": [
+      [
+        "page.css"
+      ],
+      []
+    ],
+    "contact": [
+      [
+        "contact.css"
+      ],
+      [
+        "form.js"
+      ]
+    ],
+    "legal": [
+      [
+        "legal.css"
+      ],
+      []
+    ],
+    "error": [
+      [
+        "error.css"
+      ],
+      [
+        "error.js"
+      ]
+    ]
+  },
+  "home_scripts": [
+    "vendor/gsap.min.js",
+    "vendor/ScrollTrigger.min.js",
+    "journey.js"
+  ],
+  "base_styles": [
+    "fonts.css",
+    "base.css",
+    "components.css",
+    "nav.css",
+    "media.css"
+  ],
+  "end_styles": [
+    "footer.css",
+    "cookie.css"
+  ],
+  "base_scripts": [
+    "base.js",
+    "social.js",
+    "nav.js",
+    "media.js"
+  ],
+  "end_scripts": [
+    "footer.js",
+    "cookie.js"
+  ],
+  "root_icons": [
+    "favicon.ico",
+    "apple-touch-icon.png",
+    "icon-192.png",
+    "icon-512.png",
+    "site.webmanifest"
+  ]
+}

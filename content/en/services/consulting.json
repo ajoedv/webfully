@@ -1,0 +1,182 @@
+{
+  "kind": "service",
+  "meta": {
+    "title": "Consulting and digital strategy — WebFully",
+    "description": "Independent advice on digital strategy, brand, marketing and choice of tools. We help you make better decisions and turn them into action."
+  },
+  "chapter": {
+    "name": "Consulting",
+    "accent": "for better decisions.",
+    "summary": "Digital progress is not about more tools but about better decisions. We find the opportunities and turn strategy into action.",
+    "button": "Explore consulting",
+    "tags": [
+      "Digital strategy",
+      "Analysis",
+      "Brand",
+      "Marketing plan",
+      "Tools",
+      "Workshops"
+    ]
+  },
+  "sections": [
+    {
+      "type": "service-hero",
+      "label": "Strategy & development",
+      "title": "We move you",
+      "accent": "forward.",
+      "lead": "Independent advice that helps you make informed decisions, solve real challenges and find the next step."
+    },
+    {
+      "type": "capabilities",
+      "count": "6 disciplines",
+      "title": "No fixed packages.",
+      "accent": "No hidden fees.",
+      "lead": "We start from a thorough analysis and tie the key findings into one clear plan.",
+      "items": [
+        {
+          "title": "Digital strategy",
+          "text": "Where are you going, and which digital steps take you there?"
+        },
+        {
+          "title": "Analysis",
+          "text": "Website, visibility and competitors under the microscope."
+        },
+        {
+          "title": "Brand and position",
+          "text": "What you stand for and how it should show."
+        },
+        {
+          "title": "Marketing plan",
+          "text": "Channels, budget and priorities for the year."
+        },
+        {
+          "title": "Choosing tools",
+          "text": "The right systems for booking, e-commerce and customer contact."
+        },
+        {
+          "title": "Workshops",
+          "text": "Half days where we reach decisions together."
+        }
+      ]
+    },
+    {
+      "type": "builds",
+      "label": "What we build",
+      "title": "Frameworks,",
+      "accent": "not slide decks.",
+      "lead": "Advice is only valuable when it turns into action. These are the tools we use.",
+      "cards": [
+        {
+          "title": "Current state",
+          "text": "Where you stand today, honestly and concretely.",
+          "placeholder": "diagram of current state and goals",
+          "image": "/assets/services/consulting-current-vs-goal.webp",
+          "alt": "Board setting the current state against the goal for a website",
+          "ratio": "4 / 3",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "title": "90-day plan",
+          "text": "Prioritised steps with owners and dates.",
+          "placeholder": "timeline with four phases",
+          "image": "/assets/services/consulting-timeline-four-phases.webp",
+          "alt": "Timeline with four phases: mapping, plan, implementation and follow-up",
+          "ratio": "4 / 3",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "title": "Workshop",
+          "text": "Decisions made together, for real.",
+          "placeholder": "workshop with sticky notes and sketches",
+          "image": "/assets/services/consulting-workshop-notes.webp",
+          "alt": "Workshop with sticky notes and sketches of the website pages",
+          "ratio": "4 / 3",
+          "width": 1200,
+          "height": 900
+        }
+      ]
+    },
+    {
+      "type": "phases",
+      "label": "From first meeting to follow-up",
+      "title": "Four steps.",
+      "accent": "One direction.",
+      "lead": "We start by understanding the business, and every step builds on the last.",
+      "steps": [
+        {
+          "title": "Review",
+          "text": "Goals, challenges and current state."
+        },
+        {
+          "title": "Direction",
+          "text": "Priorities and a clear plan."
+        },
+        {
+          "title": "Execution",
+          "text": "We help make the plan real."
+        },
+        {
+          "title": "Follow-up",
+          "text": "We measure and adjust together."
+        }
+      ]
+    },
+    {
+      "type": "proof",
+      "label": "Independent",
+      "title": "Advice that answers",
+      "accent": "to you.",
+      "lead": "We sell no systems and take no commission. Our advice is based only on what is best for you.",
+      "points": [
+        {
+          "title": "Honest",
+          "text": "We say what we see, even when it is uncomfortable."
+        },
+        {
+          "title": "Concrete",
+          "text": "Every piece of advice becomes a step you can take."
+        },
+        {
+          "title": "No strings",
+          "text": "You choose who carries it out."
+        }
+      ],
+      "placeholder": "illustration of a plan and priorities",
+      "image": "/assets/services/consulting-plan-priorities.webp",
+      "alt": "Priority matrix showing impact against effort and a ranked plan",
+      "width": 1400,
+      "height": 1050
+    },
+    {
+      "type": "faq",
+      "title": "Questions we often get",
+      "accent": "and our answers.",
+      "items": [
+        {
+          "q": "What does a consultation cost?",
+          "a": "A first conversation is free. After that we work by the hour or at a fixed price."
+        },
+        {
+          "q": "Do we have to buy anything else?",
+          "a": "No. The advice stands on its own."
+        },
+        {
+          "q": "Can you help us choose systems?",
+          "a": "Yes, we compare the options and recommend what suits you."
+        },
+        {
+          "q": "Do you work remotely?",
+          "a": "Yes, and happily on site in Östergötland."
+        }
+      ]
+    },
+    {
+      "type": "related"
+    },
+    {
+      "type": "cta"
+    }
+  ]
+}

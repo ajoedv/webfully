@@ -1,0 +1,3053 @@
+/* ==== fonts.css ==== */
+/* Fonts, served from the site itself (no request to Google: faster, and nothing sent to a third party).
+   Latin subset (Swedish and English), WOFF. Licences: assets/fonts/*-OFL.txt (SIL Open Font License). */
+
+@font-face {
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url("../assets/fonts/manrope.woff?v=2026.11.08.0756-f7c9582") format("woff");
+}
+
+@font-face {
+  font-family: "Instrument Serif";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../assets/fonts/instrument-serif-italic.woff?v=2026.11.08.0756-f7c9582") format("woff");
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../assets/fonts/ibm-plex-mono.woff?v=2026.11.08.0756-f7c9582") format("woff");
+}
+
+/* ==== base.css ==== */
+/* Base: tokens, tones, reset, type, reveal */
+
+:root {
+  --brand-coral: #F0624D;      /* the logo's coral: logo, logo dot, every travelling or resting dot */
+  --charcoal: #2A2A2A;
+  --black: #050505;
+  --soft: #111111;
+  --light: #F4F2EF;
+  --gutter: clamp(20px, 5vw, 96px);
+  --container: 1320px;
+  --edge: clamp(20px, 7vw, 150px);
+  --pad: max(var(--gutter), calc((100vw - var(--container)) / 2));
+  --nav-h: 96px;
+  --vh: 100vh;
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+/* Tones. Light theme: tone-b light, tone-a dark. Dark theme: both dark, tone-a slightly lighter.
+   The floating nav and the open mobile menu always use the dark tokens. */
+:root,
+.tone-b {
+  --bg: var(--light);
+  --fg: var(--charcoal);
+  --muted: #69665f;
+  --line: rgba(42, 42, 42, .14);
+  --rule: rgba(42, 42, 42, .22);
+  --coral: #E8573F;            /* coral for text and UI on light backgrounds: 3.2:1 on --light (large text AA) */
+  --accent: var(--charcoal);
+  --guide: rgba(42, 42, 42, .4);
+  --frame-rgb: 42, 42, 42;
+  --is-light: 1;
+}
+
+.tone-a,
+.nav.is-floating,
+.is-menu-open .nav,
+.mobile-menu,
+.nav-services,
+.footer,
+.cookie,
+:root[data-theme="dark"],
+:root[data-theme="dark"] .tone-b {
+  --bg: var(--black);
+  --fg: var(--light);
+  --muted: #a39f99;
+  --line: rgba(244, 242, 239, .14);
+  --rule: rgba(244, 242, 239, .22);
+  --coral: var(--brand-coral);
+  --accent: var(--coral);
+  --guide: rgba(244, 242, 239, .45);
+  --frame-rgb: 244, 242, 239;
+  --is-light: 0;
+}
+
+:root[data-theme="dark"] .tone-a {
+  --bg: var(--soft);
+}
+
+.tone-a,
+.tone-b {
+  background: var(--bg);
+  color: var(--fg);
+}
+
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: Manrope, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+/* Type */
+.mono {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.mono b {
+  font-weight: 400;
+}
+
+em {
+  font-family: "Instrument Serif", serif;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -.01em;
+}
+
+h1 em,
+h2 em {
+  color: var(--coral);
+}
+
+/* Numbered section label: "01 / Name" */
+.section-label {
+  color: var(--muted);
+}
+
+.section-label b {
+  color: var(--accent);
+}
+
+/* Reveal: text fades in from below (classes set by base.js) */
+.motion .reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 1.5s cubic-bezier(.4, 0, .2, 1),
+    transform 1.4s cubic-bezier(.2, .7, .2, 1);
+  transition-delay: var(--reveal-delay, 0s);
+}
+
+.motion .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (max-width: 900px) {
+  :root {
+    --nav-h: 72px;
+  }
+}
+
+/* Accessibility helpers */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: fixed;
+  left: 16px;
+  top: 16px;
+  z-index: 100;
+  padding: 12px 18px;
+  background: var(--coral);
+  color: var(--charcoal);
+  font-weight: 600;
+  transform: translateY(-200%);
+  transition: transform .2s;
+}
+
+.skip-link:focus {
+  transform: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--coral);
+  outline-offset: 3px;
+}
+
+main:focus {
+  outline: none;
+}
+
+/* Shared section heading block */
+.section-head {
+  max-width: 900px;
+}
+
+.section-head h2 {
+  margin-top: 22px;
+  font-weight: 300;
+  font-size: clamp(40px, 5.6vw, 96px);
+  line-height: 1.05;
+  letter-spacing: -.045em;
+}
+
+.section-head .lead {
+  margin-top: clamp(20px, 2.2vw, 30px);
+}
+
+.section-head--split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  align-items: end;
+  gap: clamp(24px, 4vw, 80px);
+  max-width: none;
+}
+
+.lead {
+  max-width: 560px;
+  color: var(--muted);
+  font-size: clamp(15px, 1.15vw, 18px);
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .section-head--split {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Cross-page view transitions (supporting browsers); the logo dot is the shared element */
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-group(wf-dot) {
+  animation-duration: .6s;
+  animation-timing-function: cubic-bezier(.65, 0, .35, 1);
+}
+
+/* ==== components.css ==== */
+/* Components: links, buttons, social icons */
+
+/* Menu links (nav, mobile menu, footer): hover and current = coral, current underlined */
+.nav ul a:hover,
+.menu-link:hover,
+.footer-cols a:hover,
+.nav ul a.is-active,
+.menu-link.is-active,
+.footer-menu a.is-active {
+  color: var(--coral);
+}
+
+.menu-link.is-active span,
+.footer-menu a.is-active span {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 6px;
+}
+
+/* Button: label + arrow cell. Follows the section colors; only the border and the arrow are coral */
+.btn {
+  --btn-bg: var(--bg);
+  --btn-fg: var(--fg);
+  --btn-border: var(--coral);
+  --btn-arrow: var(--coral);
+  --btn-fill: var(--coral);
+  --btn-arrow-hover: var(--bg);
+  display: inline-flex;
+  align-items: stretch;
+  border: 1px solid var(--btn-border);
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: transform .3s cubic-bezier(.2, .7, .2, 1);
+}
+
+.btn[hidden] {
+  display: none;
+}
+
+.btn span {
+  display: flex;
+  align-items: center;
+  padding: 16px 22px;
+}
+
+.btn i {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid var(--btn-border);
+  padding: 16px 18px;
+  color: var(--btn-arrow);
+  font-style: normal;
+  overflow: hidden;
+  isolation: isolate;
+  transition: color .3s;
+}
+
+/* arrow cell fill, rises from the bottom on hover */
+.btn i::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--btn-fill);
+  transform: scaleY(0);
+  transform-origin: 50% 100%;
+  transition: transform .4s cubic-bezier(.2, .7, .2, 1);
+}
+
+.btn i b {
+  font-weight: inherit;
+  transition: transform .35s cubic-bezier(.2, .7, .2, 1);
+}
+
+.btn:hover {
+  transform: scale(1.03);
+}
+
+.btn:hover i {
+  color: var(--btn-arrow-hover);
+}
+
+.btn:hover i::before {
+  transform: none;
+}
+
+.btn:hover i b {
+  transform: translate(2px, -2px);
+}
+
+.btn:active {
+  transform: scale(.97);
+  transition-duration: .12s;
+}
+
+.btn:focus-visible {
+  outline: 1px solid currentColor;
+  outline-offset: 4px;
+}
+
+.btn--sm {
+  height: 40px;
+  font-size: 13px;
+}
+
+.btn--sm span {
+  padding: 0 16px;
+}
+
+.btn--sm i {
+  padding: 0 13px;
+}
+
+/* Text link */
+/* Text link with an underline (e.g. "Se våra tjänster"): coral and a slight zoom on hover (desktop) or on tap */
+.link {
+  display: inline-block;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 4px;
+  transform-origin: left center;
+  transition:
+    color .3s,
+    transform .3s cubic-bezier(.2, .7, .2, 1);
+}
+
+/* a.link: wins over section rules that set the link's resting color (e.g. .hero-copy .mono) */
+@media (hover: hover) {
+  a.link:hover {
+    color: var(--coral);
+    transform: scale(1.05);
+  }
+}
+
+a.link:active,
+a.link:focus-visible {
+  color: var(--coral);
+  transform: scale(1.05);
+}
+
+/* Social icons (filled from the template by social.js) */
+.social {
+  display: flex;
+  align-items: center;
+  gap: var(--social-gap, 26px);
+}
+
+.social--col {
+  flex-direction: column;
+}
+
+.social a {
+  display: grid;
+  place-items: center;
+  color: inherit;
+  opacity: .85;
+  transition: color .3s, opacity .3s;
+}
+
+.social a:hover {
+  color: var(--coral);
+  opacity: 1;
+}
+
+.social svg {
+  display: block;
+  width: var(--social-size, 30px);
+  height: var(--social-size, 30px);
+  fill: none;
+  stroke: currentColor;
+}
+
+.social svg * {
+  stroke-width: 1.6px;
+  vector-effect: non-scaling-stroke;
+}
+
+@media (max-width: 900px) {
+  .btn {
+    font-size: 15px;
+  }
+
+  .btn span {
+    padding: 19px 26px;
+  }
+
+  .btn i {
+    padding: 19px 20px;
+  }
+}
+
+@media (max-width: 900px) and (max-height: 820px) {
+  .btn span {
+    padding: 16px 24px;
+  }
+
+  .btn i {
+    padding: 16px 18px;
+  }
+}
+
+/* ==== nav.css ==== */
+/* Nav: transparent over the hero, a dark floating rectangle once the logo faces the visitor (home) or from the first scroll */
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 60;
+  height: var(--nav-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 0 var(--edge);
+  background: transparent;
+  color: var(--fg);
+  transition:
+    background-color .4s,
+    color .4s,
+    top .6s cubic-bezier(.2, .7, .2, 1),
+    left .6s cubic-bezier(.2, .7, .2, 1),
+    right .6s cubic-bezier(.2, .7, .2, 1),
+    height .6s cubic-bezier(.2, .7, .2, 1),
+    padding .6s cubic-bezier(.2, .7, .2, 1);
+}
+
+/* Dark tokens for these states come from base.css */
+.nav.is-floating {
+  top: 16px;
+  left: var(--pad);
+  right: var(--pad);
+  height: 72px;
+  padding: 0 28px;
+  background: color-mix(in srgb, var(--black) 84%, transparent);
+  -webkit-backdrop-filter: blur(14px) saturate(1.2);
+  backdrop-filter: blur(14px) saturate(1.2);
+}
+
+/* Inner pages: before it floats, the nav sits on a 90% page-colored band so lines and text behind it stay apart */
+.page:not(.page--home) .nav:not(.is-floating) {
+  background: color-mix(in srgb, var(--bg) 90%, transparent);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.page.is-menu-open .nav:not(.is-floating) {
+  background: var(--black);
+}
+
+/* Logo: frame follows the text color, letters and dot are coral */
+.brand {
+  display: block;
+  flex: none;
+  line-height: 0;
+}
+
+.brand svg {
+  display: block;
+  width: auto;
+  height: 40px;
+}
+
+.brand .logo-frame {
+  fill: currentColor;
+}
+
+.brand .logo-word,
+.brand .logo-dot {
+  fill: var(--brand-coral);
+}
+
+/* Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: clamp(18px, 2.2vw, 36px);
+  list-style: none;
+  font-size: 14px;
+}
+
+.nav-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+  color: var(--muted);
+  font-size: 14px;
+  transition: color .25s;
+}
+
+.nav-link:hover,
+.nav-link.is-active,
+.nav-link[aria-expanded="true"] {
+  color: var(--coral);
+}
+
+.nav-link.is-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 1px;
+  height: 1px;
+  background: var(--coral);
+}
+
+.nav-caret {
+  width: 6px;
+  height: 6px;
+  border-right: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+  transition: transform .3s;
+}
+
+[aria-expanded="true"] > .nav-caret {
+  transform: translateY(1px) rotate(225deg);
+}
+
+/* Services dropdown (dark tokens from base.css) */
+.nav-item--services {
+  position: relative;
+}
+
+.nav-services {
+  position: absolute;
+  left: -24px;
+  top: calc(100% + 18px);
+  min-width: 300px;
+  padding: 14px 24px;
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--black) 94%, transparent);
+  color: var(--fg);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition:
+    opacity .25s,
+    transform .25s,
+    visibility .25s;
+}
+
+.nav-services.is-open {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+.nav-services-list {
+  list-style: none;
+}
+
+.nav-service {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 15px;
+  transition: color .25s;
+}
+
+.nav-services-list li:last-child .nav-service {
+  border-bottom: 0;
+}
+
+.nav-service .mono,
+.menu-service .mono {
+  color: var(--coral);
+}
+
+.nav-service:hover,
+.nav-service.is-active {
+  color: var(--coral);
+}
+
+/* Actions: language, theme, CTA, menu */
+.nav-actions {
+  display: flex;
+  flex: none;
+  gap: 10px;
+  align-items: center;
+}
+
+.lang-switch {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  list-style: none;
+  color: var(--muted);
+}
+
+.lang-switch li + li::before {
+  content: "/";
+  margin: 0 6px;
+  opacity: .5;
+}
+
+.lang-switch a {
+  transition: color .25s;
+}
+
+.lang-switch a:hover {
+  color: var(--coral);
+}
+
+.lang-current {
+  color: var(--fg);
+}
+
+.lang-off {
+  opacity: .4;
+}
+
+.nav .lang-switch {
+  padding: 0 6px;
+}
+
+/* Theme toggle: Auto / Light / Dark, one button */
+.theme-toggle {
+  display: inline-flex;
+  gap: 9px;
+  align-items: center;
+  height: 40px;
+  padding: 0 14px;
+  border: 1px solid var(--rule);
+  color: var(--fg);
+  transition: transform .3s cubic-bezier(.2, .7, .2, 1);
+}
+
+.theme-toggle:hover {
+  transform: scale(1.05);
+}
+
+.theme-toggle:active {
+  transform: scale(.97);
+}
+
+.theme-toggle i {
+  flex: none;
+  width: 12px;
+  height: 12px;
+  border: 1px solid currentColor;
+  background: linear-gradient(90deg, currentColor 50%, transparent 50%);
+}
+
+[data-mode="light"] .theme-toggle i {
+  background: transparent;
+}
+
+[data-mode="dark"] .theme-toggle i {
+  background: currentColor;
+}
+
+/* Mobile menu button */
+.menu-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--guide);
+}
+
+.menu-toggle i {
+  width: 16px;
+  height: 1px;
+  background: var(--fg);
+  box-shadow:
+    0 5px 0 var(--fg),
+    0 -5px 0 var(--fg);
+}
+
+/* Mobile menu (dark tokens from base.css) */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: var(--nav-h);
+  left: 0;
+  right: 0;
+  z-index: 59;
+  max-height: calc(var(--vh) - var(--nav-h) - 12px);
+  padding: 20px var(--edge) 32px;
+  overflow-y: auto;
+  border-top: 1px solid var(--line);
+  background: var(--black);
+  color: var(--fg);
+}
+
+.is-menu-open .mobile-menu {
+  display: block;
+}
+
+.menu-link {
+  display: block;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 30px;
+  font-weight: 300;
+  letter-spacing: -.02em;
+}
+
+.menu-link.is-active {
+  color: var(--coral);
+}
+
+.menu-heading {
+  margin-top: 18px;
+  color: var(--muted);
+}
+
+.menu-services {
+  padding: 6px 0 12px;
+  border-bottom: 1px solid var(--line);
+  list-style: none;
+}
+
+.menu-service {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 7px 0;
+  font-size: 18px;
+}
+
+.mobile-menu-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+@media (max-width: 1100px) {
+  .nav-main,
+  .nav-cta {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+@media (max-width: 900px) {
+  .theme-toggle {
+    justify-content: center;
+    width: 40px;
+    padding: 0;
+  }
+
+  .theme-toggle span {
+    display: none;
+  }
+
+  .brand svg {
+    height: 32px;
+  }
+
+  .nav.is-floating {
+    top: 12px;
+    height: 60px;
+    padding: 0 14px;
+  }
+
+  /* the menu hangs under the rectangle, same width */
+  .mobile-menu {
+    transition:
+      top .6s cubic-bezier(.2, .7, .2, 1),
+      left .6s cubic-bezier(.2, .7, .2, 1),
+      right .6s cubic-bezier(.2, .7, .2, 1);
+  }
+
+  .nav.is-floating ~ .mobile-menu {
+    top: 72px;
+    left: var(--pad);
+    right: var(--pad);
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+}
+
+/* ==== media.css ==== */
+/* Media: images with a blueprint placeholder behind them.
+   The placeholder shows while no image is set, and replaces an image that fails to load (media.js). */
+
+.media {
+  position: relative;
+  aspect-ratio: var(--ratio, 4 / 3);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--fg) 3%, transparent);
+}
+
+.media img {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.media.is-broken img {
+  display: none;
+}
+
+.placeholder-art {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: var(--guide);
+  stroke-width: 1;
+  stroke-dasharray: 4 6;
+  vector-effect: non-scaling-stroke;
+}
+
+.media-note {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  right: 12px;
+  color: var(--coral);
+}
+
+.media img ~ .media-note {
+  display: none;
+}
+
+.media.is-broken .media-note {
+  display: block;
+}
+
+/* ==== hero.css ==== */
+/* Hero: pinned scene, 3D logo, window into the intro */
+
+.hero-scene {
+  position: relative;
+}
+
+.hero {
+  position: relative;
+  height: var(--vh);
+  overflow: hidden;
+}
+
+/* Scene layers exist only with motion */
+.hero-bg,
+.hero-window,
+.blueprint,
+.compare {
+  display: none;
+}
+
+.motion .hero-bg,
+.motion .hero-window,
+.motion .blueprint,
+.motion .compare {
+  display: block;
+}
+
+.motion .hero-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  width: 100%;
+  height: var(--vh);
+}
+
+.motion .hero {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  width: 100%;
+  background: none;
+  pointer-events: none;
+}
+
+.motion .intro {
+  visibility: hidden;
+}
+
+/* Layout */
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
+  align-items: center;
+  column-gap: 3vw;
+  padding: var(--nav-h) var(--edge) 0;
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 5;
+  max-width: 760px;
+}
+
+.hero-copy a {
+  pointer-events: auto;
+}
+
+/* the label and the "Se våra tjänster" link */
+.hero-copy .mono {
+  display: block;
+  color: var(--muted);
+  margin-bottom: clamp(22px, 3.2vh, 40px);
+}
+
+h1 {
+  font-weight: 300;
+  font-size: clamp(40px, min(5vw, 10vh), 92px);
+  line-height: 1.02;
+  letter-spacing: -.04em;
+}
+
+h1 em {
+  display: block;
+  margin-top: .1em;
+}
+
+.hero-copy p {
+  max-width: 30em;
+  margin-top: clamp(26px, 3.4vh, 40px);
+  font-size: clamp(15px, min(1.2vw, 2.1vh), 20px);
+  line-height: 1.65;
+  color: var(--muted);
+}
+
+.hero-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: clamp(20px, 2.6vh, 30px);
+  margin-top: clamp(30px, 4vh, 48px);
+}
+
+.scroll-hint {
+  position: absolute;
+  left: var(--edge);
+  bottom: 26px;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--muted);
+}
+
+.scroll-hint::before {
+  content: "";
+  width: 28px;
+  height: 1px;
+  background: currentColor;
+}
+
+/* Social: column in the left margin (desktop), row above the buttons (mobile) */
+.hero-social {
+  --social-size: 28px;
+  --social-gap: 24px;
+  position: absolute;
+  left: calc(var(--edge) / 2);
+  top: calc(var(--nav-h) + (100% - var(--nav-h)) / 2);
+  z-index: 5;
+  transform: translate(-50%, -50%);
+  color: var(--fg);
+  pointer-events: auto;
+}
+
+.hero-social::before {
+  content: "";
+  width: 1px;
+  height: 56px;
+  margin-bottom: 4px;
+  background: var(--rule);
+}
+
+.hero-social-row {
+  --social-size: 28px;
+  --social-gap: 28px;
+  display: none;
+  margin-top: 30px;
+  color: var(--fg);
+}
+
+/* 3D logo: pieces made of stacked layers (built by hero.js) */
+.hero-stage {
+  position: relative;
+  z-index: 4;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  perspective: 1600px;
+}
+
+.logo-rig {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.hero-logo {
+  position: relative;
+  width: min(36vw, 52vh, 600px);
+  aspect-ratio: 1000 / 921.484;
+  transform-style: preserve-3d;
+}
+
+.piece {
+  position: absolute;
+  transform-style: preserve-3d;
+}
+
+.piece .layer {
+  position: absolute;
+  inset: 0;
+  backface-visibility: visible;
+}
+
+.piece--dot {
+  transform-origin: 50% 100%;
+}
+
+.piece--edge-left {
+  transform-origin: 50% 0;
+}
+
+.piece--edge-bottom {
+  transform-origin: 0 50%;
+}
+
+.shadow {
+  position: absolute;
+  background: radial-gradient(closest-side, rgba(0, 0, 0, .62), rgba(0, 0, 0, 0));
+  filter: blur(7px);
+  pointer-events: none;
+}
+
+/* Exploded view: depth rails, drop line, dot seat, launch ring, piece labels */
+.guide {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 1px;
+  transform-origin: 0 50%;
+  background: repeating-linear-gradient(90deg, var(--guide) 0 5px, transparent 5px 10px);
+}
+
+.drop-line {
+  position: absolute;
+  width: 1px;
+  background: repeating-linear-gradient(180deg, var(--coral) 0 4px, transparent 4px 8px);
+  opacity: .75;
+}
+
+.dot-seat {
+  position: absolute;
+  border: 1px dashed var(--brand-coral);
+  border-radius: 50%;
+}
+
+.launch-ring {
+  position: absolute;
+  border: 1.5px solid var(--brand-coral);
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.piece-label {
+  position: absolute;
+  padding: 5px 8px;
+  border: 1px solid rgba(244, 242, 239, .14);
+  background: rgba(24, 24, 24, .92);
+  color: rgba(244, 242, 239, .82);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 10.5px;
+  letter-spacing: .16em;
+  white-space: nowrap;
+}
+
+.piece-label b {
+  margin-right: 8px;
+  color: var(--coral);
+  font-weight: 400;
+}
+
+.piece-label::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  width: 1px;
+  height: 12px;
+  background: rgba(244, 242, 239, .5);
+}
+
+.piece-label--below::after {
+  top: auto;
+  bottom: 100%;
+}
+
+.piece-label--right {
+  right: 0;
+  text-align: right;
+}
+
+.piece-label--right::after {
+  right: 0;
+}
+
+.piece-label--left::after {
+  left: 0;
+}
+
+/* Window: the logo frame becomes a browser window showing the intro */
+.hero-window {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 6;
+  border: 0 solid var(--light);
+  opacity: 0;
+}
+
+.window-bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 10px;
+  overflow: hidden;
+  background: var(--fg);
+  color: var(--bg);
+}
+
+.window-bar i {
+  flex: none;
+  width: 7px;
+  height: 7px;
+  background: currentColor;
+  opacity: .35;
+}
+
+.window-bar span {
+  margin-left: 10px;
+  font-size: 10px;
+  letter-spacing: .12em;
+  opacity: .65;
+}
+
+/* Inside the intro: blueprint ("before") and before/after compare. Pieces are built by hero.js */
+.blueprint {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  background: var(--bg);
+  pointer-events: none;
+}
+
+.blueprint i {
+  position: absolute;
+}
+
+/* layout grid columns */
+.blueprint-col {
+  border-left: 1px solid var(--line);
+  border-right: 1px solid var(--line);
+  background: color-mix(in srgb, var(--fg) 2.5%, transparent);
+}
+
+/* one dashed box per element, with its role and size */
+.blueprint-box {
+  border: 1px dashed var(--guide);
+}
+
+.blueprint-box::after,
+.blueprint-dim::after,
+.blueprint-gap::after {
+  content: attr(data-note);
+  position: absolute;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--coral);
+  white-space: nowrap;
+}
+
+.blueprint-box::after {
+  left: 0;
+  bottom: 100%;
+  margin-bottom: 5px;
+}
+
+/* dimension line for the content width, under the content */
+.blueprint-dim {
+  height: 9px;
+  border-left: 1px solid var(--coral);
+  border-right: 1px solid var(--coral);
+  background: linear-gradient(var(--coral), var(--coral)) center / 100% 1px no-repeat;
+}
+
+.blueprint-dim::after {
+  left: 50%;
+  top: 100%;
+  margin-top: 6px;
+  transform: translateX(-50%);
+}
+
+/* vertical spacing between stacked elements */
+.blueprint-gap {
+  width: 9px;
+  border-top: 1px solid var(--coral);
+  border-bottom: 1px solid var(--coral);
+  background: linear-gradient(var(--coral), var(--coral)) center / 1px 100% no-repeat;
+}
+
+.blueprint-gap::after {
+  left: 100%;
+  top: 50%;
+  margin-left: 6px;
+  transform: translateY(-50%);
+}
+
+.compare {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 4;
+  width: 0;
+  height: var(--vh);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.compare-line {
+  position: absolute;
+  left: -1px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--coral);
+}
+
+.compare-handle {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  transform: translate(-50%, -50%);
+  background: var(--coral);
+  color: var(--charcoal);
+  font-size: 18px;
+  cursor: ew-resize;
+  touch-action: none;
+  pointer-events: auto;
+}
+
+.compare-tag {
+  position: absolute;
+  top: calc(var(--nav-h) + 16px);
+  padding: 6px 9px;
+  background: var(--black);
+  color: var(--light);
+  white-space: nowrap;
+}
+
+.compare-tag--after {
+  right: 14px;
+}
+
+.compare-tag--before {
+  left: 14px;
+}
+
+.compare-hint {
+  position: absolute;
+  left: 0;
+  top: calc(50% + 40px);
+  transform: translateX(-50%);
+  color: var(--fg);
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity .4s;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    row-gap: 0;
+    padding-top: var(--nav-h);
+    padding-bottom: clamp(12px, 1.6vh, 20px);
+  }
+
+  .hero-stage {
+    order: -1;
+    justify-content: center;
+  }
+
+  .hero-logo {
+    width: min(60vw, 30vh);
+  }
+
+  h1 {
+    font-size: clamp(40px, 11vw, 68px);
+    font-weight: 400;
+    letter-spacing: -.045em;
+  }
+
+  .hero-copy .mono {
+    margin-bottom: 20px;
+    font-size: 12.5px;
+  }
+
+  .hero-copy p {
+    margin-top: 20px;
+    font-size: 17px;
+    line-height: 1.5;
+    color: var(--fg);
+    opacity: .78;
+  }
+
+  .hero-buttons {
+    gap: 20px;
+    margin-top: 26px;
+  }
+
+  .hero-copy .link {
+    font-size: 12px;
+  }
+
+  .compare-handle {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/* Tablet portrait */
+@media (orientation: portrait) and (min-width: 901px) and (max-width: 1200px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    padding-top: calc(var(--nav-h) + 8vh);
+    padding-bottom: 4vh;
+  }
+
+  .hero-stage {
+    justify-content: center;
+  }
+
+  .hero-logo {
+    width: min(50vw, 30vh);
+  }
+
+  h1 {
+    font-size: clamp(56px, 8.4vw, 96px);
+  }
+}
+
+/* Same breakpoint as `mobile` in hero.js */
+@media (max-width: 900px), (orientation: portrait) and (max-width: 1200px) {
+  .scroll-hint,
+  .hero-social {
+    display: none;
+  }
+
+  .hero-social-row {
+    display: flex;
+  }
+}
+
+/* Short phones */
+@media (max-width: 900px) and (max-height: 820px) {
+  .hero-copy .mono {
+    margin-bottom: 16px;
+  }
+
+  .hero-copy p {
+    margin-top: 16px;
+  }
+
+  .hero-social-row {
+    margin-top: 16px;
+  }
+
+  .hero-buttons {
+    margin-top: 18px;
+  }
+
+  .hero-logo {
+    width: min(50vw, 24vh);
+  }
+
+  h1 {
+    font-size: clamp(40px, 11.6vw, 60px);
+  }
+}
+
+@media (max-width: 900px) and (max-height: 700px) {
+  .hero-copy p {
+    display: none;
+  }
+}
+
+/* ==== intro.css ==== */
+/* Intro (Studion): the section the hero window opens into */
+
+.intro {
+  position: relative;
+  z-index: 1;
+  min-height: var(--vh);
+  padding: calc(var(--nav-h) + clamp(40px, 7vw, 110px)) var(--pad) clamp(56px, 6vw, 96px);
+  transform-origin: 0 0;
+  overflow: hidden;
+}
+
+.intro h2 {
+  max-width: 14ch;
+  margin-top: 22px;
+  font-weight: 300;
+  font-size: clamp(40px, 6vw, 108px);
+  line-height: 1.1;
+  letter-spacing: -.045em;
+}
+
+.intro .lead {
+  margin-top: clamp(20px, 2.2vw, 30px);
+}
+
+/* Four short points: what every project gets */
+.intro-points {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(20px, 2.6vw, 48px);
+  margin-top: clamp(48px, 6vw, 100px);
+  list-style: none;
+}
+
+.intro-point {
+  padding-top: 18px;
+  border-top: 1px solid var(--rule);
+}
+
+.intro-point .mono {
+  color: var(--accent);
+}
+
+.intro-point h3 {
+  margin-top: 14px;
+  font-weight: 400;
+  font-size: clamp(19px, 1.6vw, 26px);
+  letter-spacing: -.02em;
+}
+
+.intro-point p {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .intro-points {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 28px;
+  }
+
+  .intro-point p {
+    font-size: 14px;
+  }
+}
+
+/* Short phones: the intro must still fit one screen (the hero window shows exactly one) */
+@media (max-width: 900px) and (max-height: 700px) {
+  .intro {
+    padding-top: calc(var(--nav-h) + 24px);
+  }
+
+  .intro-points {
+    margin-top: 28px;
+  }
+
+  .intro-point p {
+    display: none;
+  }
+}
+
+/* ==== chapters.css ==== */
+/* Chapters (services): one full-screen sticky card per service; each new card covers the one before */
+
+.chapter {
+  position: sticky;
+  top: 0;
+  min-height: var(--vh);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  padding: calc(var(--nav-h) + clamp(28px, 4vw, 56px)) var(--pad) clamp(28px, 3vw, 48px);
+  border-top: 1px solid var(--line);
+}
+
+/* Signature drawing behind each chapter */
+.chapter-sign {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+svg.chapter-sign {
+  fill: none;
+  stroke: var(--rule);
+  stroke-width: 1px;
+  vector-effect: non-scaling-stroke;
+}
+
+svg.chapter-sign * {
+  vector-effect: non-scaling-stroke;
+}
+
+/* Blueprint drawing: construction lines dashed, dimensions thin, one coral detail, mono notes */
+.chapter-sign .sign-dash {
+  stroke: var(--line);
+  stroke-dasharray: 4 8;
+}
+
+.chapter-sign .sign-dim {
+  stroke: var(--guide);
+}
+
+.chapter-sign .sign-accent {
+  stroke: var(--coral);
+}
+
+.chapter-sign .sign-text {
+  fill: var(--muted);
+  opacity: .25;
+  stroke: none;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 14px;
+  letter-spacing: .14em;
+}
+
+/* Large outlined number; its coral dot is the logo dot that drops in (chapters.js) */
+.chapter-number {
+  position: absolute;
+  right: var(--pad);
+  top: calc(var(--nav-h) + clamp(4px, 1vw, 16px));
+  font-weight: 300;
+  font-size: clamp(9rem, 26vw, 24rem);
+  line-height: .9;
+  letter-spacing: -.06em;
+  pointer-events: none;
+  user-select: none;
+}
+
+.chapter-digits {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--rule);
+}
+
+.chapter-dot {
+  display: inline-block;
+  width: .1em;
+  height: .1em;
+  margin-left: .03em;
+  border-radius: 50%;
+  background: var(--brand-coral);
+  will-change: transform;
+}
+
+.chapter-label {
+  position: relative;
+}
+
+.chapter-body {
+  position: relative;
+  align-self: end;
+  max-width: 760px;
+  padding-bottom: clamp(32px, 5vw, 72px);
+}
+
+.chapter-title {
+  font-weight: 300;
+  font-size: clamp(52px, 9vw, 150px);
+  line-height: 1;
+  letter-spacing: -.05em;
+}
+
+.chapter-title em {
+  display: block;
+  margin-top: .18em;
+  font-size: .42em;
+  letter-spacing: -.01em;
+}
+
+.chapter-body p {
+  max-width: 560px;
+  margin-top: clamp(20px, 2.2vw, 32px);
+  color: var(--muted);
+  font-size: clamp(15px, 1.15vw, 18px);
+  line-height: 1.6;
+}
+
+.chapter-body .btn {
+  margin-top: clamp(24px, 2.6vw, 40px);
+}
+
+/* Sub-services: one static row, each item led by a coral dot (stays clean when the row wraps) */
+.chapter-tags {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 28px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  list-style: none;
+  color: var(--muted);
+}
+
+.chapter-tags li {
+  display: flex;
+  align-items: center;
+}
+
+.chapter-tags li::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background: var(--coral);
+}
+
+@media (max-width: 900px) {
+  .chapter-number {
+    font-size: clamp(7rem, 34vw, 12rem);
+  }
+
+  .chapter-tags {
+    gap: 10px 20px;
+  }
+}
+
+/* Travelling dot of the home page (journey.js) */
+.journey-dot {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 55;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: var(--brand-coral);
+  pointer-events: none;
+  visibility: hidden;
+  transform-origin: 50% 50%;
+  will-change: transform;
+}
+
+.journey-dot.is-active {
+  visibility: visible;
+}
+
+/* ==== process.css ==== */
+/* Process */
+
+.process {
+  padding: clamp(96px, 11vw, 180px) var(--pad) clamp(80px, 9vw, 150px);
+}
+
+.process-head {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: start;
+  gap: clamp(24px, 3vw, 48px);
+}
+
+.process-head .section-label {
+  padding-top: clamp(10px, 1.2vw, 22px);
+}
+
+.process h2 {
+  font-weight: 300;
+  font-size: clamp(40px, 5.8vw, 104px);
+  line-height: 1.1;
+  letter-spacing: -.05em;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: clamp(72px, 9vw, 150px);
+  list-style: none;
+}
+
+.step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: clamp(360px, 34vw, 520px);
+  padding: 0 clamp(20px, 2.4vw, 40px);
+}
+
+/* vertical coral line */
+.step::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--coral);
+  transform-origin: 50% 0;
+}
+
+.step-no {
+  color: var(--coral);
+}
+
+/* Anchor on top of each coral line, where the travelling dot lands (journey.js) */
+.step-seat {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 14px;
+  height: 14px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+/* logo piece drawing in the corner */
+.step svg {
+  position: absolute;
+  top: 0;
+  right: clamp(20px, 2.4vw, 40px);
+  width: clamp(34px, 3vw, 48px);
+  height: auto;
+  overflow: visible;
+}
+
+.step .outline {
+  fill: none;
+  stroke: var(--fg);
+  stroke-opacity: .55;
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+
+.step .dot {
+  fill: var(--brand-coral);
+}
+
+.step h3 {
+  margin-top: auto;
+  font-weight: 300;
+  font-size: clamp(40px, 4vw, 72px);
+  line-height: 1;
+  letter-spacing: -.04em;
+}
+
+.step p {
+  max-width: 34ch;
+  min-height: calc(1.65em * 3);
+  margin-top: clamp(18px, 1.8vw, 28px);
+  color: var(--muted);
+  font-size: clamp(14px, 1.05vw, 16px);
+  line-height: 1.65;
+}
+
+/* Lines draw in from the top when the section enters (they are not faded) */
+.motion .step::before {
+  transform: scaleY(0);
+  transition: transform 1.4s cubic-bezier(.65, 0, .35, 1);
+}
+
+.motion .process.is-visible .step::before {
+  transform: none;
+}
+
+.motion .process.is-visible .step:nth-child(2)::before {
+  transition-delay: .18s;
+}
+
+.motion .process.is-visible .step:nth-child(3)::before {
+  transition-delay: .36s;
+}
+
+@media (max-width: 900px) {
+  .process-head,
+  .process-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .process-steps {
+    gap: 56px;
+  }
+
+  .step {
+    min-height: 0;
+    padding: 0 0 0 22px;
+  }
+
+  .step h3 {
+    margin-top: 36px;
+  }
+
+  .step svg {
+    right: 0;
+  }
+}
+
+/* ==== pricing.css ==== */
+/* Pricing: two package cards with a yearly/monthly switch, add-ons, custom offer; each opens a sheet in a dialog (pricing.js) */
+
+.pricing {
+  padding: clamp(96px, 11vw, 180px) var(--pad) clamp(80px, 9vw, 150px);
+}
+
+.pricing-head h2 {
+  margin-top: 22px;
+  font-weight: 300;
+  font-size: clamp(40px, 5.8vw, 104px);
+  line-height: 1.05;
+  letter-spacing: -.05em;
+}
+
+.pricing-head .lead {
+  margin-top: clamp(20px, 2.2vw, 30px);
+}
+
+.billing {
+  display: inline-flex;
+  margin-top: clamp(40px, 4vw, 64px);
+  border: 1px solid var(--rule);
+}
+
+.billing-option {
+  min-height: 44px;
+  padding: 0 24px;
+  font-size: 15px;
+  color: var(--muted);
+  transition: color .25s, background .25s;
+}
+
+.billing-option.is-active {
+  background: var(--coral);
+  color: var(--charcoal);
+}
+
+/* The yearly price shows by default; the switch (pricing.js) sets .is-month on the section */
+.when-month {
+  display: none;
+}
+
+.pricing.is-month .when-year {
+  display: none;
+}
+
+.pricing.is-month .when-month {
+  display: inline;
+}
+
+.packages {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(16px, 2vw, 28px);
+  margin-top: clamp(24px, 3vw, 40px);
+  list-style: none;
+}
+
+.package {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: clamp(28px, 2.6vw, 40px);
+  border: 1px solid var(--rule);
+}
+
+.package--featured {
+  border-color: var(--coral);
+}
+
+.package-badge {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: var(--coral);
+  color: var(--charcoal);
+}
+
+/* The travelling dot rests on the top edge of the last package and hops when the pointer comes near (pricing.js) */
+.package-dot {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  margin: -9px 0 0 -9px;
+  border-radius: 50%;
+  background: var(--brand-coral);
+}
+
+.package-dot.is-hopping {
+  animation: dot-hop .7s cubic-bezier(.3, 0, .3, 1);
+}
+
+@keyframes dot-hop {
+  35% {
+    transform: translateY(-42px) scale(.94, 1.06);
+  }
+
+  70% {
+    transform: translateY(0) scale(1.18, .78);
+  }
+
+  85% {
+    transform: translateY(-8px);
+  }
+}
+
+.package-name {
+  font-weight: 400;
+  font-size: clamp(30px, 2.6vw, 44px);
+  letter-spacing: -.03em;
+}
+
+.package-summary {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.package-price {
+  margin-top: 28px;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.package-amount {
+  font-weight: 300;
+  font-size: clamp(48px, 4.4vw, 76px);
+  line-height: 1;
+  letter-spacing: -.05em;
+}
+
+.package-unit {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.package-features {
+  margin-top: 24px;
+  list-style: none;
+}
+
+.package-features li {
+  display: flex;
+  gap: 12px;
+  padding: 10px 0;
+  border-top: 1px solid var(--line);
+  font-size: 15px;
+}
+
+.package-features li::before {
+  content: "";
+  flex: none;
+  width: 5px;
+  height: 5px;
+  margin-top: .55em;
+  border-radius: 50%;
+  background: var(--coral);
+}
+
+.package-open {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+.package .package-features {
+  margin-bottom: 32px;
+}
+
+.pricing-note {
+  margin-top: 28px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* Package sheet: a centered upright rectangle with space on every side, the page visible around it */
+.package-dialog {
+  --sheet-gap: clamp(16px, 5vh, 48px);
+  width: min(680px, calc(100% - 2 * var(--sheet-gap)));
+  max-width: none;
+  height: calc(100% - 2 * var(--sheet-gap));
+  max-height: none;
+  margin: auto;
+  padding: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  border: 1px solid var(--rule);
+  background: var(--bg);
+  color: var(--fg);
+}
+
+.package-dialog::backdrop {
+  background: color-mix(in srgb, var(--black) 55%, transparent);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+
+.package-dialog[open] {
+  animation: sheet-in .45s cubic-bezier(.2, .7, .2, 1);
+}
+
+@keyframes sheet-in {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+}
+
+.package-sheet {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: clamp(56px, 6vw, 88px) clamp(24px, 4vw, 56px) 0;
+}
+
+.package-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--rule);
+  font-size: 22px;
+  line-height: 1;
+  transition: color .25s, border-color .25s;
+}
+
+.package-close:hover {
+  border-color: var(--coral);
+  color: var(--coral);
+}
+
+.package-sheet-title {
+  margin-top: 18px;
+  font-weight: 300;
+  font-size: clamp(44px, 5vw, 80px);
+  line-height: 1.05;
+  letter-spacing: -.05em;
+}
+
+.package-sheet-title em {
+  display: block;
+  margin-top: .12em;
+  font-size: .55em;
+  color: var(--coral);
+}
+
+.package-group {
+  margin-top: 32px;
+}
+
+.package-group h4 {
+  color: var(--muted);
+}
+
+.package-group .package-features {
+  margin-top: 10px;
+}
+
+.package-terms {
+  margin-top: 32px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* The final price sits at the very end, always in view at the bottom of the sheet */
+.package-total {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: auto;
+  padding: 24px 0;
+  border-top: 1px solid var(--rule);
+  background: var(--bg);
+}
+
+.package-total .package-price {
+  margin-top: 0;
+}
+
+.is-dialog-open {
+  overflow: hidden;
+}
+
+/* Add-ons: one wide panel under the packages, a priced list */
+.addons,
+.custom-offer {
+  margin-top: clamp(56px, 6vw, 96px);
+  padding: clamp(28px, 2.6vw, 40px);
+  border: 1px solid var(--rule);
+}
+
+.addons-title {
+  margin-top: 18px;
+  font-weight: 300;
+  font-size: clamp(30px, 3.4vw, 56px);
+  line-height: 1.1;
+  letter-spacing: -.04em;
+}
+
+.addons-title em {
+  color: var(--coral);
+}
+
+.addons .lead,
+.custom-offer .lead {
+  margin-top: 16px;
+}
+
+.addon-list {
+  margin: clamp(28px, 3vw, 44px) 0 24px;
+  list-style: none;
+}
+
+.addon {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px 32px;
+  padding: 18px 0;
+  border-top: 1px solid var(--line);
+}
+
+.addon-text {
+  flex: 1 1 320px;
+}
+
+.addon-name {
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: -.02em;
+}
+
+.addon-text p {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.addon-price {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.addon-amount {
+  font-weight: 300;
+  font-size: clamp(26px, 2.2vw, 34px);
+  letter-spacing: -.03em;
+}
+
+.addons > .btn,
+.custom-offer > .btn {
+  margin-top: 24px;
+}
+
+.addons > .pricing-note {
+  margin-top: 0;
+}
+
+@media (max-width: 1000px) {
+  .packages {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==== special.css ==== */
+/* Special projects teaser on the home page: copy left, nested triangles right (the dot rests at their center) */
+
+.special-teaser {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr);
+  align-items: center;
+  gap: clamp(32px, 6vw, 120px);
+  padding: clamp(96px, 11vw, 180px) var(--pad);
+}
+
+.special-teaser-art {
+  position: relative;
+  aspect-ratio: 1 / 1;
+}
+
+.special-teaser-art svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.special-shape {
+  fill: none;
+  stroke: var(--rule);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+
+.special-cross {
+  stroke: var(--line);
+  stroke-width: 1;
+  stroke-dasharray: 4 8;
+  vector-effect: non-scaling-stroke;
+}
+
+/* The dot rests here on its way to the ticker (journey.js) */
+.special-seat {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--brand-coral);
+  transform: translate(-50%, -50%);
+}
+
+.special-teaser h2 {
+  margin-top: 22px;
+  font-weight: 300;
+  font-size: clamp(40px, 5vw, 88px);
+  line-height: 1.05;
+  letter-spacing: -.045em;
+}
+
+.special-teaser h2 em {
+  display: block;
+}
+
+.special-teaser .lead {
+  margin-top: clamp(20px, 2.2vw, 30px);
+}
+
+.special-teaser-list {
+  margin: 28px 0 36px;
+  list-style: none;
+}
+
+.special-teaser-list li {
+  display: flex;
+  gap: 12px;
+  padding: 12px 0;
+  border-top: 1px solid var(--line);
+  font-size: 16px;
+}
+
+.special-teaser-list li::before {
+  content: "";
+  flex: none;
+  width: 5px;
+  height: 5px;
+  margin-top: .6em;
+  border-radius: 50%;
+  background: var(--coral);
+}
+
+@media (max-width: 900px) {
+  .special-teaser {
+    grid-template-columns: 1fr;
+  }
+
+  .special-teaser-art {
+    justify-self: end;
+    width: min(72vw, 340px);
+  }
+}
+
+/* ==== ticker.css ==== */
+/* Services ticker: once on the page, right before the CTA. Two identical groups loop as one band. */
+
+.ticker {
+  position: relative;
+  padding: 25px 0;
+  overflow: hidden;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: var(--soft);
+  color: var(--light);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 12%, #000 88%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, #000 12%, #000 88%, transparent 100%);
+}
+
+.ticker-track {
+  display: flex;
+  width: max-content;
+  animation: ticker 36s linear infinite;
+}
+
+.ticker:hover .ticker-track,
+.ticker:focus-within .ticker-track {
+  animation-play-state: paused;
+}
+
+@keyframes ticker {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.ticker-group {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.ticker-group li {
+  display: flex;
+  align-items: center;
+}
+
+.ticker-word {
+  white-space: nowrap;
+  font-weight: 600;
+  font-size: clamp(37px, 4.5vw, 70px);
+  line-height: 1.1;
+  letter-spacing: -.06em;
+  transition: color .25s;
+}
+
+.ticker-group li:nth-child(even) .ticker-word {
+  color: var(--coral);
+}
+
+.ticker-word:hover {
+  color: var(--coral);
+}
+
+.ticker-group li:nth-child(even) .ticker-word:hover {
+  color: var(--light);
+}
+
+/* separators: the logo dot */
+.ticker-dot {
+  flex: none;
+  width: .32em;
+  height: .32em;
+  margin: 0 clamp(22px, 3vw, 50px);
+  border-radius: 50%;
+  background: var(--brand-coral);
+  font-size: clamp(37px, 4.5vw, 70px);
+}
+
+/* Anchors for the dot journey (journey.js): it enters on the right and leaves on the left */
+.ticker-seat {
+  position: absolute;
+  top: 50%;
+  width: 22px;
+  height: 22px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.ticker-seat--start {
+  right: var(--edge);
+}
+
+.ticker-seat--end {
+  left: var(--edge);
+}
+
+/* ==== cta.css ==== */
+/* CTA: black like the site; white wireframe logo, coral dot and rings */
+
+.cta {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.45fr);
+  align-items: center;
+  padding: clamp(56px, 6vw, 104px) 0;
+  overflow: hidden;
+  border-top: 1px solid var(--line);
+}
+
+.cta-label {
+  grid-column: 1 / -1;
+  margin-bottom: clamp(12px, 2vw, 32px);
+  padding: 0 var(--edge);
+}
+
+/* Icon: rings, crosshair, wireframe logo, solid dot */
+.cta-icon {
+  position: relative;
+  display: block;
+  justify-self: start;
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 1 / 1;
+  margin-left: var(--edge);
+}
+
+.cta-icon svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.cta .rings,
+.cta .ring {
+  transform-box: view-box;
+  transform-origin: 500px 500px;
+}
+
+.cta .ring {
+  fill: none;
+  stroke: var(--coral);
+  stroke-opacity: .55;
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+
+.cta .crosshair {
+  stroke: var(--line);
+  stroke-width: 1;
+  stroke-dasharray: 4 6;
+  vector-effect: non-scaling-stroke;
+}
+
+.cta .outline {
+  fill: none;
+  stroke: var(--fg);
+  stroke-width: 1.25;
+  vector-effect: non-scaling-stroke;
+}
+
+.cta .dot {
+  fill: var(--brand-coral);
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  transition:
+    fill .35s,
+    transform .45s cubic-bezier(.2, .7, .2, 1);
+}
+
+.cta-icon text {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 15px;
+  letter-spacing: .16em;
+  fill: var(--muted);
+  opacity: .25;
+}
+
+/* Dot drops in when the section enters, then scales on hover (cta.js) */
+.motion .cta .dot {
+  opacity: 0;
+  transform: translateY(-140px);
+  transition:
+    transform .9s cubic-bezier(.55, 0, .75, .2),
+    opacity .2s;
+}
+
+.motion .cta.is-visible .dot {
+  opacity: 1;
+  transform: none;
+}
+
+.motion .cta.is-visible .dot.is-landed {
+  transition: transform .7s cubic-bezier(.45, 0, .2, 1);
+}
+
+.motion .cta.is-visible .dot.is-hover {
+  transform: scale(1.2);
+}
+
+/* Copy */
+.cta-copy {
+  padding: 0 var(--edge) 0 clamp(40px, 6vw, 120px);
+}
+
+.cta-copy h2 {
+  max-width: 12ch;
+  font-weight: 300;
+  font-size: clamp(44px, 6.4vw, 124px);
+  line-height: 1.02;
+  letter-spacing: -.05em;
+}
+
+.cta-copy h2 em {
+  display: block;
+  margin-top: .08em;
+}
+
+.cta-copy p {
+  max-width: 440px;
+  color: var(--muted);
+  margin-top: clamp(24px, 2.6vw, 40px);
+  font-size: clamp(15px, 1.15vw, 18px);
+  line-height: 1.6;
+}
+
+.cta-btn {
+  margin-top: clamp(28px, 3vw, 44px);
+}
+
+.cta-copy .cta-meta {
+  margin-top: 20px;
+  font-size: 11px;
+}
+
+@media (max-width: 900px) {
+  .cta {
+    grid-template-columns: 1fr;
+    row-gap: 0;
+    padding: 64px 0 88px;
+  }
+
+  .cta-label {
+    margin-bottom: 20px;
+  }
+
+  .cta-icon {
+    width: calc(100% - 2 * var(--edge));
+    max-width: 420px;
+    margin: 0 0 12px var(--edge);
+  }
+
+  .cta-copy {
+    padding: 0 var(--edge);
+  }
+
+  .cta-copy h2 {
+    font-size: clamp(44px, 12vw, 68px);
+  }
+
+  .cta-copy p {
+    font-size: 17px;
+  }
+}
+
+/* Home: the travelling dot brings the CTA dot (journey.js), so it does not drop in on its own */
+.motion .has-journey .cta .dot {
+  opacity: 1;
+}
+
+.motion .has-journey .cta .dot:not(.is-hover) {
+  transform: none;
+}
+
+/* ==== testimonials.css ==== */
+/* Testimonials: between the CTA and the footer. One quote at a time, crossfading (testimonials.js) */
+
+.testimonials {
+  position: relative;
+  padding: clamp(72px, 8vw, 128px) var(--pad);
+}
+
+.testimonials-title {
+  margin-top: 22px;
+  font-weight: 300;
+  font-size: clamp(36px, 4.4vw, 76px);
+  line-height: 1.05;
+  letter-spacing: -.045em;
+}
+
+.testimonials-stage {
+  display: grid;
+  margin-top: clamp(40px, 4vw, 72px);
+}
+
+/* every slide sits in the same grid cell; only the current one is visible */
+.testimonial {
+  grid-area: 1 / 1;
+  display: grid;
+  grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+  grid-template-rows: 1fr auto;
+  column-gap: clamp(32px, 5vw, 96px);
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity .9s cubic-bezier(.4, 0, .2, 1),
+    visibility .9s;
+}
+
+.testimonial.is-current {
+  opacity: 1;
+  visibility: visible;
+}
+
+.testimonial-media {
+  grid-row: 1 / 3;
+}
+
+.testimonial-quote p {
+  font-weight: 300;
+  font-size: clamp(24px, 2.4vw, 40px);
+  line-height: 1.3;
+  letter-spacing: -.02em;
+}
+
+.testimonial-quote p::before {
+  content: "”";
+  display: block;
+  margin-bottom: 8px;
+  color: var(--coral);
+  font-family: "Instrument Serif", serif;
+  font-size: 2.2em;
+  line-height: .6;
+}
+
+.testimonial-source {
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 24px;
+  font-size: 15px;
+}
+
+.testimonial-source span {
+  color: var(--muted);
+}
+
+.testimonials-controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: clamp(32px, 3vw, 48px);
+}
+
+.testimonials-prev,
+.testimonials-next {
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--rule);
+  transition:
+    border-color .25s,
+    color .25s;
+}
+
+.testimonials-prev:hover,
+.testimonials-next:hover {
+  border-color: var(--coral);
+  color: var(--coral);
+}
+
+.testimonials-count {
+  color: var(--muted);
+}
+
+.testimonials-count b {
+  color: var(--fg);
+}
+
+.testimonials-pause {
+  margin-left: auto;
+}
+
+/* the line between this section and the footer: the dot rolls along it (journey.js) */
+.testimonials-line {
+  position: absolute;
+  left: var(--edge);
+  right: var(--edge);
+  bottom: 0;
+  height: 1px;
+  pointer-events: none;
+}
+
+@media (max-width: 900px) {
+  .testimonial {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    row-gap: 24px;
+  }
+
+  .testimonial-media {
+    grid-row: auto;
+  }
+}
+
+/* no testimonials yet: only the line stays, so the dot has somewhere to land above the footer */
+.testimonials--hidden { position: relative; height: 4rem; padding: 0; }
+
+/* client logos: black marks, shown whole on the light section and inverted on the dark theme */
+.testimonial-media img {
+  object-fit: contain;
+  padding: clamp(20px, 3vw, 44px);
+}
+
+:root[data-theme="dark"] .testimonial-media img {
+  filter: invert(1);
+}
+
+/* a client logo sits on a plain panel: the blueprint placeholder only shows while there is no image or it fails to load */
+.testimonial-media img ~ .placeholder-art {
+  display: none;
+}
+
+.testimonial-media.is-broken .placeholder-art {
+  display: block;
+}
+
+/* the client's name links to their site */
+.testimonial-source b a { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+.testimonial-source b a:hover, .testimonial-source b a:focus-visible { color: var(--accent, currentColor); }
+
+/* ==== footer.css ==== */
+/* Footer: always dark (tokens from base.css) */
+
+.footer {
+  padding: clamp(72px, 8vw, 128px) var(--edge) 28px;
+  overflow: hidden;
+  background: var(--black);
+  color: var(--fg);
+}
+
+.footer-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px;
+}
+
+.footer-heading {
+  margin-bottom: 22px;
+  font-weight: 500;
+  font-size: clamp(26px, 2.2vw, 34px);
+  line-height: 1.1;
+  letter-spacing: -.03em;
+}
+
+.footer-col a,
+.footer-col > span {
+  display: block;
+  width: fit-content;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 2;
+  transition: color .25s;
+}
+
+.footer-col a:hover,
+.footer-menu a.is-active {
+  color: var(--coral);
+}
+
+.footer-menu a.is-active span {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 6px;
+}
+
+.footer-social {
+  --social-size: 34px;
+  --social-gap: clamp(24px, 3vw, 44px);
+  justify-content: center;
+  margin-top: clamp(40px, 4vw, 64px);
+}
+
+/* Large wireframe logo; only the dot is solid (bounces, footer.js) */
+.footer-logo {
+  margin-top: clamp(40px, 4vw, 64px);
+}
+
+.footer-logo svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.footer-logo .logo-frame,
+.footer-logo .logo-word {
+  fill: none;
+  stroke: var(--fg);
+  stroke-opacity: .26;
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+
+.footer-logo .logo-dot {
+  fill: var(--brand-coral);
+}
+
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px 28px;
+  margin-top: 28px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+}
+
+.footer-bottom a,
+.footer-bottom button {
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  transition: color .25s;
+}
+
+.footer-bottom a:hover,
+.footer-bottom button:hover {
+  color: var(--fg);
+}
+
+.footer-bottom b,
+.footer-clock {
+  color: var(--coral);
+}
+
+.footer-bottom .lang-switch {
+  height: auto;
+}
+
+@media (min-width: 901px) {
+  .footer-cols > :nth-child(2) {
+    justify-self: center;
+  }
+
+  .footer-cols > :nth-child(3) {
+    justify-self: end;
+  }
+}
+
+@media (max-width: 900px) {
+  .footer-cols {
+    grid-template-columns: 1fr;
+    row-gap: 0;
+  }
+
+  .footer-col {
+    padding: 28px 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .footer-col:first-child {
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  .footer-bottom {
+    justify-content: flex-start;
+  }
+}
+
+/* ==== cookie.css ==== */
+/* Cookie consent: small dark panel, bottom left (tokens from base.css). Reopened from the footer. */
+
+.cookie {
+  position: fixed;
+  left: 16px;
+  bottom: 16px;
+  z-index: 80;
+  width: min(420px, calc(100vw - 32px));
+  max-height: calc(var(--vh) - 32px);
+  padding: 24px;
+  overflow-y: auto;
+  border: 1px solid var(--rule);
+  background: var(--black);
+  color: var(--fg);
+  box-shadow: 0 24px 60px -24px color-mix(in srgb, var(--black) 60%, transparent);
+}
+
+.cookie[hidden] {
+  display: none;
+}
+
+.cookie-title {
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: -.01em;
+}
+
+.cookie-text {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.cookie-text a {
+  color: var(--fg);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.cookie-choices fieldset {
+  margin-top: 18px;
+  border: 0;
+}
+
+.cookie-choices legend {
+  margin-bottom: 8px;
+  color: var(--muted);
+}
+
+.cookie-choice {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  gap: 12px;
+  padding: 10px 0;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.cookie-choice input {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  accent-color: var(--coral);
+}
+
+.cookie-choice b {
+  display: block;
+  color: var(--fg);
+  font-weight: 500;
+}
+
+.cookie-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Accept and reject carry the same weight on purpose */
+.cookie-actions .btn {
+  flex: 1 1 auto;
+  justify-content: center;
+}
+
+.cookie-actions .btn span {
+  width: 100%;
+  justify-content: center;
+}
+
+.cookie-customize {
+  flex-basis: 100%;
+  padding: 6px 0 2px;
+  text-align: left;
+}
+

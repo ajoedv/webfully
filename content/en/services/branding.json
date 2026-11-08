@@ -1,0 +1,182 @@
+{
+  "kind": "service",
+  "meta": {
+    "title": "Brand, logo and graphic design — WebFully",
+    "description": "Logo, visual identity, brand guidelines and graphic design that make your company recognisable everywhere, from sign to screen."
+  },
+  "chapter": {
+    "name": "Brand",
+    "accent": "that is recognised.",
+    "summary": "Logo, visual identity and graphic design that hold together. One expression on the sign, in the feed and on the web.",
+    "button": "Explore brand",
+    "tags": [
+      "Logo",
+      "Visual identity",
+      "Brand guidelines",
+      "Graphic design",
+      "Print",
+      "Signage"
+    ]
+  },
+  "sections": [
+    {
+      "type": "service-hero",
+      "label": "Identity & graphic design",
+      "title": "A brand",
+      "accent": "that lasts ten years.",
+      "lead": "We create identities with more than twenty years of graphic design experience. Logo, colour, type and rules that make you recognisable everywhere."
+    },
+    {
+      "type": "capabilities",
+      "count": "6 disciplines",
+      "title": "One expression.",
+      "accent": "Everywhere.",
+      "lead": "A brand is not just a logo. It is the sum of everything the customer sees, and it has to hold together.",
+      "items": [
+        {
+          "title": "Logo",
+          "text": "A logo that works large and small, in colour and in black and white."
+        },
+        {
+          "title": "Visual identity",
+          "text": "Colours, type and imagery that form one system."
+        },
+        {
+          "title": "Brand guidelines",
+          "text": "A manual that makes it easy to use the brand right."
+        },
+        {
+          "title": "Graphic design",
+          "text": "Brochures, presentations and material in the same expression."
+        },
+        {
+          "title": "Print",
+          "text": "Business cards, flyers and ads ready for print."
+        },
+        {
+          "title": "Signage and spaces",
+          "text": "Signs, vehicles and premises that follow the identity."
+        }
+      ]
+    },
+    {
+      "type": "builds",
+      "label": "What we build",
+      "title": "From sketch",
+      "accent": "to system.",
+      "lead": "We do not just deliver files. We deliver a system you can grow with.",
+      "cards": [
+        {
+          "title": "Logo",
+          "text": "Main logo, symbol and variants.",
+          "placeholder": "logo in different sizes and colours",
+          "image": "/assets/services/branding-logo-sizes-colors.webp",
+          "alt": "Logo for a hair salon in different sizes and colours",
+          "ratio": "4 / 3",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "title": "Identity",
+          "text": "Colour, type and patterns as one whole.",
+          "placeholder": "identity overview with colours and typefaces",
+          "image": "/assets/services/branding-identity-overview.webp",
+          "alt": "Identity overview with logo, colour palette, typefaces and graphic elements",
+          "ratio": "4 / 3",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "title": "Material",
+          "text": "Business card, sign and social media templates.",
+          "placeholder": "business card, sign and post in the same style",
+          "image": "/assets/services/branding-stationery-signage.webp",
+          "alt": "Business cards, signage and a phone ad in the same visual identity",
+          "ratio": "4 / 3",
+          "width": 1200,
+          "height": 900
+        }
+      ]
+    },
+    {
+      "type": "phases",
+      "label": "From brief to guidelines",
+      "title": "Four steps.",
+      "accent": "One expression.",
+      "lead": "We start with what you stand for, not with colours.",
+      "steps": [
+        {
+          "title": "Insight",
+          "text": "Who you are, who you speak to and what sets you apart."
+        },
+        {
+          "title": "Concept",
+          "text": "Two or three directions to choose from."
+        },
+        {
+          "title": "Development",
+          "text": "The chosen direction becomes a complete system."
+        },
+        {
+          "title": "Guidelines and files",
+          "text": "Brand guidelines and every file in the right format."
+        }
+      ]
+    },
+    {
+      "type": "proof",
+      "label": "Experience",
+      "title": "Twenty years of",
+      "accent": "form.",
+      "lead": "We have worked with graphic design for more than twenty years, in several countries and now in Sweden.",
+      "points": [
+        {
+          "title": "Lasting",
+          "text": "Identities that do not need redoing in two years."
+        },
+        {
+          "title": "Usable",
+          "text": "Files and rules that work in everyday use."
+        },
+        {
+          "title": "Original",
+          "text": "Nothing bought from a template bank."
+        }
+      ],
+      "placeholder": "identity for a client: logo, card and sign",
+      "image": "/assets/services/branding-client-identity.webp",
+      "alt": "A hair salon shopfront with the logo on signage, card and phone",
+      "width": 1400,
+      "height": 1050
+    },
+    {
+      "type": "faq",
+      "title": "Questions we often get",
+      "accent": "and our answers.",
+      "items": [
+        {
+          "q": "What is included in a logo?",
+          "a": "Main logo, symbol, variants for light and dark backgrounds and files for print and screen."
+        },
+        {
+          "q": "How many proposals do we get?",
+          "a": "Usually two or three directions, then we develop the one you choose."
+        },
+        {
+          "q": "Can you update our existing logo?",
+          "a": "Yes, sometimes a refresh is enough instead of a new one."
+        },
+        {
+          "q": "What are brand guidelines?",
+          "a": "A manual showing how logo, colours and typefaces should be used."
+        }
+      ]
+    },
+    {
+      "type": "related"
+    },
+    {
+      "type": "cta"
+    }
+  ]
+}

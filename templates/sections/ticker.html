@@ -1,0 +1,12 @@
+<!-- The second copy only closes the loop of the animation; it is hidden from assistive tech and the tab order -->
+<section class="ticker" aria-label="{{ s.label }}">
+  <div class="ticker-track">
+    {% for copy in ticker_copies %}<ul class="ticker-group"{% if copy %} aria-hidden="true"{% endif %}>
+      {% for service in services %}<li><a class="ticker-word" href="{{ service.url }}"{% if copy %} tabindex="-1"{% endif %}>{{ service.name }}</a><span class="ticker-dot" aria-hidden="true"></span></li>
+      {% endfor %}
+    </ul>
+    {% endfor %}
+  </div>
+  <span class="ticker-seat ticker-seat--start" data-journey="ticker-start" aria-hidden="true"></span>
+  <span class="ticker-seat ticker-seat--end" data-journey="ticker-end" aria-hidden="true"></span>
+</section>

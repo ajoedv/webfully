@@ -1,0 +1,177 @@
+/* CTA: black like the site; white wireframe logo, coral dot and rings */
+
+.cta {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.45fr);
+  align-items: center;
+  padding: clamp(56px, 6vw, 104px) 0;
+  overflow: hidden;
+  border-top: 1px solid var(--line);
+}
+
+.cta-label {
+  grid-column: 1 / -1;
+  margin-bottom: clamp(12px, 2vw, 32px);
+  padding: 0 var(--edge);
+}
+
+/* Icon: rings, crosshair, wireframe logo, solid dot */
+.cta-icon {
+  position: relative;
+  display: block;
+  justify-self: start;
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 1 / 1;
+  margin-left: var(--edge);
+}
+
+.cta-icon svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.cta .rings,
+.cta .ring {
+  transform-box: view-box;
+  transform-origin: 500px 500px;
+}
+
+.cta .ring {
+  fill: none;
+  stroke: var(--coral);
+  stroke-opacity: .55;
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+
+.cta .crosshair {
+  stroke: var(--line);
+  stroke-width: 1;
+  stroke-dasharray: 4 6;
+  vector-effect: non-scaling-stroke;
+}
+
+.cta .outline {
+  fill: none;
+  stroke: var(--fg);
+  stroke-width: 1.25;
+  vector-effect: non-scaling-stroke;
+}
+
+.cta .dot {
+  fill: var(--brand-coral);
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  transition:
+    fill .35s,
+    transform .45s cubic-bezier(.2, .7, .2, 1);
+}
+
+.cta-icon text {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 15px;
+  letter-spacing: .16em;
+  fill: var(--muted);
+  opacity: .25;
+}
+
+/* Dot drops in when the section enters, then scales on hover (cta.js) */
+.motion .cta .dot {
+  opacity: 0;
+  transform: translateY(-140px);
+  transition:
+    transform .9s cubic-bezier(.55, 0, .75, .2),
+    opacity .2s;
+}
+
+.motion .cta.is-visible .dot {
+  opacity: 1;
+  transform: none;
+}
+
+.motion .cta.is-visible .dot.is-landed {
+  transition: transform .7s cubic-bezier(.45, 0, .2, 1);
+}
+
+.motion .cta.is-visible .dot.is-hover {
+  transform: scale(1.2);
+}
+
+/* Copy */
+.cta-copy {
+  padding: 0 var(--edge) 0 clamp(40px, 6vw, 120px);
+}
+
+.cta-copy h2 {
+  max-width: 12ch;
+  font-weight: 300;
+  font-size: clamp(44px, 6.4vw, 124px);
+  line-height: 1.02;
+  letter-spacing: -.05em;
+}
+
+.cta-copy h2 em {
+  display: block;
+  margin-top: .08em;
+}
+
+.cta-copy p {
+  max-width: 440px;
+  color: var(--muted);
+  margin-top: clamp(24px, 2.6vw, 40px);
+  font-size: clamp(15px, 1.15vw, 18px);
+  line-height: 1.6;
+}
+
+.cta-btn {
+  margin-top: clamp(28px, 3vw, 44px);
+}
+
+.cta-copy .cta-meta {
+  margin-top: 20px;
+  font-size: 11px;
+}
+
+@media (max-width: 900px) {
+  .cta {
+    grid-template-columns: 1fr;
+    row-gap: 0;
+    padding: 64px 0 88px;
+  }
+
+  .cta-label {
+    margin-bottom: 20px;
+  }
+
+  .cta-icon {
+    width: calc(100% - 2 * var(--edge));
+    max-width: 420px;
+    margin: 0 0 12px var(--edge);
+  }
+
+  .cta-copy {
+    padding: 0 var(--edge);
+  }
+
+  .cta-copy h2 {
+    font-size: clamp(44px, 12vw, 68px);
+  }
+
+  .cta-copy p {
+    font-size: 17px;
+  }
+}
+
+/* Home: the travelling dot brings the CTA dot (journey.js), so it does not drop in on its own */
+.motion .has-journey .cta .dot {
+  opacity: 1;
+}
+
+.motion .has-journey .cta .dot:not(.is-hover) {
+  transform: none;
+}

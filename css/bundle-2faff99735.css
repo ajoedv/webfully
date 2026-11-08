@@ -1,0 +1,1248 @@
+/* ==== fonts.css ==== */
+/* Fonts, served from the site itself (no request to Google: faster, and nothing sent to a third party).
+   Latin subset (Swedish and English), WOFF. Licences: assets/fonts/*-OFL.txt (SIL Open Font License). */
+
+@font-face {
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url("../assets/fonts/manrope.woff?v=2026.11.08.0756-f7c9582") format("woff");
+}
+
+@font-face {
+  font-family: "Instrument Serif";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../assets/fonts/instrument-serif-italic.woff?v=2026.11.08.0756-f7c9582") format("woff");
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../assets/fonts/ibm-plex-mono.woff?v=2026.11.08.0756-f7c9582") format("woff");
+}
+
+/* ==== base.css ==== */
+/* Base: tokens, tones, reset, type, reveal */
+
+:root {
+  --brand-coral: #F0624D;      /* the logo's coral: logo, logo dot, every travelling or resting dot */
+  --charcoal: #2A2A2A;
+  --black: #050505;
+  --soft: #111111;
+  --light: #F4F2EF;
+  --gutter: clamp(20px, 5vw, 96px);
+  --container: 1320px;
+  --edge: clamp(20px, 7vw, 150px);
+  --pad: max(var(--gutter), calc((100vw - var(--container)) / 2));
+  --nav-h: 96px;
+  --vh: 100vh;
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+/* Tones. Light theme: tone-b light, tone-a dark. Dark theme: both dark, tone-a slightly lighter.
+   The floating nav and the open mobile menu always use the dark tokens. */
+:root,
+.tone-b {
+  --bg: var(--light);
+  --fg: var(--charcoal);
+  --muted: #69665f;
+  --line: rgba(42, 42, 42, .14);
+  --rule: rgba(42, 42, 42, .22);
+  --coral: #E8573F;            /* coral for text and UI on light backgrounds: 3.2:1 on --light (large text AA) */
+  --accent: var(--charcoal);
+  --guide: rgba(42, 42, 42, .4);
+  --frame-rgb: 42, 42, 42;
+  --is-light: 1;
+}
+
+.tone-a,
+.nav.is-floating,
+.is-menu-open .nav,
+.mobile-menu,
+.nav-services,
+.footer,
+.cookie,
+:root[data-theme="dark"],
+:root[data-theme="dark"] .tone-b {
+  --bg: var(--black);
+  --fg: var(--light);
+  --muted: #a39f99;
+  --line: rgba(244, 242, 239, .14);
+  --rule: rgba(244, 242, 239, .22);
+  --coral: var(--brand-coral);
+  --accent: var(--coral);
+  --guide: rgba(244, 242, 239, .45);
+  --frame-rgb: 244, 242, 239;
+  --is-light: 0;
+}
+
+:root[data-theme="dark"] .tone-a {
+  --bg: var(--soft);
+}
+
+.tone-a,
+.tone-b {
+  background: var(--bg);
+  color: var(--fg);
+}
+
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: Manrope, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+/* Type */
+.mono {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.mono b {
+  font-weight: 400;
+}
+
+em {
+  font-family: "Instrument Serif", serif;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -.01em;
+}
+
+h1 em,
+h2 em {
+  color: var(--coral);
+}
+
+/* Numbered section label: "01 / Name" */
+.section-label {
+  color: var(--muted);
+}
+
+.section-label b {
+  color: var(--accent);
+}
+
+/* Reveal: text fades in from below (classes set by base.js) */
+.motion .reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 1.5s cubic-bezier(.4, 0, .2, 1),
+    transform 1.4s cubic-bezier(.2, .7, .2, 1);
+  transition-delay: var(--reveal-delay, 0s);
+}
+
+.motion .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (max-width: 900px) {
+  :root {
+    --nav-h: 72px;
+  }
+}
+
+/* Accessibility helpers */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: fixed;
+  left: 16px;
+  top: 16px;
+  z-index: 100;
+  padding: 12px 18px;
+  background: var(--coral);
+  color: var(--charcoal);
+  font-weight: 600;
+  transform: translateY(-200%);
+  transition: transform .2s;
+}
+
+.skip-link:focus {
+  transform: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--coral);
+  outline-offset: 3px;
+}
+
+main:focus {
+  outline: none;
+}
+
+/* Shared section heading block */
+.section-head {
+  max-width: 900px;
+}
+
+.section-head h2 {
+  margin-top: 22px;
+  font-weight: 300;
+  font-size: clamp(40px, 5.6vw, 96px);
+  line-height: 1.05;
+  letter-spacing: -.045em;
+}
+
+.section-head .lead {
+  margin-top: clamp(20px, 2.2vw, 30px);
+}
+
+.section-head--split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  align-items: end;
+  gap: clamp(24px, 4vw, 80px);
+  max-width: none;
+}
+
+.lead {
+  max-width: 560px;
+  color: var(--muted);
+  font-size: clamp(15px, 1.15vw, 18px);
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .section-head--split {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Cross-page view transitions (supporting browsers); the logo dot is the shared element */
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-group(wf-dot) {
+  animation-duration: .6s;
+  animation-timing-function: cubic-bezier(.65, 0, .35, 1);
+}
+
+/* ==== components.css ==== */
+/* Components: links, buttons, social icons */
+
+/* Menu links (nav, mobile menu, footer): hover and current = coral, current underlined */
+.nav ul a:hover,
+.menu-link:hover,
+.footer-cols a:hover,
+.nav ul a.is-active,
+.menu-link.is-active,
+.footer-menu a.is-active {
+  color: var(--coral);
+}
+
+.menu-link.is-active span,
+.footer-menu a.is-active span {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 6px;
+}
+
+/* Button: label + arrow cell. Follows the section colors; only the border and the arrow are coral */
+.btn {
+  --btn-bg: var(--bg);
+  --btn-fg: var(--fg);
+  --btn-border: var(--coral);
+  --btn-arrow: var(--coral);
+  --btn-fill: var(--coral);
+  --btn-arrow-hover: var(--bg);
+  display: inline-flex;
+  align-items: stretch;
+  border: 1px solid var(--btn-border);
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: transform .3s cubic-bezier(.2, .7, .2, 1);
+}
+
+.btn[hidden] {
+  display: none;
+}
+
+.btn span {
+  display: flex;
+  align-items: center;
+  padding: 16px 22px;
+}
+
+.btn i {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid var(--btn-border);
+  padding: 16px 18px;
+  color: var(--btn-arrow);
+  font-style: normal;
+  overflow: hidden;
+  isolation: isolate;
+  transition: color .3s;
+}
+
+/* arrow cell fill, rises from the bottom on hover */
+.btn i::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--btn-fill);
+  transform: scaleY(0);
+  transform-origin: 50% 100%;
+  transition: transform .4s cubic-bezier(.2, .7, .2, 1);
+}
+
+.btn i b {
+  font-weight: inherit;
+  transition: transform .35s cubic-bezier(.2, .7, .2, 1);
+}
+
+.btn:hover {
+  transform: scale(1.03);
+}
+
+.btn:hover i {
+  color: var(--btn-arrow-hover);
+}
+
+.btn:hover i::before {
+  transform: none;
+}
+
+.btn:hover i b {
+  transform: translate(2px, -2px);
+}
+
+.btn:active {
+  transform: scale(.97);
+  transition-duration: .12s;
+}
+
+.btn:focus-visible {
+  outline: 1px solid currentColor;
+  outline-offset: 4px;
+}
+
+.btn--sm {
+  height: 40px;
+  font-size: 13px;
+}
+
+.btn--sm span {
+  padding: 0 16px;
+}
+
+.btn--sm i {
+  padding: 0 13px;
+}
+
+/* Text link */
+/* Text link with an underline (e.g. "Se våra tjänster"): coral and a slight zoom on hover (desktop) or on tap */
+.link {
+  display: inline-block;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 4px;
+  transform-origin: left center;
+  transition:
+    color .3s,
+    transform .3s cubic-bezier(.2, .7, .2, 1);
+}
+
+/* a.link: wins over section rules that set the link's resting color (e.g. .hero-copy .mono) */
+@media (hover: hover) {
+  a.link:hover {
+    color: var(--coral);
+    transform: scale(1.05);
+  }
+}
+
+a.link:active,
+a.link:focus-visible {
+  color: var(--coral);
+  transform: scale(1.05);
+}
+
+/* Social icons (filled from the template by social.js) */
+.social {
+  display: flex;
+  align-items: center;
+  gap: var(--social-gap, 26px);
+}
+
+.social--col {
+  flex-direction: column;
+}
+
+.social a {
+  display: grid;
+  place-items: center;
+  color: inherit;
+  opacity: .85;
+  transition: color .3s, opacity .3s;
+}
+
+.social a:hover {
+  color: var(--coral);
+  opacity: 1;
+}
+
+.social svg {
+  display: block;
+  width: var(--social-size, 30px);
+  height: var(--social-size, 30px);
+  fill: none;
+  stroke: currentColor;
+}
+
+.social svg * {
+  stroke-width: 1.6px;
+  vector-effect: non-scaling-stroke;
+}
+
+@media (max-width: 900px) {
+  .btn {
+    font-size: 15px;
+  }
+
+  .btn span {
+    padding: 19px 26px;
+  }
+
+  .btn i {
+    padding: 19px 20px;
+  }
+}
+
+@media (max-width: 900px) and (max-height: 820px) {
+  .btn span {
+    padding: 16px 24px;
+  }
+
+  .btn i {
+    padding: 16px 18px;
+  }
+}
+
+/* ==== nav.css ==== */
+/* Nav: transparent over the hero, a dark floating rectangle once the logo faces the visitor (home) or from the first scroll */
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 60;
+  height: var(--nav-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 0 var(--edge);
+  background: transparent;
+  color: var(--fg);
+  transition:
+    background-color .4s,
+    color .4s,
+    top .6s cubic-bezier(.2, .7, .2, 1),
+    left .6s cubic-bezier(.2, .7, .2, 1),
+    right .6s cubic-bezier(.2, .7, .2, 1),
+    height .6s cubic-bezier(.2, .7, .2, 1),
+    padding .6s cubic-bezier(.2, .7, .2, 1);
+}
+
+/* Dark tokens for these states come from base.css */
+.nav.is-floating {
+  top: 16px;
+  left: var(--pad);
+  right: var(--pad);
+  height: 72px;
+  padding: 0 28px;
+  background: color-mix(in srgb, var(--black) 84%, transparent);
+  -webkit-backdrop-filter: blur(14px) saturate(1.2);
+  backdrop-filter: blur(14px) saturate(1.2);
+}
+
+/* Inner pages: before it floats, the nav sits on a 90% page-colored band so lines and text behind it stay apart */
+.page:not(.page--home) .nav:not(.is-floating) {
+  background: color-mix(in srgb, var(--bg) 90%, transparent);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.page.is-menu-open .nav:not(.is-floating) {
+  background: var(--black);
+}
+
+/* Logo: frame follows the text color, letters and dot are coral */
+.brand {
+  display: block;
+  flex: none;
+  line-height: 0;
+}
+
+.brand svg {
+  display: block;
+  width: auto;
+  height: 40px;
+}
+
+.brand .logo-frame {
+  fill: currentColor;
+}
+
+.brand .logo-word,
+.brand .logo-dot {
+  fill: var(--brand-coral);
+}
+
+/* Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: clamp(18px, 2.2vw, 36px);
+  list-style: none;
+  font-size: 14px;
+}
+
+.nav-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+  color: var(--muted);
+  font-size: 14px;
+  transition: color .25s;
+}
+
+.nav-link:hover,
+.nav-link.is-active,
+.nav-link[aria-expanded="true"] {
+  color: var(--coral);
+}
+
+.nav-link.is-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 1px;
+  height: 1px;
+  background: var(--coral);
+}
+
+.nav-caret {
+  width: 6px;
+  height: 6px;
+  border-right: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+  transition: transform .3s;
+}
+
+[aria-expanded="true"] > .nav-caret {
+  transform: translateY(1px) rotate(225deg);
+}
+
+/* Services dropdown (dark tokens from base.css) */
+.nav-item--services {
+  position: relative;
+}
+
+.nav-services {
+  position: absolute;
+  left: -24px;
+  top: calc(100% + 18px);
+  min-width: 300px;
+  padding: 14px 24px;
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--black) 94%, transparent);
+  color: var(--fg);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition:
+    opacity .25s,
+    transform .25s,
+    visibility .25s;
+}
+
+.nav-services.is-open {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+.nav-services-list {
+  list-style: none;
+}
+
+.nav-service {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 15px;
+  transition: color .25s;
+}
+
+.nav-services-list li:last-child .nav-service {
+  border-bottom: 0;
+}
+
+.nav-service .mono,
+.menu-service .mono {
+  color: var(--coral);
+}
+
+.nav-service:hover,
+.nav-service.is-active {
+  color: var(--coral);
+}
+
+/* Actions: language, theme, CTA, menu */
+.nav-actions {
+  display: flex;
+  flex: none;
+  gap: 10px;
+  align-items: center;
+}
+
+.lang-switch {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  list-style: none;
+  color: var(--muted);
+}
+
+.lang-switch li + li::before {
+  content: "/";
+  margin: 0 6px;
+  opacity: .5;
+}
+
+.lang-switch a {
+  transition: color .25s;
+}
+
+.lang-switch a:hover {
+  color: var(--coral);
+}
+
+.lang-current {
+  color: var(--fg);
+}
+
+.lang-off {
+  opacity: .4;
+}
+
+.nav .lang-switch {
+  padding: 0 6px;
+}
+
+/* Theme toggle: Auto / Light / Dark, one button */
+.theme-toggle {
+  display: inline-flex;
+  gap: 9px;
+  align-items: center;
+  height: 40px;
+  padding: 0 14px;
+  border: 1px solid var(--rule);
+  color: var(--fg);
+  transition: transform .3s cubic-bezier(.2, .7, .2, 1);
+}
+
+.theme-toggle:hover {
+  transform: scale(1.05);
+}
+
+.theme-toggle:active {
+  transform: scale(.97);
+}
+
+.theme-toggle i {
+  flex: none;
+  width: 12px;
+  height: 12px;
+  border: 1px solid currentColor;
+  background: linear-gradient(90deg, currentColor 50%, transparent 50%);
+}
+
+[data-mode="light"] .theme-toggle i {
+  background: transparent;
+}
+
+[data-mode="dark"] .theme-toggle i {
+  background: currentColor;
+}
+
+/* Mobile menu button */
+.menu-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--guide);
+}
+
+.menu-toggle i {
+  width: 16px;
+  height: 1px;
+  background: var(--fg);
+  box-shadow:
+    0 5px 0 var(--fg),
+    0 -5px 0 var(--fg);
+}
+
+/* Mobile menu (dark tokens from base.css) */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: var(--nav-h);
+  left: 0;
+  right: 0;
+  z-index: 59;
+  max-height: calc(var(--vh) - var(--nav-h) - 12px);
+  padding: 20px var(--edge) 32px;
+  overflow-y: auto;
+  border-top: 1px solid var(--line);
+  background: var(--black);
+  color: var(--fg);
+}
+
+.is-menu-open .mobile-menu {
+  display: block;
+}
+
+.menu-link {
+  display: block;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 30px;
+  font-weight: 300;
+  letter-spacing: -.02em;
+}
+
+.menu-link.is-active {
+  color: var(--coral);
+}
+
+.menu-heading {
+  margin-top: 18px;
+  color: var(--muted);
+}
+
+.menu-services {
+  padding: 6px 0 12px;
+  border-bottom: 1px solid var(--line);
+  list-style: none;
+}
+
+.menu-service {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 7px 0;
+  font-size: 18px;
+}
+
+.mobile-menu-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+@media (max-width: 1100px) {
+  .nav-main,
+  .nav-cta {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+@media (max-width: 900px) {
+  .theme-toggle {
+    justify-content: center;
+    width: 40px;
+    padding: 0;
+  }
+
+  .theme-toggle span {
+    display: none;
+  }
+
+  .brand svg {
+    height: 32px;
+  }
+
+  .nav.is-floating {
+    top: 12px;
+    height: 60px;
+    padding: 0 14px;
+  }
+
+  /* the menu hangs under the rectangle, same width */
+  .mobile-menu {
+    transition:
+      top .6s cubic-bezier(.2, .7, .2, 1),
+      left .6s cubic-bezier(.2, .7, .2, 1),
+      right .6s cubic-bezier(.2, .7, .2, 1);
+  }
+
+  .nav.is-floating ~ .mobile-menu {
+    top: 72px;
+    left: var(--pad);
+    right: var(--pad);
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+}
+
+/* ==== media.css ==== */
+/* Media: images with a blueprint placeholder behind them.
+   The placeholder shows while no image is set, and replaces an image that fails to load (media.js). */
+
+.media {
+  position: relative;
+  aspect-ratio: var(--ratio, 4 / 3);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--fg) 3%, transparent);
+}
+
+.media img {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.media.is-broken img {
+  display: none;
+}
+
+.placeholder-art {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: var(--guide);
+  stroke-width: 1;
+  stroke-dasharray: 4 6;
+  vector-effect: non-scaling-stroke;
+}
+
+.media-note {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  right: 12px;
+  color: var(--coral);
+}
+
+.media img ~ .media-note {
+  display: none;
+}
+
+.media.is-broken .media-note {
+  display: block;
+}
+
+/* ==== error.css ==== */
+/* Error pages (404, 500): outlined code; the coral zero holds the logo dot, which follows the pointer inside it (error.js) */
+
+.error-page {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(40px, 6vw, 112px);
+  min-height: var(--vh);
+  padding: calc(var(--nav-h) + 40px) var(--pad) 80px;
+}
+
+.error-art {
+  display: flex;
+  justify-content: center;
+  font-weight: 300;
+  font-size: clamp(8rem, 22vw, 20rem);
+  line-height: .9;
+  letter-spacing: -.06em;
+  user-select: none;
+}
+
+.error-digit {
+  position: relative;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--rule);
+}
+
+.error-digit--home {
+  -webkit-text-stroke-color: var(--brand-coral);
+}
+
+/* the dot lives inside the zero; error.js keeps it within the inner oval */
+.error-dot {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: .1em;
+  height: .1em;
+  margin: -.05em 0 0 -.05em;
+  border-radius: 50%;
+  background: var(--brand-coral);
+  will-change: transform;
+}
+
+.error-copy h1 {
+  margin-top: 22px;
+  font-weight: 300;
+  font-size: clamp(44px, 6vw, 104px);
+  line-height: 1.02;
+  letter-spacing: -.05em;
+}
+
+.error-copy h1 em {
+  display: block;
+}
+
+.error-copy .lead {
+  margin-top: 20px;
+}
+
+.error-links ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  list-style: none;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.error-links a {
+  transition: color .25s;
+}
+
+.error-links a:hover {
+  color: var(--coral);
+}
+
+/* Mobile: the code is centered and as wide as the floating nav (the content width) */
+@media (max-width: 900px) {
+  .error-page {
+    grid-template-columns: 1fr;
+    align-content: center;
+    gap: 40px;
+  }
+
+  .error-art {
+    font-size: calc((100vw - 2 * var(--pad)) / 1.62);
+  }
+}
+
+/* ==== footer.css ==== */
+/* Footer: always dark (tokens from base.css) */
+
+.footer {
+  padding: clamp(72px, 8vw, 128px) var(--edge) 28px;
+  overflow: hidden;
+  background: var(--black);
+  color: var(--fg);
+}
+
+.footer-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px;
+}
+
+.footer-heading {
+  margin-bottom: 22px;
+  font-weight: 500;
+  font-size: clamp(26px, 2.2vw, 34px);
+  line-height: 1.1;
+  letter-spacing: -.03em;
+}
+
+.footer-col a,
+.footer-col > span {
+  display: block;
+  width: fit-content;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 2;
+  transition: color .25s;
+}
+
+.footer-col a:hover,
+.footer-menu a.is-active {
+  color: var(--coral);
+}
+
+.footer-menu a.is-active span {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 6px;
+}
+
+.footer-social {
+  --social-size: 34px;
+  --social-gap: clamp(24px, 3vw, 44px);
+  justify-content: center;
+  margin-top: clamp(40px, 4vw, 64px);
+}
+
+/* Large wireframe logo; only the dot is solid (bounces, footer.js) */
+.footer-logo {
+  margin-top: clamp(40px, 4vw, 64px);
+}
+
+.footer-logo svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.footer-logo .logo-frame,
+.footer-logo .logo-word {
+  fill: none;
+  stroke: var(--fg);
+  stroke-opacity: .26;
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+
+.footer-logo .logo-dot {
+  fill: var(--brand-coral);
+}
+
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px 28px;
+  margin-top: 28px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+}
+
+.footer-bottom a,
+.footer-bottom button {
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  transition: color .25s;
+}
+
+.footer-bottom a:hover,
+.footer-bottom button:hover {
+  color: var(--fg);
+}
+
+.footer-bottom b,
+.footer-clock {
+  color: var(--coral);
+}
+
+.footer-bottom .lang-switch {
+  height: auto;
+}
+
+@media (min-width: 901px) {
+  .footer-cols > :nth-child(2) {
+    justify-self: center;
+  }
+
+  .footer-cols > :nth-child(3) {
+    justify-self: end;
+  }
+}
+
+@media (max-width: 900px) {
+  .footer-cols {
+    grid-template-columns: 1fr;
+    row-gap: 0;
+  }
+
+  .footer-col {
+    padding: 28px 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .footer-col:first-child {
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  .footer-bottom {
+    justify-content: flex-start;
+  }
+}
+
+/* ==== cookie.css ==== */
+/* Cookie consent: small dark panel, bottom left (tokens from base.css). Reopened from the footer. */
+
+.cookie {
+  position: fixed;
+  left: 16px;
+  bottom: 16px;
+  z-index: 80;
+  width: min(420px, calc(100vw - 32px));
+  max-height: calc(var(--vh) - 32px);
+  padding: 24px;
+  overflow-y: auto;
+  border: 1px solid var(--rule);
+  background: var(--black);
+  color: var(--fg);
+  box-shadow: 0 24px 60px -24px color-mix(in srgb, var(--black) 60%, transparent);
+}
+
+.cookie[hidden] {
+  display: none;
+}
+
+.cookie-title {
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: -.01em;
+}
+
+.cookie-text {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.cookie-text a {
+  color: var(--fg);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.cookie-choices fieldset {
+  margin-top: 18px;
+  border: 0;
+}
+
+.cookie-choices legend {
+  margin-bottom: 8px;
+  color: var(--muted);
+}
+
+.cookie-choice {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  gap: 12px;
+  padding: 10px 0;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.cookie-choice input {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  accent-color: var(--coral);
+}
+
+.cookie-choice b {
+  display: block;
+  color: var(--fg);
+  font-weight: 500;
+}
+
+.cookie-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Accept and reject carry the same weight on purpose */
+.cookie-actions .btn {
+  flex: 1 1 auto;
+  justify-content: center;
+}
+
+.cookie-actions .btn span {
+  width: 100%;
+  justify-content: center;
+}
+
+.cookie-customize {
+  flex-basis: 100%;
+  padding: 6px 0 2px;
+  text-align: left;
+}
+

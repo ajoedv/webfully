@@ -1,0 +1,53 @@
+<section class="contact tone-a" aria-labelledby="contact-form-title">
+  <aside class="contact-info" aria-label="{{ s.info_label }}">
+    <h2 class="mono section-label">{{ s.direct_label }}</h2>
+    <dl class="contact-list">
+      {% if site.contact.email %}<div><dt>{{ s.email_label }}</dt><dd><a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a></dd></div>{% endif %}
+      {% if site.contact.phone %}<div><dt>{{ s.phone_label }}</dt><dd><a href="tel:{{ site.contact.phone_e164 }}">{{ site.contact.phone }}</a></dd></div>{% endif %}
+      <div><dt>{{ s.place_label }}</dt><dd>{{ site.contact.city }}</dd></div>
+      {% if site.contact.org_no %}<div><dt>{{ s.org_label }}</dt><dd>{{ site.contact.org_no }}</dd></div>{% endif %}
+    </dl>
+    <p class="contact-reply">{{ s.reply }}</p>
+  </aside>
+  <form class="contact-form" action="{% if form_endpoint %}{{ form_endpoint }}{% else %}#{% endif %}" method="post" novalidate aria-labelledby="contact-form-title"{% if form_endpoint %} data-endpoint="{{ form_endpoint }}"{% endif %}>
+    <input type="hidden" name="action" value="wf_contact">
+    <input type="hidden" name="lang" value="{{ lang }}">
+    <input type="hidden" name="started" value="">
+    <div class="field-trap" aria-hidden="true"><label for="field-fax">Fax</label><input id="field-fax" name="fax" type="text" tabindex="-1" autocomplete="off"></div>
+    <h2 class="contact-form-title" id="contact-form-title">{{ s.form_title }}</h2>
+    <p class="contact-required mono" id="contact-required">{{ s.required_note }}</p>
+    <div class="form-error-summary" role="alert" tabindex="-1" hidden>
+      <h3>{{ s.errors_title }}</h3>
+      <ul></ul>
+    </div>
+    <div class="form-grid">
+      {% for f in s.fields %}{% if f.multiple %}<fieldset class="field field--{{ f.width }} field-group" id="field-{{ f.name }}" tabindex="-1"{% if f.required %} data-required="true"{% endif %} aria-describedby="field-{{ f.name }}-error" data-error="{{ f.error }}">
+        <legend class="field-label">{{ f.label }}{% if f.required %} <span class="field-required" aria-hidden="true">*</span>{% endif %}</legend>
+        <div class="field-options">
+          {% for o in f.options %}<label class="field-option"><input class="field-check" type="checkbox" name="{{ f.name }}[]" value="{{ o.value }}"><span>{{ o.label }}</span></label>
+          {% endfor %}
+        </div>
+        <p class="field-error" id="field-{{ f.name }}-error"></p>
+      </fieldset>
+      {% else %}<div class="field field--{{ f.width }}">
+        <label class="field-label" for="field-{{ f.name }}">{{ f.label }}{% if f.required %} <span class="field-required" aria-hidden="true">*</span>{% endif %}</label>
+        {% if f.hint %}<p class="field-hint" id="field-{{ f.name }}-hint">{{ f.hint }}</p>{% endif %}
+        {% if f.options %}<select class="field-input" id="field-{{ f.name }}" name="{{ f.name }}"{% if f.required %} required aria-required="true"{% endif %} aria-describedby="field-{{ f.name }}-error" data-error="{{ f.error }}">
+          <option value="">{{ s.select_placeholder }}</option>
+          {% for o in f.options %}<option value="{{ o.value }}">{{ o.label }}</option>
+          {% endfor %}
+        </select>{% else %}{% if f.textarea %}<textarea class="field-input" id="field-{{ f.name }}" name="{{ f.name }}" rows="6"{% if f.required %} required aria-required="true"{% endif %} aria-describedby="{% if f.hint %}field-{{ f.name }}-hint {% endif %}field-{{ f.name }}-error" data-error="{{ f.error }}"></textarea>{% else %}<input class="field-input" id="field-{{ f.name }}" name="{{ f.name }}" type="{{ f.type }}" autocomplete="{{ f.autocomplete }}"{% if f.placeholder %} placeholder="{{ f.placeholder }}"{% endif %}{% if f.required %} required aria-required="true"{% endif %} aria-describedby="field-{{ f.name }}-error" data-error="{{ f.error }}">{% endif %}{% endif %}
+        <p class="field-error" id="field-{{ f.name }}-error"></p>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+    <div class="field field--consent">
+      <input class="field-check" id="field-consent" name="consent" type="checkbox" required aria-required="true" aria-describedby="field-consent-error" data-error="{{ s.consent_error }}">
+      <label for="field-consent">{{ s.consent }} <a href="{{ privacy_url }}">{{ s.consent_link }}</a>.</label>
+      <p class="field-error" id="field-consent-error"></p>
+    </div>
+    <button class="btn contact-submit" type="submit"><span>{{ s.submit }}</span><i aria-hidden="true"><b>↗</b></i></button>
+    <p class="form-status" role="status" aria-live="polite" data-success="{{ s.success }}" data-failed="{{ s.send_error }}"></p>
+  </form>
+</section>

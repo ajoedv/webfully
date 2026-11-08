@@ -1,0 +1,380 @@
+/* Pricing: two package cards with a yearly/monthly switch, add-ons, custom offer; each opens a sheet in a dialog (pricing.js) */
+
+.pricing {
+  padding: clamp(96px, 11vw, 180px) var(--pad) clamp(80px, 9vw, 150px);
+}
+
+.pricing-head h2 {
+  margin-top: 22px;
+  font-weight: 300;
+  font-size: clamp(40px, 5.8vw, 104px);
+  line-height: 1.05;
+  letter-spacing: -.05em;
+}
+
+.pricing-head .lead {
+  margin-top: clamp(20px, 2.2vw, 30px);
+}
+
+.billing {
+  display: inline-flex;
+  margin-top: clamp(40px, 4vw, 64px);
+  border: 1px solid var(--rule);
+}
+
+.billing-option {
+  min-height: 44px;
+  padding: 0 24px;
+  font-size: 15px;
+  color: var(--muted);
+  transition: color .25s, background .25s;
+}
+
+.billing-option.is-active {
+  background: var(--coral);
+  color: var(--charcoal);
+}
+
+/* The yearly price shows by default; the switch (pricing.js) sets .is-month on the section */
+.when-month {
+  display: none;
+}
+
+.pricing.is-month .when-year {
+  display: none;
+}
+
+.pricing.is-month .when-month {
+  display: inline;
+}
+
+.packages {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(16px, 2vw, 28px);
+  margin-top: clamp(24px, 3vw, 40px);
+  list-style: none;
+}
+
+.package {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: clamp(28px, 2.6vw, 40px);
+  border: 1px solid var(--rule);
+}
+
+.package--featured {
+  border-color: var(--coral);
+}
+
+.package-badge {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: var(--coral);
+  color: var(--charcoal);
+}
+
+/* The travelling dot rests on the top edge of the last package and hops when the pointer comes near (pricing.js) */
+.package-dot {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  margin: -9px 0 0 -9px;
+  border-radius: 50%;
+  background: var(--brand-coral);
+}
+
+.package-dot.is-hopping {
+  animation: dot-hop .7s cubic-bezier(.3, 0, .3, 1);
+}
+
+@keyframes dot-hop {
+  35% {
+    transform: translateY(-42px) scale(.94, 1.06);
+  }
+
+  70% {
+    transform: translateY(0) scale(1.18, .78);
+  }
+
+  85% {
+    transform: translateY(-8px);
+  }
+}
+
+.package-name {
+  font-weight: 400;
+  font-size: clamp(30px, 2.6vw, 44px);
+  letter-spacing: -.03em;
+}
+
+.package-summary {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.package-price {
+  margin-top: 28px;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.package-amount {
+  font-weight: 300;
+  font-size: clamp(48px, 4.4vw, 76px);
+  line-height: 1;
+  letter-spacing: -.05em;
+}
+
+.package-unit {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.package-features {
+  margin-top: 24px;
+  list-style: none;
+}
+
+.package-features li {
+  display: flex;
+  gap: 12px;
+  padding: 10px 0;
+  border-top: 1px solid var(--line);
+  font-size: 15px;
+}
+
+.package-features li::before {
+  content: "";
+  flex: none;
+  width: 5px;
+  height: 5px;
+  margin-top: .55em;
+  border-radius: 50%;
+  background: var(--coral);
+}
+
+.package-open {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+.package .package-features {
+  margin-bottom: 32px;
+}
+
+.pricing-note {
+  margin-top: 28px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* Package sheet: a centered upright rectangle with space on every side, the page visible around it */
+.package-dialog {
+  --sheet-gap: clamp(16px, 5vh, 48px);
+  width: min(680px, calc(100% - 2 * var(--sheet-gap)));
+  max-width: none;
+  height: calc(100% - 2 * var(--sheet-gap));
+  max-height: none;
+  margin: auto;
+  padding: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  border: 1px solid var(--rule);
+  background: var(--bg);
+  color: var(--fg);
+}
+
+.package-dialog::backdrop {
+  background: color-mix(in srgb, var(--black) 55%, transparent);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+
+.package-dialog[open] {
+  animation: sheet-in .45s cubic-bezier(.2, .7, .2, 1);
+}
+
+@keyframes sheet-in {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+}
+
+.package-sheet {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: clamp(56px, 6vw, 88px) clamp(24px, 4vw, 56px) 0;
+}
+
+.package-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--rule);
+  font-size: 22px;
+  line-height: 1;
+  transition: color .25s, border-color .25s;
+}
+
+.package-close:hover {
+  border-color: var(--coral);
+  color: var(--coral);
+}
+
+.package-sheet-title {
+  margin-top: 18px;
+  font-weight: 300;
+  font-size: clamp(44px, 5vw, 80px);
+  line-height: 1.05;
+  letter-spacing: -.05em;
+}
+
+.package-sheet-title em {
+  display: block;
+  margin-top: .12em;
+  font-size: .55em;
+  color: var(--coral);
+}
+
+.package-group {
+  margin-top: 32px;
+}
+
+.package-group h4 {
+  color: var(--muted);
+}
+
+.package-group .package-features {
+  margin-top: 10px;
+}
+
+.package-terms {
+  margin-top: 32px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* The final price sits at the very end, always in view at the bottom of the sheet */
+.package-total {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: auto;
+  padding: 24px 0;
+  border-top: 1px solid var(--rule);
+  background: var(--bg);
+}
+
+.package-total .package-price {
+  margin-top: 0;
+}
+
+.is-dialog-open {
+  overflow: hidden;
+}
+
+/* Add-ons: one wide panel under the packages, a priced list */
+.addons,
+.custom-offer {
+  margin-top: clamp(56px, 6vw, 96px);
+  padding: clamp(28px, 2.6vw, 40px);
+  border: 1px solid var(--rule);
+}
+
+.addons-title {
+  margin-top: 18px;
+  font-weight: 300;
+  font-size: clamp(30px, 3.4vw, 56px);
+  line-height: 1.1;
+  letter-spacing: -.04em;
+}
+
+.addons-title em {
+  color: var(--coral);
+}
+
+.addons .lead,
+.custom-offer .lead {
+  margin-top: 16px;
+}
+
+.addon-list {
+  margin: clamp(28px, 3vw, 44px) 0 24px;
+  list-style: none;
+}
+
+.addon {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px 32px;
+  padding: 18px 0;
+  border-top: 1px solid var(--line);
+}
+
+.addon-text {
+  flex: 1 1 320px;
+}
+
+.addon-name {
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: -.02em;
+}
+
+.addon-text p {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.addon-price {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.addon-amount {
+  font-weight: 300;
+  font-size: clamp(26px, 2.2vw, 34px);
+  letter-spacing: -.03em;
+}
+
+.addons > .btn,
+.custom-offer > .btn {
+  margin-top: 24px;
+}
+
+.addons > .pricing-note {
+  margin-top: 0;
+}
+
+@media (max-width: 1000px) {
+  .packages {
+    grid-template-columns: 1fr;
+  }
+}

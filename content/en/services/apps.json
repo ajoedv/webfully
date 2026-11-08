@@ -1,0 +1,186 @@
+{
+  "kind": "service",
+  "meta": {
+    "title": "Apps and digital products — WebFully",
+    "description": "We design and build apps, web apps and digital products that solve real problems, from the first idea and prototype to launch."
+  },
+  "chapter": {
+    "name": "Apps",
+    "accent": "that get used.",
+    "summary": "Digital products people want to use and companies can grow with. From idea and prototype to launch.",
+    "button": "Explore apps",
+    "tags": [
+      "Product strategy",
+      "UX",
+      "UI",
+      "Web apps",
+      "Mobile apps",
+      "AI integrations"
+    ]
+  },
+  "sections": [
+    {
+      "type": "service-hero",
+      "label": "Digital products",
+      "title": "Apps and",
+      "accent": "custom software.",
+      "lead": "We design and build apps and software that solve real problems, win customers and grow with you."
+    },
+    {
+      "type": "capabilities",
+      "count": "6 disciplines",
+      "title": "From idea",
+      "accent": "to everyday use.",
+      "lead": "A successful product is not defined by its number of features but by how clearly it solves a problem.",
+      "items": [
+        {
+          "title": "Product strategy",
+          "text": "The right problem, the right users, the right first version."
+        },
+        {
+          "title": "UX",
+          "text": "Flows that feel obvious."
+        },
+        {
+          "title": "UI",
+          "text": "Interfaces that are clear and beautiful."
+        },
+        {
+          "title": "Web apps",
+          "text": "Apps that run straight in the browser."
+        },
+        {
+          "title": "Mobile apps",
+          "text": "Apps for iOS and Android."
+        },
+        {
+          "title": "AI integrations",
+          "text": "Smart features where they truly help."
+        }
+      ]
+    },
+    {
+      "type": "builds",
+      "label": "What we build",
+      "title": "Four kinds of",
+      "accent": "product.",
+      "lead": "Strategy, design and development in the same room, from the first sketch to release.",
+      "cards": [
+        {
+          "title": "Customer portal",
+          "text": "Customers handle bookings and requests themselves.",
+          "placeholder": "logged-in customer portal",
+          "image": "/assets/services/apps-customer-portal.webp",
+          "alt": "Logged-in customer portal for a logistics company on a laptop",
+          "ratio": "4 / 3",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "title": "Mobile app",
+          "text": "An app in your customers' pockets.",
+          "placeholder": "app screens on a phone",
+          "image": "/assets/services/apps-mobile-screens.webp",
+          "alt": "App screens on three phones: login, orders and order details",
+          "ratio": "4 / 5",
+          "width": 960,
+          "height": 1200
+        },
+        {
+          "title": "Internal tool",
+          "text": "Less admin, more time.",
+          "placeholder": "dashboard for an internal tool",
+          "image": "/assets/services/apps-internal-dashboard.webp",
+          "alt": "Dashboard for an internal tool with an order list and deliveries per day",
+          "ratio": "4 / 3",
+          "width": 1200,
+          "height": 900
+        }
+      ]
+    },
+    {
+      "type": "phases",
+      "label": "From signal to scale",
+      "title": "Five steps.",
+      "accent": "One product team.",
+      "lead": "Strategy, design and engineering move together. Every step reduces uncertainty.",
+      "steps": [
+        {
+          "title": "Discover",
+          "text": "The problem, the users and the goal."
+        },
+        {
+          "title": "Prototype",
+          "text": "A clickable prototype to test early."
+        },
+        {
+          "title": "Design",
+          "text": "Full interface and design system."
+        },
+        {
+          "title": "Development",
+          "text": "The first version, built to grow."
+        },
+        {
+          "title": "Launch and beyond",
+          "text": "Release, measurement and the next version."
+        }
+      ]
+    },
+    {
+      "type": "proof",
+      "label": "Architecture & scale",
+      "title": "Built for",
+      "accent": "real use.",
+      "lead": "A prototype can impress and still fall over in its first week. We build the system behind the interface so it holds.",
+      "points": [
+        {
+          "title": "Secure",
+          "text": "Login and data protected from the start."
+        },
+        {
+          "title": "Scalable",
+          "text": "Architecture that handles more users."
+        },
+        {
+          "title": "Maintainable",
+          "text": "Code you can keep building on."
+        }
+      ],
+      "placeholder": "architecture sketch for an app",
+      "image": "/assets/services/apps-architecture-sketch.webp",
+      "alt": "Architecture sketch for an app: client, API, database, payment and email",
+      "width": 1400,
+      "height": 1050
+    },
+    {
+      "type": "faq",
+      "title": "Questions we often get",
+      "accent": "and our answers.",
+      "items": [
+        {
+          "q": "What does an app cost?",
+          "a": "It depends entirely on the scope. We often start with a fixed-price prototype."
+        },
+        {
+          "q": "Web app or mobile app?",
+          "a": "A web app is often enough and faster to build. We help you choose."
+        },
+        {
+          "q": "How long does it take?",
+          "a": "A first version often takes two to four months."
+        },
+        {
+          "q": "Do we own the code?",
+          "a": "We agree on that clearly in every project."
+        }
+      ]
+    },
+    {
+      "type": "related"
+    },
+    {
+      "type": "cta"
+    }
+  ]
+}

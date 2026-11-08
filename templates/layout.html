@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="{{ common.html_lang }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{ page.meta.title }}</title>
+<meta name="description" content="{{ page.meta.description }}">
+{% if page.noindex %}<meta name="robots" content="noindex, follow">
+{% else %}<link rel="canonical" href="{{ abs_url }}">
+{% for alt in alternates %}<link rel="alternate" hreflang="{{ alt.lang }}" href="{{ alt.href }}">
+{% endfor %}<link rel="alternate" hreflang="x-default" href="{{ x_default }}">
+{% endif %}<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ site.brand }}">
+<meta property="og:locale" content="{{ common.og_locale }}">
+<meta property="og:title" content="{{ page.meta.title }}">
+<meta property="og:description" content="{{ page.meta.description }}">
+<meta property="og:url" content="{{ abs_url }}">
+<meta property="og:image" content="{{ og_image }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/jpeg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page.meta.title }}">
+<meta name="twitter:description" content="{{ page.meta.description }}">
+<meta name="twitter:image" content="{{ og_image }}">
+<meta name="theme-color" content="#050505">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="{{ asset_url }}/assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script>
+// Before first paint: theme (saved mode or system setting) and the motion flag
+(() => {
+  const root = document.documentElement;
+{% if site.theme_switch %}  let mode = 'auto';
+  try {
+    const saved = localStorage.getItem('wf-theme');
+    if (saved === 'light' || saved === 'dark') mode = saved;
+  } catch (e) {}
+  const systemDark = matchMedia('(prefers-color-scheme: dark)').matches;
+  root.dataset.mode = mode;
+  root.dataset.theme = mode === 'auto' ? (systemDark ? 'dark' : 'light') : mode;
+{% else %}  // the theme switch is hidden (site.json → theme_switch): light for everyone
+  root.dataset.mode = 'light';
+  root.dataset.theme = 'light';
+{% endif %}
+  // motion runs for every visitor, even with prefers-reduced-motion (decision 6 Nov 2026)
+  root.classList.add('motion');
+})();
+</script>
+<link rel="preload" href="{{ asset_url }}/assets/fonts/manrope.woff{% if asset_version %}?v={{ asset_version }}{% endif %}" as="font" type="font/woff" crossorigin>
+{% for file in styles %}<link rel="stylesheet" href="{{ asset_url }}/css/{{ file }}{% if asset_version %}?v={{ asset_version }}{% endif %}">
+{% endfor %}{{ json_ld|raw }}
+</head>
+<body class="page page--{{ page.kind }}">
+<a class="skip-link" href="#main">{{ common.skip_link }}</a>
+{% include "partials/nav.html" %}
+<main id="main" tabindex="-1">
+{{ content|raw }}
+</main>
+{% include "partials/footer.html" %}
+{% include "partials/cookie-banner.html" %}
+{% include "partials/social-template.html" %}
+{% for file in scripts %}<script src="{{ asset_url }}/js/{{ file }}{% if asset_version %}?v={{ asset_version }}{% endif %}" defer></script>
+{% endfor %}</body>
+</html>

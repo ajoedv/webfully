@@ -1,0 +1,182 @@
+{
+  "kind": "service",
+  "meta": {
+    "title": "Support, hosting and domain and email migration — WebFully",
+    "description": "Hosting, updates, booking systems and migration of domains and email. We run the technology so your website always works."
+  },
+  "chapter": {
+    "name": "Support",
+    "accent": "that always answers.",
+    "summary": "Hosting, updates, booking and migration of domains and email. We take care of the technology so you can run the business.",
+    "button": "Explore support",
+    "tags": [
+      "Hosting",
+      "Updates",
+      "Booking",
+      "Email migration",
+      "Domain transfer",
+      "Security"
+    ]
+  },
+  "sections": [
+    {
+      "type": "service-hero",
+      "label": "Operations, maintenance & migration",
+      "title": "The tech is handled.",
+      "accent": "You run the business.",
+      "lead": "A website needs care to keep working. We keep it secure, fast and up to date, and help when something needs to move or connect."
+    },
+    {
+      "type": "capabilities",
+      "count": "6 disciplines",
+      "title": "Everything technical.",
+      "accent": "In one place.",
+      "lead": "From daily backups to moving your entire email. One contact, one responsibility.",
+      "items": [
+        {
+          "title": "Hosting and operations",
+          "text": "Fast hosting, SSL and round-the-clock monitoring."
+        },
+        {
+          "title": "Updates",
+          "text": "Security updates and changes without breaking anything."
+        },
+        {
+          "title": "Booking systems",
+          "text": "Online booking linked to your calendar and reminders."
+        },
+        {
+          "title": "Email migration",
+          "text": "We move mailboxes to a new provider without losing messages."
+        },
+        {
+          "title": "Domain transfer",
+          "text": "Domains and DNS moved safely, without downtime."
+        },
+        {
+          "title": "Security and backup",
+          "text": "Daily backups and quick restores."
+        }
+      ]
+    },
+    {
+      "type": "builds",
+      "label": "What we build",
+      "title": "What",
+      "accent": "keeps it running.",
+      "lead": "Most support goes unnoticed. That is the point.",
+      "cards": [
+        {
+          "title": "Monitoring",
+          "text": "We see problems before your customers do.",
+          "placeholder": "dashboard with uptime and response times",
+          "image": "/assets/services/support-uptime-dashboard.webp",
+          "alt": "Dashboard showing 99.98 percent uptime and response times for a website",
+          "ratio": "4 / 3",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "title": "Booking",
+          "text": "Customers book themselves, day and night.",
+          "placeholder": "booking calendar on mobile",
+          "image": "/assets/services/support-booking-calendar-mobile.webp",
+          "alt": "Booking calendar for a hair salon on a phone",
+          "ratio": "4 / 3",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "title": "Migration",
+          "text": "Email and domains moved on schedule and safely.",
+          "placeholder": "plan for moving email and domain",
+          "image": "/assets/services/support-migration-plan.webp",
+          "alt": "Migration plan: domain, email and website moved from an old to a new server",
+          "ratio": "4 / 3",
+          "width": 1200,
+          "height": 900
+        }
+      ]
+    },
+    {
+      "type": "phases",
+      "label": "From handover to operations",
+      "title": "Four steps.",
+      "accent": "No downtime.",
+      "lead": "We start by understanding what you have today, then move or take over without anything stopping.",
+      "steps": [
+        {
+          "title": "Review",
+          "text": "We go through domain, email, hosting and systems."
+        },
+        {
+          "title": "Plan",
+          "text": "A clear plan with times, so nothing comes as a surprise."
+        },
+        {
+          "title": "Move or take over",
+          "text": "We move and test, step by step."
+        },
+        {
+          "title": "Ongoing operations",
+          "text": "Updates, backups and support every month."
+        }
+      ]
+    },
+    {
+      "type": "proof",
+      "label": "Reliable operations",
+      "title": "One number",
+      "accent": "to call.",
+      "lead": "When something goes wrong you want to talk to someone who knows your site. We do.",
+      "points": [
+        {
+          "title": "Fast replies",
+          "text": "An answer within one working day, usually the same day."
+        },
+        {
+          "title": "Planned",
+          "text": "Changes are made when they disturb the least."
+        },
+        {
+          "title": "Documented",
+          "text": "You always know what was done and why."
+        }
+      ],
+      "placeholder": "illustration of operations: server, lock and calendar",
+      "image": "/assets/services/support-hosting-illustration.webp",
+      "alt": "Technical sketch of a server, a lock and a calendar standing for hosting and security",
+      "width": 1400,
+      "height": 1050
+    },
+    {
+      "type": "faq",
+      "title": "Questions we often get",
+      "accent": "and our answers.",
+      "items": [
+        {
+          "q": "Can you take over an existing website?",
+          "a": "Yes, after a review we take over hosting and support for most websites."
+        },
+        {
+          "q": "Will emails get lost when email moves?",
+          "a": "No. We move the content and switch over in the right order so nothing is lost."
+        },
+        {
+          "q": "Will the site go down when the domain moves?",
+          "a": "With the right planning there is no noticeable downtime."
+        },
+        {
+          "q": "What does operations include?",
+          "a": "Hosting, SSL, backups, updates, monitoring and support."
+        }
+      ]
+    },
+    {
+      "type": "related"
+    },
+    {
+      "type": "cta"
+    }
+  ]
+}

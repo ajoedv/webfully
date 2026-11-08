@@ -1,0 +1,118 @@
+/* Accordion: capabilities and FAQ. Numbered rows; hover slides the title, the open row turns coral (accordion.js) */
+
+.accordion {
+  list-style: none;
+  border-bottom: 1px solid var(--line);
+}
+
+.accordion-item {
+  border-top: 1px solid var(--line);
+}
+
+.accordion-heading {
+  font: inherit;
+}
+
+.accordion-toggle {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) 28px;
+  align-items: center;
+  gap: clamp(16px, 2vw, 32px);
+  width: 100%;
+  padding: clamp(20px, 2vw, 30px) 0;
+  text-align: left;
+}
+
+.faq .accordion-toggle {
+  grid-template-columns: minmax(0, 1fr) 28px;
+}
+
+/* a coral line draws in under the hovered row */
+.accordion-toggle::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 1px;
+  background: var(--coral);
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition: transform .5s cubic-bezier(.76, 0, .24, 1);
+}
+
+.accordion-toggle:hover::after,
+.accordion-toggle:focus-visible::after {
+  transform: none;
+}
+
+.accordion-no {
+  color: var(--muted);
+}
+
+.accordion-title {
+  font-weight: 400;
+  font-size: clamp(24px, 2.6vw, 44px);
+  line-height: 1.1;
+  letter-spacing: -.035em;
+  transition:
+    transform .45s cubic-bezier(.2, .7, .2, 1),
+    color .3s;
+}
+
+.faq .accordion-title {
+  font-size: clamp(19px, 1.7vw, 26px);
+  letter-spacing: -.02em;
+}
+
+.accordion-toggle:hover .accordion-title {
+  transform: translateX(8px);
+}
+
+.accordion-toggle[aria-expanded="true"] .accordion-title {
+  color: var(--coral);
+}
+
+/* plus that turns into a minus */
+.accordion-icon {
+  position: relative;
+  justify-self: end;
+  width: 16px;
+  height: 16px;
+}
+
+.accordion-icon::before,
+.accordion-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 16px;
+  height: 1px;
+  background: var(--coral);
+  transition: transform .3s;
+}
+
+.accordion-icon::after {
+  transform: rotate(90deg);
+}
+
+[aria-expanded="true"] .accordion-icon::after {
+  transform: rotate(0);
+}
+
+.accordion-panel {
+  padding: 0 0 clamp(22px, 2vw, 32px);
+}
+
+.capabilities .accordion-panel {
+  padding-left: calc(2ch + clamp(16px, 2vw, 32px));
+}
+
+.accordion-panel p {
+  max-width: 60ch;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.7;
+}

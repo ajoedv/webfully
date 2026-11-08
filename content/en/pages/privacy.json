@@ -1,0 +1,94 @@
+{
+  "kind": "legal",
+  "meta": {
+    "title": "Privacy policy — WebFully",
+    "description": "How WebFully processes personal data and cookies under the GDPR."
+  },
+  "breadcrumb": [
+    {
+      "name": "Home",
+      "url": "/en/"
+    },
+    {
+      "name": "Privacy policy",
+      "url": "/en/privacy/"
+    }
+  ],
+  "sections": [
+    {
+      "type": "page-hero",
+      "label": "Privacy / GDPR",
+      "title": "Privacy",
+      "accent": "policy.",
+      "lead": "Here we describe what data we collect, why and for how long, and which rights you have."
+    },
+    {
+      "type": "legal",
+      "label": "Privacy / GDPR",
+      "updated": "Last updated: 7 November 2026 (draft)",
+      "parts": [
+        {
+          "id": "controller",
+          "title": "Data controller",
+          "paragraphs": [
+            "WebFully is run by [Company name AB], reg. no. 000000-0000, Mjölby, Sweden, which is the controller for the processing of your data. Contact: info@webfully.se."
+          ]
+        },
+        {
+          "id": "data",
+          "title": "What data we collect",
+          "paragraphs": [
+            "When you send an enquiry through the form we process the details you provide."
+          ],
+          "list": [
+            "Name and company",
+            "Email address and phone number",
+            "Type of work, budget and your description"
+          ]
+        },
+        {
+          "id": "purpose",
+          "title": "Why we process the data",
+          "paragraphs": [
+            "We use the data to answer your enquiry, prepare a proposal and, if we start working together, to fulfil the agreement. The legal basis is your consent and our legitimate interest in answering enquiries."
+          ]
+        },
+        {
+          "id": "storage",
+          "title": "How long we keep it",
+          "paragraphs": [
+            "Enquiries that do not lead to an assignment are deleted after 12 months. Data required for bookkeeping is kept as long as the law requires."
+          ]
+        },
+        {
+          "id": "recipients",
+          "title": "Who can access it",
+          "paragraphs": [
+            "We never sell your data. We use providers for hosting and email who process data on our behalf under data processing agreements."
+          ]
+        },
+        {
+          "id": "cookies",
+          "title": "Cookies",
+          "paragraphs": [
+            "Today the site only uses necessary storage in your browser: your colour mode and your cookie choice. We use no cookies for statistics or marketing. If we add them we will ask first, and you can change your choice through Cookie settings at the bottom of the page."
+          ]
+        },
+        {
+          "id": "rights",
+          "title": "Your rights",
+          "paragraphs": [
+            "You have the right to know what data we hold about you, to have it corrected or erased, to restrict processing, to object, and to receive it in a machine-readable format. You can withdraw your consent at any time."
+          ]
+        },
+        {
+          "id": "complaints",
+          "title": "Complaints",
+          "paragraphs": [
+            "If you believe we process your data incorrectly, contact us or file a complaint with the Swedish Authority for Privacy Protection (IMY), imy.se."
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{% if s.hidden %}<section class="testimonials testimonials--hidden tone-b" aria-hidden="true">
+  <span class="testimonials-line" data-journey="line" aria-hidden="true"></span>
+</section>
+{% else %}<section class="testimonials tone-b" aria-labelledby="testimonials-title" aria-roledescription="{{ s.roledescription }}">
+  <div class="testimonials-head">
+    <p class="mono section-label">{{ s.label }}</p>
+    <h2 class="testimonials-title" id="testimonials-title">{{ s.title }} <em>{{ s.accent }}</em></h2>
+  </div>
+  <div class="testimonials-stage">
+    {% for t in s.items %}<figure class="testimonial{% if loop.first %} is-current{% endif %}" aria-roledescription="{{ s.slide_label }}" aria-label="{{ loop.index }} / {{ s.count }}"{% if not loop.first %} aria-hidden="true"{% endif %}>
+      <div class="media testimonial-media" style="--ratio: 4 / 3">
+        {% if t.image %}<img src="{{ asset_url }}{{ t.image }}" alt="{{ t.alt }}"{% if t.width %} width="{{ t.width }}" height="{{ t.height }}"{% endif %} loading="lazy" decoding="async">{% endif %}
+        {% include "partials/image-placeholder.html" %}
+        <p class="media-note mono">{{ common.image_label }}: {{ t.placeholder }}</p>
+      </div>
+      <blockquote class="testimonial-quote">
+        <p>{{ t.quote }}</p>
+      </blockquote>
+      <figcaption class="testimonial-source"><b>{% if t.url %}<a href="{{ t.url }}" target="_blank" rel="noopener">{{ t.name }}</a>{% else %}{{ t.name }}{% endif %}</b><span>{{ t.company }}</span></figcaption>
+    </figure>
+    {% endfor %}
+  </div>
+  <div class="testimonials-controls">
+    <button class="testimonials-prev" type="button" aria-label="{{ s.prev }}"><span aria-hidden="true">←</span></button>
+    <p class="testimonials-count mono" aria-hidden="true"><b class="testimonials-index">01</b> / {{ s.count }}</p>
+    <button class="testimonials-next" type="button" aria-label="{{ s.next }}"><span aria-hidden="true">→</span></button>
+    <button class="testimonials-pause link mono" type="button" aria-pressed="false" data-pause="{{ s.pause }}" data-play="{{ s.play }}">{{ s.pause }}</button>
+  </div>
+  <span class="testimonials-line" data-journey="line" aria-hidden="true"></span>
+</section>
+{% endif %}

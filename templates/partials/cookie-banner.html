@@ -1,0 +1,20 @@
+<section class="cookie" role="dialog" aria-modal="false" aria-labelledby="cookie-title" aria-describedby="cookie-text" hidden>
+  <h2 class="cookie-title" id="cookie-title">{{ common.cookie.title }}</h2>
+  <p class="cookie-text" id="cookie-text">{{ common.cookie.text }} <a href="{{ privacy_url }}#{{ common.ids.cookies }}">{{ common.cookie.read_more }}</a></p>
+  <form class="cookie-choices" id="cookie-choices" hidden>
+    <fieldset>
+      <legend class="mono">{{ common.cookie.categories }}</legend>
+      {% for c in common.cookie.items %}<label class="cookie-choice">
+        <input type="checkbox" name="{{ c.key }}"{% if c.required %} checked disabled{% endif %}>
+        <span><b>{{ c.name }}</b>{{ c.text }}</span>
+      </label>
+      {% endfor %}
+    </fieldset>
+  </form>
+  <div class="cookie-actions">
+    <button class="btn btn--sm" type="button" data-consent="accept"><span>{{ common.cookie.accept }}</span></button>
+    <button class="btn btn--sm" type="button" data-consent="reject"><span>{{ common.cookie.reject }}</span></button>
+    <button class="cookie-customize link mono" type="button" aria-expanded="false" aria-controls="cookie-choices">{{ common.cookie.customize }}</button>
+    <button class="btn btn--sm cookie-save" type="button" data-consent="save" hidden><span>{{ common.cookie.save }}</span></button>
+  </div>
+</section>

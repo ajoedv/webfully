@@ -1,0 +1,7 @@
+<nav class="related tone-b" aria-labelledby="related-title">
+  <h2 class="mono section-label" id="related-title">{{ common.related_label }}</h2>
+  <ul class="related-list">
+    {% for service in page.related %}<li><a class="related-link" href="{{ service.url }}"><span class="mono" aria-hidden="true">{{ service.number }}</span>{{ service.name }}<i aria-hidden="true">↗</i></a></li>
+    {% endfor %}
+  </ul>
+</nav>

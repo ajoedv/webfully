@@ -1,0 +1,38 @@
+<header class="nav">
+  <a class="brand" href="{{ home_url }}" aria-label="{{ common.nav.home_label }}">{% include "partials/logo-horizontal.html" %}</a>
+  <nav class="nav-main" aria-label="{{ common.nav.label }}">
+    <ul class="nav-links">
+      <li><a class="nav-link" href="{{ home_url }}" data-nav="home">{{ common.nav.home }}</a></li>
+      <li class="nav-item--services">
+        <button class="nav-link nav-services-toggle" type="button" aria-expanded="false" aria-controls="nav-services" data-nav="services" data-target="{{ home_url }}#{{ common.ids.services }}">{{ common.nav.services }}<span class="nav-caret" aria-hidden="true"></span></button>
+        <div class="nav-services" id="nav-services">
+          <ul class="nav-services-list">
+            {% for service in services %}<li><a class="nav-service" href="{{ service.url }}"><span class="mono">{{ service.number }}</span>{{ service.name }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+      </li>
+      <li><a class="nav-link" href="{{ home_url }}#{{ common.ids.pricing }}" data-nav="pricing">{{ common.nav.pricing }}</a></li>
+      <li><a class="nav-link" href="{{ special_url }}" data-nav="special">{{ common.nav.special }}</a></li>
+      <li><a class="nav-link" href="{{ contact_url }}" data-nav="contact">{{ common.nav.contact }}</a></li>
+    </ul>
+  </nav>
+  <div class="nav-actions">
+    {% include "partials/lang-switch.html" %}
+    {% if site.theme_switch %}<button class="theme-toggle mono" type="button" aria-label="{{ common.theme.label }}: {{ common.theme.auto }}" data-labels='{"auto":"{{ common.theme.auto }}","light":"{{ common.theme.light }}","dark":"{{ common.theme.dark }}","prefix":"{{ common.theme.label }}"}'><i aria-hidden="true"></i><span>{{ common.theme.auto }}</span></button>{% endif %}
+    <a class="btn btn--sm nav-cta" href="{{ cta_href }}"><span>{{ common.cta_button }}</span><i aria-hidden="true"><b>↗</b></i></a>
+    <button class="menu-toggle" type="button" aria-label="{{ common.nav.menu }}" aria-expanded="false" aria-controls="mobile-menu"><i aria-hidden="true"></i></button>
+  </div>
+</header>
+<nav class="mobile-menu" id="mobile-menu" aria-label="{{ common.nav.label }}">
+  <a class="menu-link" href="{{ home_url }}" data-nav="home"><span>{{ common.nav.home }}</span></a>
+  <p class="menu-heading mono">{{ common.nav.services }}</p>
+  <ul class="menu-services">
+    {% for service in services %}<li><a class="menu-service" href="{{ service.url }}"><span class="mono">{{ service.number }}</span>{{ service.name }}</a></li>
+    {% endfor %}
+  </ul>
+  <a class="menu-link" href="{{ home_url }}#{{ common.ids.pricing }}" data-nav="pricing"><span>{{ common.nav.pricing }}</span></a>
+  <a class="menu-link" href="{{ special_url }}" data-nav="special"><span>{{ common.nav.special }}</span></a>
+  <a class="menu-link" href="{{ contact_url }}" data-nav="contact"><span>{{ common.nav.contact }}</span></a>
+  <div class="mobile-menu-actions"><a class="btn" href="{{ cta_href }}"><span>{{ common.cta_button }}</span><i aria-hidden="true"><b>↗</b></i></a></div>
+</nav>

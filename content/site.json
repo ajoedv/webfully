@@ -1,0 +1,102 @@
+{
+  "brand": "WebFully",
+  "base_url": "https://webfully.se",
+  "logo": "/assets/logos/webfully-logo-icon-on-dark.svg",
+  "og_image": "/assets/og/webfully-og.jpg",
+  "default_lang": "sv",
+  "languages": [
+    "sv",
+    "en"
+  ],
+  "theme_switch": false,
+  "contact": {
+    "email": "info@webfully.se",
+    "phone": "070-000 00 00",
+    "phone_e164": "+46700000000",
+    "city": "Mjölby",
+    "org_no": "000000-0000"
+  },
+  "social": {
+    "instagram": "https://www.instagram.com/",
+    "facebook": "https://www.facebook.com/",
+    "linkedin": "https://www.linkedin.com/",
+    "tiktok": "https://www.tiktok.com/"
+  },
+  "pages": [
+    {
+      "key": "home",
+      "path": "/"
+    },
+    {
+      "key": "special-projects",
+      "path": "/special-projects/",
+      "signature": "triangles"
+    },
+    {
+      "key": "contact",
+      "path": "/contact/",
+      "signature": "message"
+    },
+    {
+      "key": "privacy",
+      "path": "/privacy/"
+    },
+    {
+      "key": "404",
+      "path": "/404.html"
+    },
+    {
+      "key": "500",
+      "path": "/500.html"
+    }
+  ],
+  "services": [
+    {
+      "slug": "web",
+      "signature": "browser"
+    },
+    {
+      "slug": "seo-aeo",
+      "signature": "search"
+    },
+    {
+      "slug": "support",
+      "signature": "rack"
+    },
+    {
+      "slug": "branding",
+      "signature": "construction"
+    },
+    {
+      "slug": "content",
+      "signature": "frames"
+    },
+    {
+      "slug": "ads",
+      "signature": "formats"
+    },
+    {
+      "slug": "consulting",
+      "signature": "timeline"
+    },
+    {
+      "slug": "apps",
+      "signature": "layers",
+      "hidden": false
+    }
+  ],
+  "packages": [
+    {
+      "key": "basic",
+      "price": 499,
+      "price_month": 599,
+      "featured": false
+    },
+    {
+      "key": "business",
+      "price": 799,
+      "price_month": 899,
+      "featured": true
+    }
+  ]
+}

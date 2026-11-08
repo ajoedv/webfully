@@ -1,0 +1,186 @@
+{
+  "kind": "service",
+  "meta": {
+    "title": "Appar och digitala produkter — WebFully",
+    "description": "Vi designar och bygger appar, webbappar och digitala produkter som löser verkliga problem, från första idé och prototyp till lansering."
+  },
+  "chapter": {
+    "name": "Appar",
+    "accent": "som används.",
+    "summary": "Digitala produkter som människor vill använda och företag kan växa med. Från idé och prototyp till lansering.",
+    "button": "Utforska appar",
+    "tags": [
+      "Produktstrategi",
+      "UX",
+      "UI",
+      "Webbappar",
+      "Mobilappar",
+      "AI-integrationer"
+    ]
+  },
+  "sections": [
+    {
+      "type": "service-hero",
+      "label": "Digitala produkter",
+      "title": "Appar och",
+      "accent": "egen mjukvara.",
+      "lead": "Vi designar och bygger appar och mjukvara som löser verkliga problem, vinner kunder och växer med er."
+    },
+    {
+      "type": "capabilities",
+      "count": "6 discipliner",
+      "title": "Från idé",
+      "accent": "till daglig användning.",
+      "lead": "En lyckad produkt avgörs inte av antalet funktioner utan av hur tydligt den löser ett problem.",
+      "items": [
+        {
+          "title": "Produktstrategi",
+          "text": "Rätt problem, rätt användare, rätt första version."
+        },
+        {
+          "title": "UX",
+          "text": "Flöden som känns självklara."
+        },
+        {
+          "title": "UI",
+          "text": "Gränssnitt som är tydliga och vackra."
+        },
+        {
+          "title": "Webbappar",
+          "text": "Appar som körs direkt i webbläsaren."
+        },
+        {
+          "title": "Mobilappar",
+          "text": "Appar för iOS och Android."
+        },
+        {
+          "title": "AI-integrationer",
+          "text": "Smarta funktioner där de gör verklig nytta."
+        }
+      ]
+    },
+    {
+      "type": "builds",
+      "label": "Vad vi bygger",
+      "title": "Fyra sorters",
+      "accent": "produkter.",
+      "lead": "Strategi, design och utveckling i samma rum, från första skiss till release.",
+      "cards": [
+        {
+          "title": "Kundportal",
+          "text": "Kunderna sköter bokningar och ärenden själva.",
+          "placeholder": "inloggad kundportal",
+          "image": "/assets/services/apps-customer-portal.webp",
+          "alt": "Inloggad kundportal för ett logistikföretag på bärbar dator",
+          "ratio": "4 / 3",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "title": "Mobilapp",
+          "text": "En app i fickan hos era kunder.",
+          "placeholder": "app-skärmar på telefon",
+          "image": "/assets/services/apps-mobile-screens.webp",
+          "alt": "Appens skärmar på tre mobiler: inloggning, beställningar och orderdetaljer",
+          "ratio": "4 / 5",
+          "width": 960,
+          "height": 1200
+        },
+        {
+          "title": "Internt verktyg",
+          "text": "Mindre administration, mer tid.",
+          "placeholder": "dashboard för internt verktyg",
+          "image": "/assets/services/apps-internal-dashboard.webp",
+          "alt": "Dashboard för ett internt verktyg med orderlista och leveranser per dag",
+          "ratio": "4 / 3",
+          "width": 1200,
+          "height": 900
+        }
+      ]
+    },
+    {
+      "type": "phases",
+      "label": "Från signal till skala",
+      "title": "Fem steg.",
+      "accent": "Ett produktteam.",
+      "lead": "Strategi, design och teknik rör sig tillsammans. Varje steg minskar osäkerheten.",
+      "steps": [
+        {
+          "title": "Upptäck",
+          "text": "Problemet, användarna och målet."
+        },
+        {
+          "title": "Prototyp",
+          "text": "Klickbar prototyp att testa tidigt."
+        },
+        {
+          "title": "Design",
+          "text": "Komplett gränssnitt och designsystem."
+        },
+        {
+          "title": "Utveckling",
+          "text": "Första versionen, byggd för att växa."
+        },
+        {
+          "title": "Lansering och vidare",
+          "text": "Release, mätning och nästa version."
+        }
+      ]
+    },
+    {
+      "type": "proof",
+      "label": "Arkitektur & skala",
+      "title": "Byggd för",
+      "accent": "verklig användning.",
+      "lead": "En prototyp kan imponera och ändå falla första veckan. Vi bygger systemet bakom gränssnittet så att det håller.",
+      "points": [
+        {
+          "title": "Säkert",
+          "text": "Inloggning och data skyddas från start."
+        },
+        {
+          "title": "Skalbart",
+          "text": "Arkitektur som klarar fler användare."
+        },
+        {
+          "title": "Underhållbart",
+          "text": "Kod som går att bygga vidare på."
+        }
+      ],
+      "placeholder": "arkitekturskiss för en app",
+      "image": "/assets/services/apps-architecture-sketch.webp",
+      "alt": "Arkitekturskiss för en app: klient, API, databas, betalning och e-post",
+      "width": 1400,
+      "height": 1050
+    },
+    {
+      "type": "faq",
+      "title": "Frågor vi ofta får",
+      "accent": "och våra svar.",
+      "items": [
+        {
+          "q": "Vad kostar en app?",
+          "a": "Det beror helt på omfattning. Vi börjar ofta med en prototyp till fast pris."
+        },
+        {
+          "q": "Webbapp eller mobilapp?",
+          "a": "En webbapp räcker ofta och är snabbare att bygga. Vi hjälper er välja."
+        },
+        {
+          "q": "Hur lång tid tar det?",
+          "a": "En första version tar ofta två till fyra månader."
+        },
+        {
+          "q": "Äger vi koden?",
+          "a": "Det avtalar vi tydligt i varje projekt."
+        }
+      ]
+    },
+    {
+      "type": "related"
+    },
+    {
+      "type": "cta"
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+{
+  "kind": "service",
+  "meta": {
+    "title": "Varumärke, logotyp och grafisk design — WebFully",
+    "description": "Logotyp, visuell identitet, grafisk profil och grafisk design som gör att ert företag känns igen överallt, från skylt till skärm."
+  },
+  "chapter": {
+    "name": "Varumärke",
+    "accent": "som känns igen.",
+    "summary": "Logotyp, visuell identitet och grafisk design som håller ihop. Ett uttryck som syns på skylten, i flödet och på webben.",
+    "button": "Utforska varumärke",
+    "tags": [
+      "Logotyp",
+      "Visuell identitet",
+      "Grafisk profil",
+      "Grafisk design",
+      "Trycksaker",
+      "Skyltar"
+    ]
+  },
+  "sections": [
+    {
+      "type": "service-hero",
+      "label": "Identitet & grafisk design",
+      "title": "Ett varumärke",
+      "accent": "som håller i tio år.",
+      "lead": "Vi skapar identiteter med över tjugo års erfarenhet av grafisk design. Logotyp, färg, typografi och regler som gör er igenkännbara överallt."
+    },
+    {
+      "type": "capabilities",
+      "count": "6 discipliner",
+      "title": "Ett uttryck.",
+      "accent": "Överallt.",
+      "lead": "Ett varumärke är inte bara en logotyp. Det är summan av allt kunden ser, och det måste hålla ihop.",
+      "items": [
+        {
+          "title": "Logotyp",
+          "text": "En logotyp som fungerar stor och liten, i färg och svartvitt."
+        },
+        {
+          "title": "Visuell identitet",
+          "text": "Färger, typografi och bildspråk som bildar ett system."
+        },
+        {
+          "title": "Grafisk profil",
+          "text": "En manual som gör det lätt att använda varumärket rätt."
+        },
+        {
+          "title": "Grafisk design",
+          "text": "Broschyrer, presentationer och material i samma uttryck."
+        },
+        {
+          "title": "Trycksaker",
+          "text": "Visitkort, flyers och annonser klara för tryck."
+        },
+        {
+          "title": "Skyltar och miljö",
+          "text": "Skyltar, fordon och lokaler som följer identiteten."
+        }
+      ]
+    },
+    {
+      "type": "builds",
+      "label": "Vad vi bygger",
+      "title": "Från skiss",
+      "accent": "till system.",
+      "lead": "Vi levererar inte bara filer. Vi levererar ett system ni kan växa med.",
+      "cards": [
+        {
+          "title": "Logotyp",
+          "text": "Huvudlogotyp, symbol och varianter.",
+          "placeholder": "logotyp i olika storlekar och färger",
+          "image": "/assets/services/branding-logo-sizes-colors.webp",
+          "alt": "Logotyp för en frisörsalong i olika storlekar och färger",
+          "ratio": "4 / 3",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "title": "Identitet",
+          "text": "Färg, typografi och mönster i en helhet.",
+          "placeholder": "identitetsöversikt med färger och typsnitt",
+          "image": "/assets/services/branding-identity-overview.webp",
+          "alt": "Identitetsöversikt med logotyp, färgpalett, typsnitt och grafiska element",
+          "ratio": "4 / 3",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "title": "Material",
+          "text": "Visitkort, skylt och mallar för sociala medier.",
+          "placeholder": "visitkort, skylt och inlägg i samma uttryck",
+          "image": "/assets/services/branding-stationery-signage.webp",
+          "alt": "Visitkort, skylt och mobilannons i samma visuella identitet",
+          "ratio": "4 / 3",
+          "width": 1200,
+          "height": 900
+        }
+      ]
+    },
+    {
+      "type": "phases",
+      "label": "Från brief till manual",
+      "title": "Fyra steg.",
+      "accent": "Ett uttryck.",
+      "lead": "Vi börjar med vad ni står för, inte med färger.",
+      "steps": [
+        {
+          "title": "Insikt",
+          "text": "Vilka ni är, vem ni pratar med och vad som skiljer er."
+        },
+        {
+          "title": "Koncept",
+          "text": "Två eller tre riktningar att välja mellan."
+        },
+        {
+          "title": "Utveckling",
+          "text": "Den valda riktningen blir ett komplett system."
+        },
+        {
+          "title": "Manual och filer",
+          "text": "Grafisk profil och alla filer i rätt format."
+        }
+      ]
+    },
+    {
+      "type": "proof",
+      "label": "Erfarenhet",
+      "title": "Tjugo år av",
+      "accent": "form.",
+      "lead": "Vi har arbetat med grafisk design i över tjugo år, i flera länder och nu i Sverige.",
+      "points": [
+        {
+          "title": "Hållbart",
+          "text": "Identiteter som inte behöver göras om om två år."
+        },
+        {
+          "title": "Användbart",
+          "text": "Filer och regler som fungerar i vardagen."
+        },
+        {
+          "title": "Eget",
+          "text": "Ingenting köpt från en mallbank."
+        }
+      ],
+      "placeholder": "identitet för ett kundföretag: logotyp, kort och skylt",
+      "image": "/assets/services/branding-client-identity.webp",
+      "alt": "Frisörsalongens skyltfönster med logotyp på skylt, kort och mobil",
+      "width": 1400,
+      "height": 1050
+    },
+    {
+      "type": "faq",
+      "title": "Frågor vi ofta får",
+      "accent": "och våra svar.",
+      "items": [
+        {
+          "q": "Vad ingår i en logotyp?",
+          "a": "Huvudlogotyp, symbol, varianter för ljus och mörk bakgrund och filer för tryck och skärm."
+        },
+        {
+          "q": "Hur många förslag får vi?",
+          "a": "Oftast två eller tre riktningar, och sedan arbetar vi vidare med den ni väljer."
+        },
+        {
+          "q": "Kan ni uppdatera vår befintliga logotyp?",
+          "a": "Ja, ibland räcker en modernisering i stället för en ny."
+        },
+        {
+          "q": "Vad är en grafisk profil?",
+          "a": "En manual som visar hur logotyp, färger och typsnitt ska användas."
+        }
+      ]
+    },
+    {
+      "type": "related"
+    },
+    {
+      "type": "cta"
+    }
+  ]
+}

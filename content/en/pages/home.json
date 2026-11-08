@@ -1,0 +1,334 @@
+{
+  "kind": "home",
+  "meta": {
+    "title": "WebFully — Websites, SEO and brands from Mjölby, Sweden",
+    "description": "WebFully is a digital studio in Mjölby, Sweden. We build websites, brands and visibility on Google and in AI search for small and medium-sized companies."
+  },
+  "sections": [
+    {
+      "type": "hero-scene",
+      "label": "Web & brand · Mjölby",
+      "title": "The missing piece",
+      "accent": "in your business.",
+      "lead": "We build websites and brands that help small companies get seen, get remembered and grow.",
+      "services_link": "See our services",
+      "scroll_hint": "Scroll",
+      "pieces": "Structure,Identity,Launch",
+      "intro": {
+        "label": "The studio",
+        "title": "From a blank page",
+        "accent": "to a finished presence.",
+        "lead": "We plan, design and build your digital presence as one whole. From the first sketch to a website that is found, recognised and brings in customers.",
+        "points": [
+          {
+            "title": "Your own design",
+            "text": "No templates. Every page is drawn for your business."
+          },
+          {
+            "title": "Found for real",
+            "text": "Built for Google and AI search from the very first line."
+          },
+          {
+            "title": "Fast everywhere",
+            "text": "Light code that loads quickly on mobile and desktop."
+          },
+          {
+            "title": "Two languages",
+            "text": "Swedish and English, with the right SEO for both."
+          }
+        ]
+      },
+      "compare": {
+        "before": "Before",
+        "after": "After",
+        "hint": "Drag to compare"
+      }
+    },
+    {
+      "type": "chapters",
+      "title": "Our services",
+      "label": "Service",
+      "tags_label": "Included"
+    },
+    {
+      "type": "process",
+      "number": "03",
+      "label": "How we work",
+      "title": "Every piece in its place.",
+      "accent": "In the right order.",
+      "steps": [
+        {
+          "title": "Structure",
+          "text": "We start with the foundation: what you offer, who you talk to and what the site has to achieve."
+        },
+        {
+          "title": "Identity",
+          "text": "Then the form. Type, colour and imagery that make you recognisable at once."
+        },
+        {
+          "title": "Launch",
+          "text": "Finally we publish, measure and fine-tune. The site should keep working long after launch."
+        }
+      ]
+    },
+    {
+      "type": "pricing",
+      "number": "04",
+      "label": "Pricing",
+      "title": "Two packages.",
+      "accent": "One clear price.",
+      "lead": "A simple company website with hosting, SSL and support. Ready within a week of receiving all your material.",
+      "billing_label": "Billing",
+      "billing_year": "Yearly",
+      "billing_month": "Monthly",
+      "unit_year": "SEK/month excl. VAT · one year paid in advance",
+      "unit_month": "SEK/month excl. VAT · setup fee 1 990 SEK",
+      "featured_label": "Most chosen",
+      "open_label": "View",
+      "close_label": "Close",
+      "choose_label": "Choose",
+      "note": "All prices excl. VAT. Domain name not included.",
+      "terms_year": "The price is per month and the whole year is paid in advance. All prices excl. VAT.",
+      "terms_month": "Paying monthly has a setup fee of 1 990 SEK and a higher monthly price. All prices excl. VAT.",
+      "packages": [
+        {
+          "key": "basic",
+          "name": "Basic",
+          "tagline": "to be seen.",
+          "summary": "A simple company website for those who want to get started.",
+          "highlights": [
+            "Up to 5 pages",
+            "2 mailboxes",
+            "Up to 15 images",
+            "Hosting and SSL included"
+          ],
+          "groups": [
+            {
+              "title": "Website",
+              "items": [
+                "Up to 5 pages",
+                "Mobile friendly and fast",
+                "Contact form",
+                "Up to 15 images"
+              ]
+            },
+            {
+              "title": "Included",
+              "items": [
+                "Hosting, SSL and backups",
+                "2 mailboxes",
+                "Basic search engine settings (titles and descriptions)",
+                "One small change a month, up to 15 minutes"
+              ]
+            },
+            {
+              "title": "Delivery and support",
+              "items": [
+                "Ready within a week of receiving all your material",
+                "Support by email"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "business",
+          "name": "Business",
+          "tagline": "to grow.",
+          "summary": "For those who need more pages and more room.",
+          "highlights": [
+            "Up to 10 pages",
+            "5 mailboxes",
+            "30 minutes of changes a month",
+            "Hosting and SSL included"
+          ],
+          "groups": [
+            {
+              "title": "Website",
+              "items": [
+                "Up to 10 pages",
+                "Mobile friendly and fast",
+                "Contact form",
+                "Up to 30 images"
+              ]
+            },
+            {
+              "title": "Included",
+              "items": [
+                "Hosting, SSL and backups",
+                "5 mailboxes",
+                "Basic search engine settings (titles and descriptions)",
+                "Changes each month, up to 30 minutes"
+              ]
+            },
+            {
+              "title": "Delivery and support",
+              "items": [
+                "Ready within a week of receiving all your material",
+                "Support by email"
+              ]
+            }
+          ]
+        }
+      ],
+      "addons": {
+        "label": "Add-ons",
+        "title": "Add what you need.",
+        "accent": "One price, one time.",
+        "lead": "Booking, menu, price forms and more are added to your package. The price below is what you pay for the add-on.",
+        "items": [
+          {
+            "name": "Appointment booking",
+            "text": "Customers book a time online. For hairdressers, massage, nails, makeup and other services.",
+            "from": "From",
+            "price": "2 490",
+            "unit": "SEK one-time excl. VAT"
+          },
+          {
+            "name": "Menu",
+            "text": "A clear menu page for restaurants and pizzerias, up to 30 dishes. More dishes are priced separately.",
+            "from": "From",
+            "price": "1 490",
+            "unit": "SEK one-time excl. VAT"
+          },
+          {
+            "name": "Table booking",
+            "text": "Guests book a table straight from the website.",
+            "from": "From",
+            "price": "2 490",
+            "unit": "SEK one-time excl. VAT"
+          },
+          {
+            "name": "Price form",
+            "text": "The customer enters rooms, windows, distance or floors and gets a price. For moving, cleaning and more.",
+            "from": "From",
+            "price": "4 900",
+            "unit": "SEK one-time excl. VAT"
+          },
+          {
+            "name": "Website text",
+            "text": "We write the text for up to 5 pages from the information you give us, so you do not have to write it yourself.",
+            "from": "",
+            "price": "1 490",
+            "unit": "SEK one-time excl. VAT"
+          },
+          {
+            "name": "Logo",
+            "text": "A simple logo for your website.",
+            "from": "From",
+            "price": "2 900",
+            "unit": "SEK one-time excl. VAT"
+          },
+          {
+            "name": "Extra images",
+            "text": "On top of the images included in the package.",
+            "from": "",
+            "price": "190",
+            "unit": "SEK per 10 images excl. VAT"
+          },
+          {
+            "name": "Extra mailbox",
+            "text": "Basic includes 2 mailboxes and Business 5. The price applies to each mailbox beyond that.",
+            "from": "",
+            "price": "39",
+            "unit": "SEK/month excl. VAT per mailbox"
+          },
+          {
+            "name": "Email setup",
+            "text": "We create your mailboxes and connect them to your phone and computer.",
+            "from": "From",
+            "price": "1 490",
+            "unit": "SEK one-time excl. VAT"
+          },
+          {
+            "name": "Domain transfer",
+            "text": "If you already have a domain name, we move it and connect it to the website.",
+            "from": "",
+            "price": "890",
+            "unit": "SEK one-time excl. VAT"
+          },
+          {
+            "name": "Extra changes and support",
+            "text": "On top of the minutes included in the package.",
+            "from": "",
+            "price": "995",
+            "unit": "SEK per hour excl. VAT"
+          },
+          {
+            "name": "Domain name",
+            "text": "We register and renew it for you.",
+            "from": "",
+            "price": "495",
+            "unit": "SEK/year excl. VAT"
+          }
+        ],
+        "note": "If an add-on needs a paid third-party licence, you see the licence cost before you order. You pay it. All prices excl. VAT.",
+        "button": "Ask about add-ons"
+      },
+      "custom": {
+        "title": "Need something else?",
+        "accent": "Then we talk directly.",
+        "text": "Larger websites, custom design and special features are priced with you in a call or a meeting. Send a request and we will get back to you.",
+        "button": "Ask for a price"
+      }
+    },
+    {
+      "type": "special-teaser",
+      "number": "05",
+      "label": "Special projects",
+      "title": "No package fits?",
+      "accent": "Then we build it from scratch.",
+      "lead": "Larger websites, web apps, campaigns or a new identity. Special projects are planned and priced for you, one to one.",
+      "items": [
+        "A tailored quote after a free walkthrough",
+        "One contact person through the whole project",
+        "Fixed price or ongoing, you choose"
+      ],
+      "button": "Start a special project"
+    },
+    {
+      "type": "ticker",
+      "label": "All services"
+    },
+    {
+      "type": "cta",
+      "number": "06"
+    },
+    {
+      "type": "testimonials",
+      "label": "Clients about us",
+      "title": "What they say",
+      "accent": "afterwards.",
+      "roledescription": "carousel",
+      "slide_label": "testimonial",
+      "prev": "Previous testimonial",
+      "next": "Next testimonial",
+      "pause": "Pause",
+      "play": "Play",
+      "items": [
+        {
+          "quote": "We got a website that feels like our salon. It is clear, fast and good-looking, and customers find what they are looking for straight away.",
+          "name": "Salah Cuts",
+          "url": "https://salah-cuts.se",
+          "company": "Barbershop",
+          "placeholder": "client logo or website",
+          "image": "/assets/clients/salah-cuts.webp",
+          "alt": "Salah Cuts logo",
+          "width": 781,
+          "height": 900
+        },
+        {
+          "quote": "Webfully understood right away what we do and how we want to come across. The website looks professional and shows our work the right way.",
+          "name": "La Vida Måleri AB",
+          "url": "https://lavida-maleri.se",
+          "company": "Construction and painting",
+          "placeholder": "client logo or website",
+          "image": "/assets/clients/la-vida-maleri.webp",
+          "alt": "La Vida Måleri AB logo",
+          "width": 900,
+          "height": 737
+        }
+      ],
+      "count": "02"
+    }
+  ]
+}

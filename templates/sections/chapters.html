@@ -1,0 +1,18 @@
+<section class="chapters" id="{{ common.ids.services }}" aria-labelledby="chapters-title">
+  <h2 class="visually-hidden" id="chapters-title">{{ s.title }}</h2>
+  {% for service in services %}<article class="chapter {{ service.tone }} chapter--{{ service.slug }}">
+    {{ service.signature_svg|raw }}
+    <div class="chapter-number" aria-hidden="true"><span class="chapter-digits">{{ service.number }}</span><span class="chapter-dot" data-dot></span></div>
+    <p class="chapter-label mono section-label">{{ s.label }} <b>{{ service.number }}</b> &nbsp;/&nbsp; {{ service.total }}</p>
+    <div class="chapter-body">
+      <h3 class="chapter-title">{{ service.name }} <em>{{ service.accent }}</em></h3>
+      <p>{{ service.summary }}</p>
+      <a class="btn chapter-btn" href="{{ service.url }}"><span>{{ service.button }}</span><i aria-hidden="true"><b>↗</b></i></a>
+    </div>
+    <ul class="chapter-tags mono" aria-label="{{ s.tags_label }}">
+      {% for tag in service.tags %}<li>{{ tag }}</li>
+      {% endfor %}
+    </ul>
+  </article>
+  {% endfor %}
+</section>

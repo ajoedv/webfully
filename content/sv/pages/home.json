@@ -1,0 +1,334 @@
+{
+  "kind": "home",
+  "meta": {
+    "title": "WebFully — Webbplatser, SEO och varumärken i Mjölby",
+    "description": "WebFully är en digital studio i Mjölby. Vi bygger webbplatser, varumärken och synlighet på Google och i AI-sök för små och medelstora företag."
+  },
+  "sections": [
+    {
+      "type": "hero-scene",
+      "label": "Webb & varumärke · Mjölby",
+      "title": "Den saknade biten",
+      "accent": "i ert företag.",
+      "lead": "Vi bygger webbplatser och varumärken som får små företag att synas, kännas och växa.",
+      "services_link": "Se våra tjänster",
+      "scroll_hint": "Scrolla",
+      "pieces": "Struktur,Identitet,Lansering",
+      "intro": {
+        "label": "Studion",
+        "title": "Från tom sida",
+        "accent": "till färdig närvaro.",
+        "lead": "Vi planerar, designar och bygger er digitala närvaro som en helhet. Från första skiss till en webbplats som hittas, känns igen och ger kunder.",
+        "points": [
+          {
+            "title": "Egen design",
+            "text": "Inga mallar. Varje sida ritas för just ert företag."
+          },
+          {
+            "title": "Hittas på riktigt",
+            "text": "Byggd för Google och AI-sök från första raden."
+          },
+          {
+            "title": "Snabb överallt",
+            "text": "Lätt kod som laddar snabbt på mobil och dator."
+          },
+          {
+            "title": "Två språk",
+            "text": "Svenska och engelska, med rätt SEO för båda."
+          }
+        ]
+      },
+      "compare": {
+        "before": "Före",
+        "after": "Efter",
+        "hint": "Dra för att jämföra"
+      }
+    },
+    {
+      "type": "chapters",
+      "title": "Våra tjänster",
+      "label": "Tjänst",
+      "tags_label": "Ingår"
+    },
+    {
+      "type": "process",
+      "number": "03",
+      "label": "Så arbetar vi",
+      "title": "Varje bit på sin plats.",
+      "accent": "I rätt ordning.",
+      "steps": [
+        {
+          "title": "Struktur",
+          "text": "Vi börjar med grunden: vad ni erbjuder, vem ni pratar med och vad sidan måste uppnå."
+        },
+        {
+          "title": "Identitet",
+          "text": "Sedan formen. Typografi, färg och bild som gör att ni känns igen direkt."
+        },
+        {
+          "title": "Lansering",
+          "text": "Till sist publicerar vi, mäter och finjusterar. Sidan ska fortsätta arbeta långt efter lanseringen."
+        }
+      ]
+    },
+    {
+      "type": "pricing",
+      "number": "04",
+      "label": "Priser",
+      "title": "Två paket.",
+      "accent": "Ett tydligt pris.",
+      "lead": "En enkel företagssida med hosting, SSL och support. Klar inom en vecka från att vi fått allt material.",
+      "billing_label": "Betalning",
+      "billing_year": "Årsvis",
+      "billing_month": "Månadsvis",
+      "unit_year": "kr/mån exkl. moms · ett år betalas i förskott",
+      "unit_month": "kr/mån exkl. moms · uppstartsavgift 1 990 kr",
+      "featured_label": "Mest vald",
+      "open_label": "Visa",
+      "close_label": "Stäng",
+      "choose_label": "Välj",
+      "note": "Alla priser exkl. moms. Domännamn ingår inte.",
+      "terms_year": "Priset gäller per månad och hela året betalas i förskott. Alla priser exkl. moms.",
+      "terms_month": "Månadsvis betalning har en uppstartsavgift på 1 990 kr och ett högre månadspris. Alla priser exkl. moms.",
+      "packages": [
+        {
+          "key": "basic",
+          "name": "Bas",
+          "tagline": "för att synas.",
+          "summary": "En enkel företagssida för er som vill komma igång.",
+          "highlights": [
+            "Upp till 5 sidor",
+            "2 e-postlådor",
+            "Upp till 15 bilder",
+            "Hosting och SSL ingår"
+          ],
+          "groups": [
+            {
+              "title": "Webbplats",
+              "items": [
+                "Upp till 5 sidor",
+                "Mobilanpassad och snabb",
+                "Kontaktformulär",
+                "Upp till 15 bilder"
+              ]
+            },
+            {
+              "title": "Ingår",
+              "items": [
+                "Hosting, SSL och säkerhetskopior",
+                "2 e-postlådor",
+                "Grundläggande sökmotorinställningar (titlar och beskrivningar)",
+                "En liten ändring i månaden, upp till 15 minuter"
+              ]
+            },
+            {
+              "title": "Leverans och support",
+              "items": [
+                "Klar inom en vecka från att vi fått allt material",
+                "Support via e-post"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "business",
+          "name": "Företag",
+          "tagline": "för att växa.",
+          "summary": "För er som behöver fler sidor och mer utrymme.",
+          "highlights": [
+            "Upp till 10 sidor",
+            "5 e-postlådor",
+            "30 minuters ändringar i månaden",
+            "Hosting och SSL ingår"
+          ],
+          "groups": [
+            {
+              "title": "Webbplats",
+              "items": [
+                "Upp till 10 sidor",
+                "Mobilanpassad och snabb",
+                "Kontaktformulär",
+                "Upp till 30 bilder"
+              ]
+            },
+            {
+              "title": "Ingår",
+              "items": [
+                "Hosting, SSL och säkerhetskopior",
+                "5 e-postlådor",
+                "Grundläggande sökmotorinställningar (titlar och beskrivningar)",
+                "Ändringar i månaden, upp till 30 minuter"
+              ]
+            },
+            {
+              "title": "Leverans och support",
+              "items": [
+                "Klar inom en vecka från att vi fått allt material",
+                "Support via e-post"
+              ]
+            }
+          ]
+        }
+      ],
+      "addons": {
+        "label": "Tillägg",
+        "title": "Lägg till det ni behöver.",
+        "accent": "Ett pris, en gång.",
+        "lead": "Bokning, meny, prisformulär och mer läggs till på ert paket. Priset nedan är det ni betalar för tillägget.",
+        "items": [
+          {
+            "name": "Tidsbokning",
+            "text": "Kunderna bokar tid online. För frisör, massage, naglar, makeup och andra tjänster.",
+            "from": "Från",
+            "price": "2 490",
+            "unit": "kr engångs exkl. moms"
+          },
+          {
+            "name": "Meny",
+            "text": "En tydlig menysida för restaurang och pizzeria, upp till 30 rätter. Fler rätter prissätts separat.",
+            "from": "Från",
+            "price": "1 490",
+            "unit": "kr engångs exkl. moms"
+          },
+          {
+            "name": "Bordsbokning",
+            "text": "Gäster bokar bord direkt på webbplatsen.",
+            "from": "Från",
+            "price": "2 490",
+            "unit": "kr engångs exkl. moms"
+          },
+          {
+            "name": "Prisformulär",
+            "text": "Kunden fyller i till exempel rum, fönster, avstånd eller våningar och får en prisuppgift. För flytt, städ med mera.",
+            "from": "Från",
+            "price": "4 900",
+            "unit": "kr engångs exkl. moms"
+          },
+          {
+            "name": "Webbtexter",
+            "text": "Vi skriver texterna till upp till 5 sidor utifrån den information ni ger oss, så att ni slipper skriva själva.",
+            "from": "",
+            "price": "1 490",
+            "unit": "kr engångs exkl. moms"
+          },
+          {
+            "name": "Logotyp",
+            "text": "En enkel logotyp till er webbplats.",
+            "from": "Från",
+            "price": "2 900",
+            "unit": "kr engångs exkl. moms"
+          },
+          {
+            "name": "Extra bilder",
+            "text": "Utöver bilderna som ingår i paketet.",
+            "from": "",
+            "price": "190",
+            "unit": "kr per 10 bilder exkl. moms"
+          },
+          {
+            "name": "Extra e-postlåda",
+            "text": "Bas inkluderar 2 lådor och Företag 5. Priset gäller varje låda utöver det.",
+            "from": "",
+            "price": "39",
+            "unit": "kr/mån exkl. moms per låda"
+          },
+          {
+            "name": "E-postuppsättning",
+            "text": "Vi lägger upp era e-postlådor och kopplar dem till mobil och dator.",
+            "from": "Från",
+            "price": "1 490",
+            "unit": "kr engångs exkl. moms"
+          },
+          {
+            "name": "Flytt av domän",
+            "text": "Har ni redan ett domännamn flyttar och kopplar vi det till webbplatsen.",
+            "from": "",
+            "price": "890",
+            "unit": "kr engångs exkl. moms"
+          },
+          {
+            "name": "Extra ändringar och support",
+            "text": "Utöver de minuter som ingår i paketet.",
+            "from": "",
+            "price": "995",
+            "unit": "kr per timme exkl. moms"
+          },
+          {
+            "name": "Domännamn",
+            "text": "Vi registrerar och förnyar det åt er.",
+            "from": "",
+            "price": "495",
+            "unit": "kr/år exkl. moms"
+          }
+        ],
+        "note": "Kräver ett tillägg en betald licens hos en tredje part, får ni licenskostnaden redovisad innan ni beställer. Den betalas av er. Alla priser exkl. moms.",
+        "button": "Fråga om tillägg"
+      },
+      "custom": {
+        "title": "Behöver ni något annat?",
+        "accent": "Då tar vi det direkt.",
+        "text": "Större webbplatser, egen design och särskilda funktioner prissätts tillsammans med er i ett samtal eller möte. Skicka en förfrågan så hör vi av oss.",
+        "button": "Be om pris"
+      }
+    },
+    {
+      "type": "special-teaser",
+      "number": "05",
+      "label": "Specialprojekt",
+      "title": "Passar inget paket?",
+      "accent": "Då bygger vi det från grunden.",
+      "lead": "Större webbplatser, webbappar, kampanjer eller en ny identitet. Specialprojekt planeras och prissätts för just er, en till en.",
+      "items": [
+        "Egen offert efter en kostnadsfri genomgång",
+        "En kontaktperson genom hela projektet",
+        "Fast pris eller löpande, ni väljer"
+      ],
+      "button": "Starta ett specialprojekt"
+    },
+    {
+      "type": "ticker",
+      "label": "Alla tjänster"
+    },
+    {
+      "type": "cta",
+      "number": "06"
+    },
+    {
+      "type": "testimonials",
+      "label": "Kunderna om oss",
+      "title": "Det de säger",
+      "accent": "efteråt.",
+      "roledescription": "karusell",
+      "slide_label": "omdöme",
+      "prev": "Föregående omdöme",
+      "next": "Nästa omdöme",
+      "pause": "Pausa",
+      "play": "Spela",
+      "items": [
+        {
+          "quote": "Vi fick en hemsida som känns som vår salong. Den är tydlig, snabb och snygg, och kunderna hittar det de söker direkt.",
+          "name": "Salah Cuts",
+          "url": "https://salah-cuts.se",
+          "company": "Barbershop",
+          "placeholder": "kundens logotyp eller webbplats",
+          "image": "/assets/clients/salah-cuts.webp",
+          "alt": "Logotyp för Salah Cuts",
+          "width": 781,
+          "height": 900
+        },
+        {
+          "quote": "Webfully förstod direkt vad vi gör och hur vi vill framstå. Hemsidan ser professionell ut och visar vårt arbete på rätt sätt.",
+          "name": "La Vida Måleri AB",
+          "url": "https://lavida-maleri.se",
+          "company": "Bygg och måleri",
+          "placeholder": "kundens logotyp eller webbplats",
+          "image": "/assets/clients/la-vida-maleri.webp",
+          "alt": "Logotyp för La Vida Måleri AB",
+          "width": 900,
+          "height": 737
+        }
+      ],
+      "count": "02"
+    }
+  ]
+}

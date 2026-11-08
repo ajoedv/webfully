@@ -1,0 +1,130 @@
+{
+  "kind": "special",
+  "meta": {
+    "title": "Specialprojekt — skräddarsydda lösningar med WebFully",
+    "description": "Större webbplatser, webbappar, kampanjer och nya identiteter, planerade och prissatta för just er, en till en."
+  },
+  "breadcrumb": [
+    {
+      "name": "Hem",
+      "url": "/"
+    },
+    {
+      "name": "Specialprojekt",
+      "url": "/special-projects/"
+    }
+  ],
+  "sections": [
+    {
+      "type": "page-hero",
+      "label": "Specialprojekt / en till en",
+      "title": "Ert projekt.",
+      "accent": "Ingen mall.",
+      "lead": "När paketen inte räcker bygger vi från grunden. Ni får en egen plan, ett eget pris och en kontaktperson från första möte till lansering.",
+      "button": "Boka en genomgång",
+      "button_href": "/contact/?type=special"
+    },
+    {
+      "type": "columns",
+      "tone": "tone-a",
+      "label": "När passar det",
+      "title": "Större än",
+      "accent": "ett paket.",
+      "lead": "Specialprojekt passar när behovet är unikt, omfattande eller ska kopplas ihop med flera system.",
+      "items": [
+        {
+          "title": "Stora webbplatser",
+          "text": "Många sidor, flera språk och avancerade funktioner."
+        },
+        {
+          "title": "Webbappar och portaler",
+          "text": "Bokning, kundinloggning och egna verktyg."
+        },
+        {
+          "title": "Ny identitet",
+          "text": "Varumärke från grunden, med allt material."
+        },
+        {
+          "title": "Kampanjer",
+          "text": "Innehåll och annonser för en lansering eller säsong."
+        }
+      ]
+    },
+    {
+      "type": "phases",
+      "label": "Så går det till",
+      "title": "Fem steg.",
+      "accent": "En plan för er.",
+      "lead": "Vi börjar alltid med att förstå. Priset kommer när vi vet vad som ska byggas.",
+      "steps": [
+        {
+          "title": "Genomgång",
+          "text": "Ett kostnadsfritt möte om mål, behov och tidsram."
+        },
+        {
+          "title": "Förslag",
+          "text": "En skriftlig plan med omfattning och tidplan."
+        },
+        {
+          "title": "Offert",
+          "text": "Fast pris eller löpande, tydligt från början."
+        },
+        {
+          "title": "Produktion",
+          "text": "Design och utveckling med avstämningar varje vecka."
+        },
+        {
+          "title": "Lansering",
+          "text": "Publicering, överlämning och uppföljning."
+        }
+      ]
+    },
+    {
+      "type": "columns",
+      "tone": "tone-b",
+      "label": "Vad vi behöver",
+      "title": "Inför första",
+      "accent": "mötet.",
+      "items": [
+        {
+          "title": "Mål",
+          "text": "Vad ska projektet uppnå, och hur vet vi att det lyckats?"
+        },
+        {
+          "title": "Målgrupp",
+          "text": "Vem ska använda det ni bygger?"
+        },
+        {
+          "title": "Tidsram",
+          "text": "Finns det ett datum som styr?"
+        },
+        {
+          "title": "Budget",
+          "text": "En ungefärlig ram hjälper oss föreslå rätt nivå."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "title": "Frågor om",
+      "accent": "specialprojekt.",
+      "items": [
+        {
+          "q": "Kostar genomgången något?",
+          "a": "Nej, det första mötet är kostnadsfritt och utan förpliktelser."
+        },
+        {
+          "q": "Hur lång tid tar ett specialprojekt?",
+          "a": "Från några veckor till några månader. Ni får en tidplan i förslaget."
+        },
+        {
+          "q": "Kan vi kombinera med ett paket?",
+          "a": "Ja, många börjar med ett specialprojekt och fortsätter med drift i ett paket."
+        }
+      ]
+    },
+    {
+      "type": "cta"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+<section class="builds tone-b" aria-labelledby="builds-title">
+  <div class="section-head">
+    <p class="mono section-label">{{ s.label }}</p>
+    <h2 id="builds-title">{{ s.title }} <em>{{ s.accent }}</em></h2>
+    <p class="lead">{{ s.lead }}</p>
+  </div>
+  <ul class="builds-grid">
+    {% for card in s.cards %}<li class="build-card">
+      <figure class="media" style="--ratio: {{ card.ratio }}">
+        {% if card.image %}<img src="{{ asset_url }}{{ card.image }}" alt="{{ card.alt }}"{% if card.width %} width="{{ card.width }}" height="{{ card.height }}"{% endif %} loading="lazy" decoding="async">{% endif %}
+        {% include "partials/image-placeholder.html" %}
+        <figcaption class="media-note mono">{{ common.image_label }}: {{ card.placeholder }}</figcaption>
+      </figure>
+      <p class="mono build-no" aria-hidden="true">{{ loop.index }}</p>
+      <h3>{{ card.title }}</h3>
+      <p>{{ card.text }}</p>
+    </li>
+    {% endfor %}
+  </ul>
+</section>

@@ -1,0 +1,94 @@
+{
+  "html_lang": "en",
+  "locale_tag": "en",
+  "og_locale": "en_GB",
+  "og_image": "/assets/og/webfully-og-en.jpg",
+  "org_description": "Digital studio in Mjölby, Sweden, building websites, brands and visibility for companies that want to grow.",
+  "skip_link": "Skip to content",
+  "lang_switch": "Language",
+  "breadcrumb": "Breadcrumb",
+  "ids": {
+    "home": "home",
+    "services": "services",
+    "process": "process",
+    "pricing": "pricing",
+    "special": "special-projects",
+    "contact": "contact",
+    "cookies": "cookies"
+  },
+  "nav": {
+    "label": "Main menu",
+    "home_label": "WebFully, to the home page",
+    "home": "Home",
+    "services": "Services",
+    "pricing": "Pricing",
+    "special": "Special projects",
+    "contact": "Contact",
+    "menu": "Menu"
+  },
+  "theme": {
+    "label": "Colour mode",
+    "auto": "Auto",
+    "light": "Light",
+    "dark": "Dark"
+  },
+  "cta_button": "Start a project",
+  "service_label": "Service",
+  "capabilities_label": "Capabilities",
+  "process_label": "Process",
+  "faq_label": "Frequently asked questions",
+  "related_label": "More services",
+  "image_label": "Image",
+  "image_missing": "The image could not be loaded",
+  "cta": {
+    "label": "Start here",
+    "icon_label": "Go to the contact page",
+    "title": "Missing a piece?",
+    "accent": "We will find it.",
+    "text": "Tell us where you are and where you want to go. We reply within one working day with a first proposal.",
+    "button": "Start a project",
+    "icon_note": "03 — LAUNCH"
+  },
+  "footer": {
+    "contact": "Contact",
+    "services": "Services",
+    "menu": "Menu",
+    "privacy": "Privacy policy",
+    "clock": "Local time in Mjölby",
+    "top": "Back to top"
+  },
+  "cookie": {
+    "title": "We care about your privacy",
+    "text": "Today we only use necessary cookies. If we add statistics or marketing we will ask first, and you can change your choice at any time.",
+    "read_more": "Read more about cookies",
+    "categories": "Choose categories",
+    "accept": "Accept all",
+    "reject": "Reject all",
+    "customize": "Customise",
+    "save": "Save choices",
+    "settings": "Cookie settings",
+    "items": [
+      {
+        "key": "necessary",
+        "name": "Necessary",
+        "text": "Needed for the site to work, for example your colour mode and this consent.",
+        "required": true
+      },
+      {
+        "key": "statistics",
+        "name": "Statistics",
+        "text": "Helps us understand how the site is used. Not used today.",
+        "required": false
+      },
+      {
+        "key": "marketing",
+        "name": "Marketing",
+        "text": "Used to measure and tailor ads. Not used today.",
+        "required": false
+      }
+    ]
+  },
+  "labels": {
+    "new_tab": "opens in a new tab"
+  }
+}

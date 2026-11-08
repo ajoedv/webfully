@@ -1,0 +1,130 @@
+{
+  "kind": "special",
+  "meta": {
+    "title": "Special projects — tailored solutions with WebFully",
+    "description": "Larger websites, web apps, campaigns and new identities, planned and priced for you, one to one."
+  },
+  "breadcrumb": [
+    {
+      "name": "Home",
+      "url": "/en/"
+    },
+    {
+      "name": "Special projects",
+      "url": "/en/special-projects/"
+    }
+  ],
+  "sections": [
+    {
+      "type": "page-hero",
+      "label": "Special projects / one to one",
+      "title": "Your project.",
+      "accent": "No template.",
+      "lead": "When the packages are not enough, we build from scratch. You get your own plan, your own price and one contact person from the first meeting to launch.",
+      "button": "Book a walkthrough",
+      "button_href": "/en/contact/?type=special"
+    },
+    {
+      "type": "columns",
+      "tone": "tone-a",
+      "label": "When it fits",
+      "title": "Bigger than",
+      "accent": "a package.",
+      "lead": "Special projects fit when the need is unique, extensive or has to connect with several systems.",
+      "items": [
+        {
+          "title": "Large websites",
+          "text": "Many pages, several languages and advanced features."
+        },
+        {
+          "title": "Web apps and portals",
+          "text": "Booking, customer login and custom tools."
+        },
+        {
+          "title": "A new identity",
+          "text": "A brand from scratch, with all the material."
+        },
+        {
+          "title": "Campaigns",
+          "text": "Content and ads for a launch or a season."
+        }
+      ]
+    },
+    {
+      "type": "phases",
+      "label": "How it works",
+      "title": "Five steps.",
+      "accent": "A plan for you.",
+      "lead": "We always start by understanding. The price comes when we know what is to be built.",
+      "steps": [
+        {
+          "title": "Walkthrough",
+          "text": "A free meeting about goals, needs and timeframe."
+        },
+        {
+          "title": "Proposal",
+          "text": "A written plan with scope and timeline."
+        },
+        {
+          "title": "Quote",
+          "text": "Fixed price or ongoing, clear from the start."
+        },
+        {
+          "title": "Production",
+          "text": "Design and development with weekly check-ins."
+        },
+        {
+          "title": "Launch",
+          "text": "Publishing, handover and follow-up."
+        }
+      ]
+    },
+    {
+      "type": "columns",
+      "tone": "tone-b",
+      "label": "What we need",
+      "title": "Before the first",
+      "accent": "meeting.",
+      "items": [
+        {
+          "title": "Goals",
+          "text": "What should the project achieve, and how will we know it worked?"
+        },
+        {
+          "title": "Audience",
+          "text": "Who will use what you build?"
+        },
+        {
+          "title": "Timeframe",
+          "text": "Is there a date that drives the work?"
+        },
+        {
+          "title": "Budget",
+          "text": "An approximate range helps us suggest the right level."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "title": "Questions about",
+      "accent": "special projects.",
+      "items": [
+        {
+          "q": "Does the walkthrough cost anything?",
+          "a": "No, the first meeting is free and without obligation."
+        },
+        {
+          "q": "How long does a special project take?",
+          "a": "From a few weeks to a few months. You get a timeline in the proposal."
+        },
+        {
+          "q": "Can we combine it with a package?",
+          "a": "Yes, many start with a special project and continue with operations in a package."
+        }
+      ]
+    },
+    {
+      "type": "cta"
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+/* Services ticker: once on the page, right before the CTA. Two identical groups loop as one band. */
+
+.ticker {
+  position: relative;
+  padding: 25px 0;
+  overflow: hidden;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: var(--soft);
+  color: var(--light);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 12%, #000 88%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, #000 12%, #000 88%, transparent 100%);
+}
+
+.ticker-track {
+  display: flex;
+  width: max-content;
+  animation: ticker 36s linear infinite;
+}
+
+.ticker:hover .ticker-track,
+.ticker:focus-within .ticker-track {
+  animation-play-state: paused;
+}
+
+@keyframes ticker {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.ticker-group {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.ticker-group li {
+  display: flex;
+  align-items: center;
+}
+
+.ticker-word {
+  white-space: nowrap;
+  font-weight: 600;
+  font-size: clamp(37px, 4.5vw, 70px);
+  line-height: 1.1;
+  letter-spacing: -.06em;
+  transition: color .25s;
+}
+
+.ticker-group li:nth-child(even) .ticker-word {
+  color: var(--coral);
+}
+
+.ticker-word:hover {
+  color: var(--coral);
+}
+
+.ticker-group li:nth-child(even) .ticker-word:hover {
+  color: var(--light);
+}
+
+/* separators: the logo dot */
+.ticker-dot {
+  flex: none;
+  width: .32em;
+  height: .32em;
+  margin: 0 clamp(22px, 3vw, 50px);
+  border-radius: 50%;
+  background: var(--brand-coral);
+  font-size: clamp(37px, 4.5vw, 70px);
+}
+
+/* Anchors for the dot journey (journey.js): it enters on the right and leaves on the left */
+.ticker-seat {
+  position: absolute;
+  top: 50%;
+  width: 22px;
+  height: 22px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.ticker-seat--start {
+  right: var(--edge);
+}
+
+.ticker-seat--end {
+  left: var(--edge);
+}

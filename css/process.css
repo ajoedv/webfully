@@ -1,0 +1,146 @@
+/* Process */
+
+.process {
+  padding: clamp(96px, 11vw, 180px) var(--pad) clamp(80px, 9vw, 150px);
+}
+
+.process-head {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: start;
+  gap: clamp(24px, 3vw, 48px);
+}
+
+.process-head .section-label {
+  padding-top: clamp(10px, 1.2vw, 22px);
+}
+
+.process h2 {
+  font-weight: 300;
+  font-size: clamp(40px, 5.8vw, 104px);
+  line-height: 1.1;
+  letter-spacing: -.05em;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: clamp(72px, 9vw, 150px);
+  list-style: none;
+}
+
+.step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: clamp(360px, 34vw, 520px);
+  padding: 0 clamp(20px, 2.4vw, 40px);
+}
+
+/* vertical coral line */
+.step::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--coral);
+  transform-origin: 50% 0;
+}
+
+.step-no {
+  color: var(--coral);
+}
+
+/* Anchor on top of each coral line, where the travelling dot lands (journey.js) */
+.step-seat {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 14px;
+  height: 14px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+/* logo piece drawing in the corner */
+.step svg {
+  position: absolute;
+  top: 0;
+  right: clamp(20px, 2.4vw, 40px);
+  width: clamp(34px, 3vw, 48px);
+  height: auto;
+  overflow: visible;
+}
+
+.step .outline {
+  fill: none;
+  stroke: var(--fg);
+  stroke-opacity: .55;
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+
+.step .dot {
+  fill: var(--brand-coral);
+}
+
+.step h3 {
+  margin-top: auto;
+  font-weight: 300;
+  font-size: clamp(40px, 4vw, 72px);
+  line-height: 1;
+  letter-spacing: -.04em;
+}
+
+.step p {
+  max-width: 34ch;
+  min-height: calc(1.65em * 3);
+  margin-top: clamp(18px, 1.8vw, 28px);
+  color: var(--muted);
+  font-size: clamp(14px, 1.05vw, 16px);
+  line-height: 1.65;
+}
+
+/* Lines draw in from the top when the section enters (they are not faded) */
+.motion .step::before {
+  transform: scaleY(0);
+  transition: transform 1.4s cubic-bezier(.65, 0, .35, 1);
+}
+
+.motion .process.is-visible .step::before {
+  transform: none;
+}
+
+.motion .process.is-visible .step:nth-child(2)::before {
+  transition-delay: .18s;
+}
+
+.motion .process.is-visible .step:nth-child(3)::before {
+  transition-delay: .36s;
+}
+
+@media (max-width: 900px) {
+  .process-head,
+  .process-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .process-steps {
+    gap: 56px;
+  }
+
+  .step {
+    min-height: 0;
+    padding: 0 0 0 22px;
+  }
+
+  .step h3 {
+    margin-top: 36px;
+  }
+
+  .step svg {
+    right: 0;
+  }
+}

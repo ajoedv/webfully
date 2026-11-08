@@ -1,0 +1,156 @@
+/* Testimonials: between the CTA and the footer. One quote at a time, crossfading (testimonials.js) */
+
+.testimonials {
+  position: relative;
+  padding: clamp(72px, 8vw, 128px) var(--pad);
+}
+
+.testimonials-title {
+  margin-top: 22px;
+  font-weight: 300;
+  font-size: clamp(36px, 4.4vw, 76px);
+  line-height: 1.05;
+  letter-spacing: -.045em;
+}
+
+.testimonials-stage {
+  display: grid;
+  margin-top: clamp(40px, 4vw, 72px);
+}
+
+/* every slide sits in the same grid cell; only the current one is visible */
+.testimonial {
+  grid-area: 1 / 1;
+  display: grid;
+  grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+  grid-template-rows: 1fr auto;
+  column-gap: clamp(32px, 5vw, 96px);
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity .9s cubic-bezier(.4, 0, .2, 1),
+    visibility .9s;
+}
+
+.testimonial.is-current {
+  opacity: 1;
+  visibility: visible;
+}
+
+.testimonial-media {
+  grid-row: 1 / 3;
+}
+
+.testimonial-quote p {
+  font-weight: 300;
+  font-size: clamp(24px, 2.4vw, 40px);
+  line-height: 1.3;
+  letter-spacing: -.02em;
+}
+
+.testimonial-quote p::before {
+  content: "”";
+  display: block;
+  margin-bottom: 8px;
+  color: var(--coral);
+  font-family: "Instrument Serif", serif;
+  font-size: 2.2em;
+  line-height: .6;
+}
+
+.testimonial-source {
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 24px;
+  font-size: 15px;
+}
+
+.testimonial-source span {
+  color: var(--muted);
+}
+
+.testimonials-controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: clamp(32px, 3vw, 48px);
+}
+
+.testimonials-prev,
+.testimonials-next {
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--rule);
+  transition:
+    border-color .25s,
+    color .25s;
+}
+
+.testimonials-prev:hover,
+.testimonials-next:hover {
+  border-color: var(--coral);
+  color: var(--coral);
+}
+
+.testimonials-count {
+  color: var(--muted);
+}
+
+.testimonials-count b {
+  color: var(--fg);
+}
+
+.testimonials-pause {
+  margin-left: auto;
+}
+
+/* the line between this section and the footer: the dot rolls along it (journey.js) */
+.testimonials-line {
+  position: absolute;
+  left: var(--edge);
+  right: var(--edge);
+  bottom: 0;
+  height: 1px;
+  pointer-events: none;
+}
+
+@media (max-width: 900px) {
+  .testimonial {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    row-gap: 24px;
+  }
+
+  .testimonial-media {
+    grid-row: auto;
+  }
+}
+
+/* no testimonials yet: only the line stays, so the dot has somewhere to land above the footer */
+.testimonials--hidden { position: relative; height: 4rem; padding: 0; }
+
+/* client logos: black marks, shown whole on the light section and inverted on the dark theme */
+.testimonial-media img {
+  object-fit: contain;
+  padding: clamp(20px, 3vw, 44px);
+}
+
+:root[data-theme="dark"] .testimonial-media img {
+  filter: invert(1);
+}
+
+/* a client logo sits on a plain panel: the blueprint placeholder only shows while there is no image or it fails to load */
+.testimonial-media img ~ .placeholder-art {
+  display: none;
+}
+
+.testimonial-media.is-broken .placeholder-art {
+  display: block;
+}
+
+/* the client's name links to their site */
+.testimonial-source b a { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+.testimonial-source b a:hover, .testimonial-source b a:focus-visible { color: var(--accent, currentColor); }

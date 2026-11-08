@@ -1,0 +1,195 @@
+{
+  "kind": "service",
+  "meta": {
+    "title": "SEO and AEO — visibility on Google and in AI search — WebFully",
+    "description": "Technical SEO, local SEO, content and AEO that get you found on Google and on the map, and quoted in AI answers. Measurable every month."
+  },
+  "chapter": {
+    "name": "SEO & AEO",
+    "accent": "where customers search.",
+    "summary": "Visibility on Google, on the map and in AI answers. We build it with technology, content and structure that both people and machines understand.",
+    "button": "Explore SEO & AEO",
+    "tags": [
+      "Technical SEO",
+      "Content",
+      "Local SEO",
+      "Google Business",
+      "Structured data",
+      "AEO",
+      "GEO"
+    ]
+  },
+  "sections": [
+    {
+      "type": "service-hero",
+      "label": "Organic growth & AI search",
+      "title": "Found on Google.",
+      "accent": "Quoted by AI.",
+      "lead": "Visibility that lasts, and a place in the AI answers that increasingly decide the purchase."
+    },
+    {
+      "type": "capabilities",
+      "count": "7 disciplines",
+      "title": "Two ways to search.",
+      "accent": "One foundation.",
+      "lead": "Search is splitting in two: the results page and the generated answer. Both reward the same thing, a fast, well-built site with content that answers real questions.",
+      "items": [
+        {
+          "title": "Technical SEO",
+          "text": "Indexing, speed, structure and rendering in order."
+        },
+        {
+          "title": "Content and structure",
+          "text": "Pages and texts that answer what customers actually ask."
+        },
+        {
+          "title": "Rich results",
+          "text": "Structured data that adds stars, prices and breadcrumbs to your result."
+        },
+        {
+          "title": "Local SEO",
+          "text": "Google Business, reviews and the map, run as a channel of its own."
+        },
+        {
+          "title": "FAQ and answers",
+          "text": "Questions and answers written so both Google and AI can use them."
+        },
+        {
+          "title": "Authority",
+          "text": "Mentions and links that strengthen trust."
+        },
+        {
+          "title": "AI search (GEO and AEO)",
+          "text": "Structure and content that make you the source AI chooses to quote."
+        }
+      ]
+    },
+    {
+      "type": "builds",
+      "label": "What we build",
+      "title": "More than",
+      "accent": "a blue link.",
+      "lead": "Ranking is the entry ticket. What wins the click is built around it: the snippet, the map and the answers.",
+      "cards": [
+        {
+          "title": "Rich results",
+          "text": "Your result takes more space and earns more clicks.",
+          "placeholder": "search result with stars, price and breadcrumbs",
+          "image": "/assets/services/seo-search-result-rich.webp",
+          "alt": "Google search result with stars, price and breadcrumbs for a ceramics shop",
+          "ratio": "4 / 3",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "title": "Local SEO",
+          "text": "For anyone selling in a place, the map is the front page.",
+          "placeholder": "Google Business profile in the map view",
+          "image": "/assets/services/seo-google-business-map.webp",
+          "alt": "Google Business profile in the map view for a hair salon, on a phone",
+          "ratio": "4 / 3",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "title": "AI answers",
+          "text": "Answers that quote you when someone asks an AI assistant.",
+          "placeholder": "AI assistant quoting webfully.se",
+          "image": "/assets/services/seo-ai-assistant-citation.webp",
+          "alt": "AI assistant on a phone recommending and linking to webfully.se",
+          "ratio": "4 / 3",
+          "width": 1200,
+          "height": 900
+        }
+      ]
+    },
+    {
+      "type": "phases",
+      "label": "From audit to AI visibility",
+      "title": "Five steps.",
+      "accent": "Full visibility.",
+      "lead": "Technology first, then content, authority and machine-readable answers. Each step is measured so the next one starts from evidence.",
+      "steps": [
+        {
+          "title": "Technical audit",
+          "text": "Indexing, performance, structure and rendering in detail."
+        },
+        {
+          "title": "Search intent and plan",
+          "text": "We map what the market searches for and prioritise."
+        },
+        {
+          "title": "Content and structure",
+          "text": "Pages and texts that people and machines understand."
+        },
+        {
+          "title": "Authority",
+          "text": "Relationships, mentions and links."
+        },
+        {
+          "title": "Measurement and AI search",
+          "text": "Ranking, traffic, conversion and visibility in AI answers."
+        }
+      ]
+    },
+    {
+      "type": "proof",
+      "label": "Follow-up",
+      "title": "Numbers you can",
+      "accent": "act on.",
+      "lead": "A ranking only matters if it changes something. Every month you get a report you can read in two minutes.",
+      "points": [
+        {
+          "title": "Rankings",
+          "text": "Which terms moved, and by how much."
+        },
+        {
+          "title": "Traffic and conversion",
+          "text": "What visitors did after they landed."
+        },
+        {
+          "title": "AI visibility",
+          "text": "Where you are quoted in AI answers, and where you are not."
+        }
+      ],
+      "placeholder": "example of a monthly report with rankings, traffic and AI citations",
+      "image": "/assets/services/seo-monthly-report.webp",
+      "alt": "Monthly SEO report with ranking, visits, keywords and AI citations",
+      "width": 1400,
+      "height": 1050
+    },
+    {
+      "type": "faq",
+      "title": "Questions we often get",
+      "accent": "and our answers.",
+      "items": [
+        {
+          "q": "What is the difference between SEO and AEO?",
+          "a": "SEO is about showing up in Google's results. AEO is about becoming the answer that AI assistants and voice search choose."
+        },
+        {
+          "q": "How fast do results show?",
+          "a": "Technical improvements often show within a few weeks. Content and authority build results over months."
+        },
+        {
+          "q": "Do we have to write the texts?",
+          "a": "No. We can write for you, or work with what you already have."
+        },
+        {
+          "q": "Can you guarantee first place?",
+          "a": "No, and no serious agency can. We promise clear work and measurable progress."
+        },
+        {
+          "q": "Does it work for local businesses?",
+          "a": "Yes, local SEO and Google Business are often what gives the quickest effect."
+        }
+      ]
+    },
+    {
+      "type": "related"
+    },
+    {
+      "type": "cta"
+    }
+  ]
+}

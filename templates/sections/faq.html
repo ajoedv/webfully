@@ -1,0 +1,20 @@
+<section class="faq tone-a" aria-labelledby="faq-title">
+  <div class="section-head">
+    <p class="mono section-label">{{ common.faq_label }}</p>
+    <h2 id="faq-title">{{ s.title }} <em>{{ s.accent }}</em></h2>
+  </div>
+  <ul class="accordion faq-list">
+    {% for item in s.items %}<li class="accordion-item">
+      <h3 class="accordion-heading">
+        <button class="accordion-toggle" type="button" aria-expanded="false" aria-controls="faq-{{ loop.index }}" id="faq-{{ loop.index }}-label">
+          <span class="accordion-title">{{ item.q }}</span>
+          <span class="accordion-icon" aria-hidden="true"></span>
+        </button>
+      </h3>
+      <div class="accordion-panel" id="faq-{{ loop.index }}" role="region" aria-labelledby="faq-{{ loop.index }}-label" hidden>
+        <p>{{ item.a }}</p>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</section>

@@ -1,0 +1,383 @@
+/* Inner pages: page hero (services, special projects, contact, privacy) and the service page sections */
+
+/* ---------- Page hero ---------- */
+.page-hero {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  min-height: min(var(--vh), 960px);
+  padding: calc(var(--nav-h) + clamp(32px, 4vw, 64px)) var(--pad) clamp(56px, 6vw, 96px);
+  overflow: hidden;
+}
+
+/* Page hero drawing: cropped to its lines (sign.js), its top edge level with the breadcrumb, right edge on the
+   content edge. Lighter than on the home chapters: it stays behind the page, never part of the content. */
+.page-hero > svg.chapter-sign {
+  stroke: var(--line);
+}
+
+.page-hero > svg.chapter-sign.is-fitted {
+  --sign-top: calc(var(--nav-h) + clamp(32px, 4vw, 64px));
+  inset: auto;
+  top: var(--sign-top);
+  right: var(--pad);
+  width: calc(56% - var(--pad));
+  height: calc(100% - var(--sign-top) - clamp(56px, 6vw, 96px));
+}
+
+.page-hero > .chapter-sign .sign-dash {
+  stroke: var(--line);
+  opacity: .8;
+}
+
+.page-hero > .chapter-sign .sign-dim,
+.page-hero > .chapter-sign .sign-accent {
+  stroke: var(--line);
+}
+
+.page-hero > .chapter-sign .sign-text {
+  fill: var(--rule);
+  opacity: .25;
+  font-size: 13px;
+}
+
+/* Special projects, contact: a shorter hero, so the title follows the breadcrumb closely */
+.page-hero:not(.service-hero) {
+  min-height: min(72vh, 720px);
+}
+
+.page-hero:not(.service-hero) .page-hero-body {
+  padding-top: clamp(48px, 6vw, 96px);
+}
+
+.page-hero-number {
+  position: absolute;
+  right: var(--pad);
+  top: calc(var(--nav-h) + clamp(16px, 2vw, 32px));
+  font-weight: 300;
+  font-size: clamp(9rem, 24vw, 22rem);
+  line-height: .9;
+  letter-spacing: -.06em;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* The same dot as the chapter it came from (cross-page view transition) */
+.page-hero-dot {
+  view-transition-name: wf-dot;
+}
+
+.breadcrumb {
+  position: relative;
+  color: var(--muted);
+}
+
+.breadcrumb ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+}
+
+.breadcrumb li + li::before {
+  content: "/";
+  margin-right: 8px;
+  opacity: .6;
+}
+
+.breadcrumb a {
+  transition: color .25s;
+}
+
+.breadcrumb a:hover {
+  color: var(--coral);
+}
+
+.breadcrumb [aria-current] {
+  color: var(--fg);
+}
+
+.page-hero-body {
+  position: relative;
+  align-self: end;
+  max-width: 960px;
+}
+
+.page-hero-title {
+  margin-top: 22px;
+  font-weight: 300;
+  font-size: clamp(52px, 8.4vw, 150px);
+  line-height: 1;
+  letter-spacing: -.05em;
+}
+
+.page-hero-title em {
+  display: block;
+  margin-top: .1em;
+}
+
+.page-hero-body .lead {
+  margin-top: clamp(22px, 2.4vw, 36px);
+}
+
+.page-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px 32px;
+  margin-top: clamp(28px, 3vw, 44px);
+}
+
+.page-hero-meta {
+  color: var(--muted);
+}
+
+/* ---------- Shared section frame ---------- */
+.capabilities,
+.builds,
+.phases,
+.proof,
+.faq,
+.columns,
+.related {
+  padding: clamp(88px, 10vw, 160px) var(--pad);
+}
+
+/* ---------- Capabilities: heading left, accordion right ---------- */
+.capabilities {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
+  align-items: start;
+  gap: clamp(40px, 6vw, 120px);
+}
+
+.capabilities-head {
+  position: sticky;
+  top: calc(var(--nav-h) + 24px);
+}
+
+.capabilities-head h2 {
+  margin-top: 22px;
+  font-weight: 300;
+  font-size: clamp(38px, 4.6vw, 80px);
+  line-height: 1.05;
+  letter-spacing: -.045em;
+}
+
+.capabilities-head .lead {
+  margin-top: 24px;
+}
+
+/* ---------- Builds: cards with media ---------- */
+.builds-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(20px, 2.4vw, 40px);
+  margin-top: clamp(48px, 5vw, 88px);
+  list-style: none;
+}
+
+.build-no {
+  margin-top: 22px;
+  color: var(--coral);
+}
+
+.build-card h3 {
+  margin-top: 10px;
+  font-weight: 400;
+  font-size: clamp(22px, 1.9vw, 30px);
+  letter-spacing: -.02em;
+}
+
+.build-card > p:last-child {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ---------- Phases ---------- */
+.phases-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  margin-top: clamp(48px, 5vw, 88px);
+  list-style: none;
+}
+
+.phase {
+  padding: 0 clamp(16px, 1.6vw, 28px) 0 clamp(16px, 1.6vw, 24px);
+  border-left: 1px solid var(--coral);
+}
+
+.phase-no {
+  color: var(--coral);
+}
+
+.phase h3 {
+  margin-top: 56px;
+  font-weight: 400;
+  font-size: clamp(22px, 1.8vw, 28px);
+  letter-spacing: -.02em;
+}
+
+.phase p {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ---------- Proof ---------- */
+.proof {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: clamp(40px, 6vw, 112px);
+}
+
+.proof h2 {
+  margin-top: 22px;
+  font-weight: 300;
+  font-size: clamp(40px, 5vw, 88px);
+  line-height: 1.05;
+  letter-spacing: -.045em;
+}
+
+.proof .lead {
+  margin-top: 24px;
+}
+
+.proof-points {
+  margin-top: 32px;
+  list-style: none;
+}
+
+.proof-points li {
+  display: grid;
+  grid-template-columns: minmax(120px, .4fr) 1fr;
+  gap: 20px;
+  padding: 16px 0;
+  border-top: 1px solid var(--line);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.proof-points b {
+  font-weight: 500;
+}
+
+.proof-points span {
+  color: var(--muted);
+}
+
+/* ---------- FAQ ---------- */
+.faq-list {
+  margin-top: clamp(40px, 4vw, 72px);
+}
+
+/* ---------- Columns (special projects) ---------- */
+.columns-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: clamp(20px, 2.4vw, 40px);
+  margin-top: clamp(48px, 5vw, 88px);
+  list-style: none;
+}
+
+.column-item {
+  padding-top: 20px;
+  border-top: 1px solid var(--rule);
+}
+
+.column-item .mono {
+  color: var(--coral);
+}
+
+.column-item h3 {
+  margin-top: 14px;
+  font-weight: 400;
+  font-size: clamp(22px, 1.8vw, 28px);
+  letter-spacing: -.02em;
+}
+
+.column-item p {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ---------- Related services ---------- */
+.related {
+  padding-top: clamp(56px, 6vw, 96px);
+  padding-bottom: clamp(56px, 6vw, 96px);
+  border-top: 1px solid var(--line);
+}
+
+.related-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  margin-top: 24px;
+  list-style: none;
+}
+
+.related-link {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: clamp(20px, 1.6vw, 26px);
+  font-weight: 300;
+  letter-spacing: -.02em;
+  transition: color .25s;
+}
+
+.related-link .mono {
+  color: var(--coral);
+}
+
+.related-link i {
+  margin-left: auto;
+  padding-right: 18px;
+  font-style: normal;
+  color: var(--coral);
+  transition: transform .3s cubic-bezier(.2, .7, .2, 1);
+}
+
+.related-link:hover {
+  color: var(--coral);
+}
+
+.related-link:hover i {
+  transform: translate(3px, -3px);
+}
+
+@media (max-width: 900px) {
+  .capabilities,
+  .proof {
+    grid-template-columns: 1fr;
+  }
+
+  .capabilities-head {
+    position: static;
+  }
+
+  .builds-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-hero-number {
+    font-size: clamp(7rem, 34vw, 12rem);
+  }
+
+  .page-hero > svg.chapter-sign.is-fitted {
+    width: calc(100% - 2 * var(--pad));
+    height: 38%;
+  }
+
+  .proof-points li {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}

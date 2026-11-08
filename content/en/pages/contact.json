@@ -1,0 +1,201 @@
+{
+  "kind": "contact",
+  "meta": {
+    "title": "Contact — start a project with WebFully",
+    "description": "Tell us about your project. We read every enquiry personally and reply within one working day."
+  },
+  "breadcrumb": [
+    {
+      "name": "Home",
+      "url": "/en/"
+    },
+    {
+      "name": "Contact",
+      "url": "/en/contact/"
+    }
+  ],
+  "schema_type": "ContactPage",
+  "sections": [
+    {
+      "type": "page-hero",
+      "label": "Contact / start a project",
+      "title": "Let's",
+      "accent": "talk.",
+      "lead": "Tell us where you are and where you want to go. We read every enquiry personally and reply within one working day, in Swedish or English."
+    },
+    {
+      "type": "contact",
+      "info_label": "Contact details",
+      "direct_label": "Direct",
+      "email_label": "Email",
+      "phone_label": "Phone",
+      "place_label": "Location",
+      "org_label": "Reg. no.",
+      "reply": "Reply within one working day.",
+      "form_title": "Tell us about the project",
+      "required_note": "Fields marked * are required.",
+      "errors_title": "Please check the following:",
+      "select_placeholder": "Select",
+      "fields": [
+        {
+          "name": "name",
+          "label": "Name",
+          "type": "text",
+          "autocomplete": "name",
+          "required": true,
+          "width": "half",
+          "error": "Enter your name."
+        },
+        {
+          "name": "company",
+          "label": "Company",
+          "type": "text",
+          "autocomplete": "organization",
+          "required": true,
+          "width": "half",
+          "error": "Enter the company name."
+        },
+        {
+          "name": "email",
+          "label": "Email",
+          "type": "email",
+          "autocomplete": "email",
+          "required": true,
+          "width": "half",
+          "error": "Enter a valid email address, for example name@company.com."
+        },
+        {
+          "name": "phone",
+          "label": "Phone",
+          "type": "tel",
+          "autocomplete": "tel",
+          "required": false,
+          "width": "half",
+          "error": ""
+        },
+        {
+          "name": "website",
+          "label": "Current website",
+          "type": "url",
+          "autocomplete": "url",
+          "required": false,
+          "width": "half",
+          "error": "",
+          "placeholder": "https://"
+        },
+        {
+          "name": "business",
+          "label": "Type of business",
+          "type": "text",
+          "autocomplete": "off",
+          "required": false,
+          "width": "half",
+          "error": "",
+          "placeholder": "For example hair salon, construction or restaurant"
+        },
+        {
+          "name": "type",
+          "label": "Which services is it about?",
+          "options": [
+            {
+              "value": "web",
+              "label": "Web"
+            },
+            {
+              "value": "seo-aeo",
+              "label": "SEO & AEO"
+            },
+            {
+              "value": "support",
+              "label": "Support"
+            },
+            {
+              "value": "branding",
+              "label": "Brand"
+            },
+            {
+              "value": "content",
+              "label": "Photo, video & social media"
+            },
+            {
+              "value": "ads",
+              "label": "Ads"
+            },
+            {
+              "value": "consulting",
+              "label": "Consulting"
+            },
+            {
+              "value": "apps",
+              "label": "Apps"
+            },
+            {
+              "value": "package",
+              "label": "One of the packages"
+            },
+            {
+              "value": "special",
+              "label": "Special project"
+            },
+            {
+              "value": "unsure",
+              "label": "Not sure yet"
+            }
+          ],
+          "required": true,
+          "width": "full",
+          "error": "Choose at least one service.",
+          "multiple": true
+        },
+        {
+          "name": "budget",
+          "label": "Approximate budget",
+          "options": [
+            {
+              "value": "lt10",
+              "label": "Under 10,000 SEK"
+            },
+            {
+              "value": "10-25",
+              "label": "10,000 – 25,000 SEK"
+            },
+            {
+              "value": "25-50",
+              "label": "25,000 – 50,000 SEK"
+            },
+            {
+              "value": "50-100",
+              "label": "50,000 – 100,000 SEK"
+            },
+            {
+              "value": "gt100",
+              "label": "Over 100,000 SEK"
+            },
+            {
+              "value": "discuss",
+              "label": "Prefer to discuss"
+            }
+          ],
+          "required": false,
+          "width": "half",
+          "error": ""
+        },
+        {
+          "name": "message",
+          "label": "Briefly describe what you need",
+          "textarea": true,
+          "required": true,
+          "width": "full",
+          "error": "Describe the project in a few words.",
+          "hint": "A few lines are enough: goals, wishes or questions."
+        }
+      ],
+      "consent": "I agree that WebFully processes my details according to the",
+      "consent_link": "privacy policy",
+      "consent_error": "You need to accept the privacy policy to send.",
+      "submit": "Send enquiry",
+      "success": "Thank you! Your enquiry has been received. We will reply within one working day.",
+      "send_error": "The message could not be sent right now. Please try again, or email us directly."
+    }
+  ]
+}
