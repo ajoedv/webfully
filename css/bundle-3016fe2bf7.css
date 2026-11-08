@@ -7,7 +7,7 @@
   font-style: normal;
   font-weight: 200 800;
   font-display: swap;
-  src: url("../assets/fonts/manrope.woff?v=2026.11.08.0756-f7c9582") format("woff");
+  src: url("../assets/fonts/manrope.woff?v=2026.11.08.0812-06d9eb1") format("woff");
 }
 
 @font-face {
@@ -15,7 +15,7 @@
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: url("../assets/fonts/instrument-serif-italic.woff?v=2026.11.08.0756-f7c9582") format("woff");
+  src: url("../assets/fonts/instrument-serif-italic.woff?v=2026.11.08.0812-06d9eb1") format("woff");
 }
 
 @font-face {
@@ -23,7 +23,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("../assets/fonts/ibm-plex-mono.woff?v=2026.11.08.0756-f7c9582") format("woff");
+  src: url("../assets/fonts/ibm-plex-mono.woff?v=2026.11.08.0812-06d9eb1") format("woff");
 }
 
 /* ==== base.css ==== */

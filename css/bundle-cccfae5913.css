@@ -7,7 +7,7 @@
   font-style: normal;
   font-weight: 200 800;
   font-display: swap;
-  src: url("../assets/fonts/manrope.woff?v=2026.11.08.0756-f7c9582") format("woff");
+  src: url("../assets/fonts/manrope.woff?v=2026.11.08.0812-06d9eb1") format("woff");
 }
 
 @font-face {
@@ -15,7 +15,7 @@
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: url("../assets/fonts/instrument-serif-italic.woff?v=2026.11.08.0756-f7c9582") format("woff");
+  src: url("../assets/fonts/instrument-serif-italic.woff?v=2026.11.08.0812-06d9eb1") format("woff");
 }
 
 @font-face {
@@ -23,7 +23,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("../assets/fonts/ibm-plex-mono.woff?v=2026.11.08.0756-f7c9582") format("woff");
+  src: url("../assets/fonts/ibm-plex-mono.woff?v=2026.11.08.0812-06d9eb1") format("woff");
 }
 
 /* ==== base.css ==== */
@@ -2804,9 +2804,55 @@ svg.chapter-sign * {
   display: block;
 }
 
-/* the client's name links to their site */
-.testimonial-source b a { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
-.testimonial-source b a:hover, .testimonial-source b a:focus-visible { color: var(--accent, currentColor); }
+/* the client's name links to their site: it grows a little and turns coral on hover */
+.testimonial-source b a {
+  display: inline-block;
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  transform-origin: left center;
+  transition:
+    transform .3s cubic-bezier(.2, .7, .2, 1),
+    color .25s;
+}
+
+.testimonial-source b a:hover,
+.testimonial-source b a:focus-visible {
+  color: var(--coral);
+  transform: scale(1.06);
+}
+
+/* the logo is a button too: a transparent link over the panel, the logo grows a little on hover */
+.testimonial-logo-link {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+.testimonial-media img {
+  transition: transform .35s cubic-bezier(.2, .7, .2, 1);
+}
+
+.testimonial-media:has(.testimonial-logo-link:hover) img,
+.testimonial-media:has(.testimonial-logo-link:focus-visible) img {
+  transform: scale(1.06);
+}
+
+.testimonial-logo-link:focus-visible {
+  outline: 2px solid var(--coral);
+  outline-offset: -2px;
+}
+
+/* hovering the logo lights up the client's name, and the other way round */
+.testimonial:has(.testimonial-logo-link:hover) .testimonial-source b a {
+  color: var(--coral);
+  transform: scale(1.06);
+}
+
+.testimonial:has(.testimonial-source b a:hover) .testimonial-media img {
+  transform: scale(1.06);
+}
 
 /* ==== footer.css ==== */
 /* Footer: always dark (tokens from base.css) */

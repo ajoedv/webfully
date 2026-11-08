@@ -12,6 +12,7 @@
         {% if t.image %}<img src="{{ asset_url }}{{ t.image }}" alt="{{ t.alt }}"{% if t.width %} width="{{ t.width }}" height="{{ t.height }}"{% endif %} loading="lazy" decoding="async">{% endif %}
         {% include "partials/image-placeholder.html" %}
         <p class="media-note mono">{{ common.image_label }}: {{ t.placeholder }}</p>
+        {% if t.url %}<a class="testimonial-logo-link" href="{{ t.url }}" target="_blank" rel="noopener" aria-label="{{ t.name }}"></a>{% endif %}
       </div>
       <blockquote class="testimonial-quote">
         <p>{{ t.quote }}</p>
