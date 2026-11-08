@@ -1,0 +1,17 @@
+<section class="phases tone-a" aria-labelledby="phases-title">
+  <div class="section-head section-head--split">
+    <div>
+      <p class="mono section-label">{{ common.process_label }} &nbsp;/&nbsp; {{ s.label }}</p>
+      <h2 id="phases-title">{{ s.title }} <em>{{ s.accent }}</em></h2>
+    </div>
+    <p class="lead">{{ s.lead }}</p>
+  </div>
+  <ol class="phases-list">
+    {% for step in s.steps %}<li class="phase">
+      <span class="phase-no mono" aria-hidden="true">0{{ loop.index }}</span>
+      <h3>{{ step.title }}</h3>
+      <p>{{ step.text }}</p>
+    </li>
+    {% endfor %}
+  </ol>
+</section>

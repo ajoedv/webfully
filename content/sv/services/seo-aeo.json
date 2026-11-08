@@ -1,0 +1,195 @@
+{
+  "kind": "service",
+  "meta": {
+    "title": "SEO och AEO — synlighet på Google och i AI-sök — WebFully",
+    "description": "Teknisk SEO, lokal SEO, innehåll och AEO som gör att ni hittas på Google, i kartan och citeras i AI-svar. Mätbart varje månad."
+  },
+  "chapter": {
+    "name": "SEO & AEO",
+    "accent": "där kunderna söker.",
+    "summary": "Synlighet på Google, i kartan och i AI-svaren. Vi bygger den med teknik, innehåll och struktur som både människor och maskiner förstår.",
+    "button": "Utforska SEO & AEO",
+    "tags": [
+      "Teknisk SEO",
+      "Innehåll",
+      "Lokal SEO",
+      "Google Business",
+      "Strukturerad data",
+      "AEO",
+      "GEO"
+    ]
+  },
+  "sections": [
+    {
+      "type": "service-hero",
+      "label": "Organisk tillväxt & AI-sök",
+      "title": "Hittad på Google.",
+      "accent": "Citerad av AI.",
+      "lead": "Synlighet som håller över tid, och en plats i AI-svaren som allt oftare avgör köpet."
+    },
+    {
+      "type": "capabilities",
+      "count": "7 discipliner",
+      "title": "Två sätt att söka.",
+      "accent": "En grund.",
+      "lead": "Sökningen delas i två: resultatsidan och det genererade svaret. Båda belönar samma sak, en snabb och korrekt byggd sida med innehåll som svarar på riktiga frågor.",
+      "items": [
+        {
+          "title": "Teknisk SEO",
+          "text": "Indexering, hastighet, struktur och rendering i ordning."
+        },
+        {
+          "title": "Innehåll och struktur",
+          "text": "Sidor och texter som svarar på det kunderna faktiskt frågar."
+        },
+        {
+          "title": "Rika resultat",
+          "text": "Strukturerad data som ger stjärnor, priser och brödsmulor i sökresultatet."
+        },
+        {
+          "title": "Lokal SEO",
+          "text": "Google Business, recensioner och kartan, skött som en egen kanal."
+        },
+        {
+          "title": "FAQ och svar",
+          "text": "Frågor och svar skrivna så att både Google och AI kan använda dem."
+        },
+        {
+          "title": "Auktoritet",
+          "text": "Omnämnanden och länkar som stärker förtroendet."
+        },
+        {
+          "title": "AI-sök (GEO och AEO)",
+          "text": "Struktur och innehåll som gör er till källan AI väljer att citera."
+        }
+      ]
+    },
+    {
+      "type": "builds",
+      "label": "Vad vi bygger",
+      "title": "Mer än",
+      "accent": "en blå länk.",
+      "lead": "Rankingen är inträdesbiljetten. Det som vinner klicket byggs runt omkring: utdraget, kartan och svaren.",
+      "cards": [
+        {
+          "title": "Rika resultat",
+          "text": "Ert resultat tar mer plats och får fler klick.",
+          "placeholder": "sökresultat med stjärnor, pris och brödsmulor",
+          "image": "/assets/services/seo-search-result-rich.webp",
+          "alt": "Sökresultat på Google med stjärnor, pris och brödsmulor för en keramikbutik",
+          "ratio": "4 / 3",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "title": "Lokal SEO",
+          "text": "Kartan är förstasidan för den som säljer på en ort.",
+          "placeholder": "Google Business-profil i kartvyn",
+          "image": "/assets/services/seo-google-business-map.webp",
+          "alt": "Google Business-profil i kartvyn för en frisörsalong, på mobil",
+          "ratio": "4 / 3",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "title": "AI-svar",
+          "text": "Svar som citerar er när någon frågar en AI-assistent.",
+          "placeholder": "AI-assistent som citerar webfully.se",
+          "image": "/assets/services/seo-ai-assistant-citation.webp",
+          "alt": "AI-assistent på mobil som rekommenderar och länkar till webfully.se",
+          "ratio": "4 / 3",
+          "width": 1200,
+          "height": 900
+        }
+      ]
+    },
+    {
+      "type": "phases",
+      "label": "Från analys till AI-synlighet",
+      "title": "Fem steg.",
+      "accent": "Full synlighet.",
+      "lead": "Tekniken först, sedan innehåll, auktoritet och maskinläsbara svar. Varje steg mäts så att nästa bygger på fakta.",
+      "steps": [
+        {
+          "title": "Teknisk analys",
+          "text": "Indexering, prestanda, struktur och rendering i detalj."
+        },
+        {
+          "title": "Sökintention och plan",
+          "text": "Vi kartlägger vad marknaden söker och prioriterar."
+        },
+        {
+          "title": "Innehåll och struktur",
+          "text": "Sidor och texter som människor och maskiner förstår."
+        },
+        {
+          "title": "Auktoritet",
+          "text": "Relationer, omnämnanden och länkar."
+        },
+        {
+          "title": "Mätning och AI-sök",
+          "text": "Ranking, trafik, konvertering och synlighet i AI-svar."
+        }
+      ]
+    },
+    {
+      "type": "proof",
+      "label": "Uppföljning",
+      "title": "Siffror ni kan",
+      "accent": "agera på.",
+      "lead": "En ranking spelar bara roll om den förändrar något. Varje månad får ni en rapport som läses på två minuter.",
+      "points": [
+        {
+          "title": "Ranking",
+          "text": "Vilka sökord som rört sig och hur mycket."
+        },
+        {
+          "title": "Trafik och konvertering",
+          "text": "Vad besökarna gjorde efter att de landat."
+        },
+        {
+          "title": "AI-synlighet",
+          "text": "Var ni citeras i AI-svar, och var ni inte gör det."
+        }
+      ],
+      "placeholder": "exempel på månadsrapport med ranking, trafik och AI-citat",
+      "image": "/assets/services/seo-monthly-report.webp",
+      "alt": "Månadsrapport för SEO med ranking, besök, sökord och AI-citat",
+      "width": 1400,
+      "height": 1050
+    },
+    {
+      "type": "faq",
+      "title": "Frågor vi ofta får",
+      "accent": "och våra svar.",
+      "items": [
+        {
+          "q": "Vad är skillnaden mellan SEO och AEO?",
+          "a": "SEO handlar om att synas i Googles resultat. AEO handlar om att bli svaret som AI-assistenter och röstsök väljer."
+        },
+        {
+          "q": "Hur snabbt syns resultat?",
+          "a": "Tekniska förbättringar märks ofta inom några veckor. Innehåll och auktoritet bygger resultat över månader."
+        },
+        {
+          "q": "Behöver vi skriva texter själva?",
+          "a": "Nej. Vi kan skriva åt er, eller arbeta med det ni redan har."
+        },
+        {
+          "q": "Kan ni garantera förstaplatsen?",
+          "a": "Nej, och ingen seriös byrå kan det. Vi lovar ett tydligt arbete och mätbar utveckling."
+        },
+        {
+          "q": "Fungerar det för lokala företag?",
+          "a": "Ja, lokal SEO och Google Business är ofta det som ger snabbast effekt."
+        }
+      ]
+    },
+    {
+      "type": "related"
+    },
+    {
+      "type": "cta"
+    }
+  ]
+}

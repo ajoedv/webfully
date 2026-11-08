@@ -1,0 +1,36 @@
+<div class="hero-scene">
+  <div class="hero-bg tone-b"></div>
+  <section class="hero tone-b" id="{{ common.ids.home }}" aria-labelledby="hero-title">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="mono section-label"><b>01</b> &nbsp;/&nbsp; {{ s.label }}</p>
+        <h1 id="hero-title">{{ s.title }} <em>{{ s.accent }}</em></h1>
+        <p>{{ s.lead }}</p>
+        <div class="social hero-social-row"></div>
+        <div class="hero-buttons"><a class="btn" href="{{ cta_href }}"><span>{{ common.cta_button }}</span><i aria-hidden="true"><b>↗</b></i></a><a class="link mono" href="#{{ common.ids.services }}">{{ s.services_link }}</a></div>
+      </div>
+      <div class="hero-stage" aria-hidden="true"><div class="logo-rig"><div class="hero-logo" data-labels="{{ s.pieces }}"></div></div></div>
+    </div>
+    <div class="scroll-hint mono" aria-hidden="true">{{ s.scroll_hint }}</div>
+    <div class="social social--col hero-social"></div>
+    <div class="hero-window" aria-hidden="true"><div class="window-bar mono"><i></i><i></i><i></i><span>webfully.se</span></div></div>
+  </section>
+
+  <section class="intro tone-a" aria-labelledby="intro-title">
+    <p class="mono section-label" data-blueprint="Label"><b>02</b> &nbsp;/&nbsp; {{ s.intro.label }}</p>
+    <h2 id="intro-title" data-blueprint="H2">{{ s.intro.title }} <em>{{ s.intro.accent }}</em></h2>
+    <p class="lead" data-blueprint="P">{{ s.intro.lead }}</p>
+    <ul class="intro-points" data-blueprint="Grid">
+      {% for point in s.intro.points %}<li class="intro-point" data-blueprint="Card"><span class="mono" aria-hidden="true">{{ loop.index }}</span><h3>{{ point.title }}</h3><p>{{ point.text }}</p></li>
+      {% endfor %}
+    </ul>
+    <div class="blueprint" aria-hidden="true"></div>
+    <div class="compare" aria-hidden="true">
+      <span class="compare-tag compare-tag--after mono">{{ s.compare.after }}</span>
+      <span class="compare-tag compare-tag--before mono">{{ s.compare.before }}</span>
+      <span class="compare-line"></span>
+      <span class="compare-handle">⟷</span>
+      <span class="compare-hint mono">{{ s.compare.hint }}</span>
+    </div>
+  </section>
+</div>

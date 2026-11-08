@@ -1,0 +1,73 @@
+<section class="pricing tone-a" id="{{ common.ids.pricing }}" aria-labelledby="pricing-title">
+  <div class="pricing-head">
+    <p class="mono section-label"><b>{{ s.number }}</b> &nbsp;/&nbsp; {{ s.label }}</p>
+    <h2 id="pricing-title">{{ s.title }} <em>{{ s.accent }}</em></h2>
+    <p class="lead">{{ s.lead }}</p>
+  </div>
+  <div class="billing" role="group" aria-label="{{ s.billing_label }}">
+    <button class="billing-option is-active" type="button" data-billing="year" aria-pressed="true">{{ s.billing_year }}</button>
+    <button class="billing-option" type="button" data-billing="month" aria-pressed="false">{{ s.billing_month }}</button>
+  </div>
+  <ul class="packages">
+    {% for p in s.packages %}<li class="package{% if p.featured %} package--featured{% endif %}{% if loop.last %} package--last{% endif %}">
+      {% if loop.last %}<span class="package-dot" data-journey="package" aria-hidden="true"></span>{% endif %}
+      {% if p.featured %}<p class="package-badge mono">{{ s.featured_label }}</p>{% endif %}
+      <h3 class="package-name">{{ p.name }}</h3>
+      <p class="package-summary">{{ p.summary }}</p>
+      <p class="package-price"><span class="package-amount"><span class="when-year">{{ p.price }}</span><span class="when-month">{{ p.price_month }}</span></span> <span class="package-unit"><span class="when-year">{{ s.unit_year }}</span><span class="when-month">{{ s.unit_month }}</span></span></p>
+      <ul class="package-features">
+        {% for f in p.highlights %}<li>{{ f }}</li>
+        {% endfor %}
+      </ul>
+      <button class="btn package-open" type="button" aria-haspopup="dialog" aria-controls="package-{{ p.key }}"><span>{{ s.open_label }} {{ p.name }}</span><i aria-hidden="true"><b>↗</b></i></button>
+    </li>
+    {% endfor %}
+  </ul>
+  <p class="pricing-note">{{ s.note }}</p>
+  <div class="addons">
+    <div class="addons-head">
+      <p class="mono section-label">{{ s.addons.label }}</p>
+      <h3 class="addons-title">{{ s.addons.title }} <em>{{ s.addons.accent }}</em></h3>
+      <p class="lead">{{ s.addons.lead }}</p>
+    </div>
+    <ul class="addon-list">
+      {% for a in s.addons.items %}<li class="addon">
+        <div class="addon-text">
+          <h4 class="addon-name">{{ a.name }}</h4>
+          <p>{{ a.text }}</p>
+        </div>
+        <p class="addon-price"><span class="package-unit">{{ a.from }}</span> <span class="addon-amount">{{ a.price }}</span> <span class="package-unit">{{ a.unit }}</span></p>
+      </li>
+      {% endfor %}
+    </ul>
+    <p class="pricing-note">{{ s.addons.note }}</p>
+    <a class="btn" href="{{ contact_url }}?package=addons&amp;plan={{ s.addons.label }}"><span>{{ s.addons.button }}</span><i aria-hidden="true"><b>↗</b></i></a>
+  </div>
+  <div class="custom-offer">
+    <h3 class="addons-title">{{ s.custom.title }} <em>{{ s.custom.accent }}</em></h3>
+    <p class="lead">{{ s.custom.text }}</p>
+    <a class="btn" href="{{ contact_url }}?type=special"><span>{{ s.custom.button }}</span><i aria-hidden="true"><b>↗</b></i></a>
+  </div>
+  {% for p in s.packages %}<dialog class="package-dialog tone-a" id="package-{{ p.key }}" aria-labelledby="package-{{ p.key }}-title">
+    <div class="package-sheet">
+      <button class="package-close" type="button" aria-label="{{ s.close_label }}"><span aria-hidden="true">×</span></button>
+      <p class="mono section-label">{{ s.label }} &nbsp;/&nbsp; {{ p.name }}</p>
+      <h3 class="package-sheet-title" id="package-{{ p.key }}-title">{{ p.name }} <em>{{ p.tagline }}</em></h3>
+      <p class="package-summary">{{ p.summary }}</p>
+      {% for group in p.groups %}<div class="package-group">
+        <h4 class="mono">{{ group.title }}</h4>
+        <ul class="package-features">
+          {% for f in group.items %}<li>{{ f }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+      <p class="package-terms"><span class="when-year">{{ s.terms_year }}</span><span class="when-month">{{ s.terms_month }}</span></p>
+      <div class="package-total">
+        <p class="package-price"><span class="package-amount"><span class="when-year">{{ p.price }}</span><span class="when-month">{{ p.price_month }}</span></span> <span class="package-unit"><span class="when-year">{{ s.unit_year }}</span><span class="when-month">{{ s.unit_month }}</span></span></p>
+        <a class="btn package-choose" href="{{ contact_url }}?package={{ p.key }}" data-plan="{{ p.name }}"><span>{{ s.choose_label }} {{ p.name }}</span><i aria-hidden="true"><b>↗</b></i></a>
+      </div>
+    </div>
+  </dialog>
+  {% endfor %}
+</section>

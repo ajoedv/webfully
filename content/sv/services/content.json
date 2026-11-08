@@ -1,0 +1,186 @@
+{
+  "kind": "service",
+  "meta": {
+    "title": "Foto, video och sociala medier — WebFully",
+    "description": "Fotografi, film, motion och innehåll till sociala medier i ett och samma visuella språk. Från koncept och manus till färdiga filer."
+  },
+  "chapter": {
+    "name": "Foto, video & sociala medier",
+    "accent": "som stoppar flödet.",
+    "summary": "Bilder, film och inlägg som gör att man stannar upp. Koncept, produktion och publicering i ett och samma språk.",
+    "button": "Utforska innehåll",
+    "tags": [
+      "Fotografi",
+      "Video",
+      "Motion",
+      "Sociala medier",
+      "Innehållsplan",
+      "Redigering"
+    ]
+  },
+  "sections": [
+    {
+      "type": "service-hero",
+      "label": "Foto, film & sociala medier",
+      "title": "Innehåll",
+      "accent": "i en röst.",
+      "lead": "En bild, en film och ett inlägg som produceras var för sig ser ut som tre olika företag. Producerade tillsammans ser de ut som ett."
+    },
+    {
+      "type": "capabilities",
+      "count": "6 discipliner",
+      "title": "Hela bilden.",
+      "accent": "Under ett tak.",
+      "lead": "Från idé och manus till färdiga format för varje kanal.",
+      "items": [
+        {
+          "title": "Fotografi",
+          "text": "Produkter, miljö och porträtt i ert bildspråk."
+        },
+        {
+          "title": "Video",
+          "text": "Korta filmer som visar vad ni gör, utan att kännas som reklam."
+        },
+        {
+          "title": "Motion",
+          "text": "Animerad grafik och logotyper i rörelse."
+        },
+        {
+          "title": "Sociala medier",
+          "text": "Inlägg, mallar och format för varje plattform."
+        },
+        {
+          "title": "Innehållsplan",
+          "text": "En plan för vad som ska publiceras, när och var."
+        },
+        {
+          "title": "Redigering",
+          "text": "Klippning, färg, ljud och textning."
+        }
+      ]
+    },
+    {
+      "type": "builds",
+      "label": "Vad vi bygger",
+      "title": "En idé.",
+      "accent": "Varje format.",
+      "lead": "Vi planerar så att en inspelningsdag ger material för månader.",
+      "cards": [
+        {
+          "title": "Foto",
+          "text": "Bilder till webb, annonser och tryck.",
+          "placeholder": "produktfoto i studio",
+          "image": "/assets/services/content-product-studio.webp",
+          "alt": "Handgjord keramikvas fotograferad i studio mot grå bakgrund",
+          "ratio": "4 / 5",
+          "width": 960,
+          "height": 1200
+        },
+        {
+          "title": "Video",
+          "text": "Film i liggande och stående format.",
+          "placeholder": "stillbild ur en kort reklamfilm",
+          "image": "/assets/services/content-ad-film-still.webp",
+          "alt": "Stillbild ur en kort reklamfilm: hyvel, stämjärn och trä i en verkstad",
+          "ratio": "16 / 9",
+          "width": 1600,
+          "height": 900
+        },
+        {
+          "title": "Sociala medier",
+          "text": "Inlägg och reels i ett enhetligt flöde.",
+          "placeholder": "flöde med inlägg i samma stil",
+          "image": "/assets/services/content-social-feed.webp",
+          "alt": "Flöde med inlägg i samma stil för en keramikverkstad, på mobil",
+          "ratio": "4 / 5",
+          "width": 960,
+          "height": 1200
+        }
+      ]
+    },
+    {
+      "type": "phases",
+      "label": "Från idé till publicering",
+      "title": "Fem steg.",
+      "accent": "En visuell röst.",
+      "lead": "Ingenting improviserat och ingenting utan syfte. Varje steg planeras efter kanalen.",
+      "steps": [
+        {
+          "title": "Idé",
+          "text": "Vad ska innehållet uppnå och för vem?"
+        },
+        {
+          "title": "Manus och plan",
+          "text": "Bildlista, manus och tidsplan."
+        },
+        {
+          "title": "Produktion",
+          "text": "Foto och film på plats eller i studio."
+        },
+        {
+          "title": "Redigering",
+          "text": "Klippning, färg och anpassning till varje format."
+        },
+        {
+          "title": "Publicering",
+          "text": "Rätt format i rätt kanal, och uppföljning."
+        }
+      ]
+    },
+    {
+      "type": "proof",
+      "label": "Planerat innehåll",
+      "title": "En dag.",
+      "accent": "Material för månader.",
+      "lead": "Med en tydlig plan blir en produktionsdag till innehåll för en hel säsong.",
+      "points": [
+        {
+          "title": "Enhetligt",
+          "text": "Allt följer samma bildspråk."
+        },
+        {
+          "title": "Effektivt",
+          "text": "En inspelning, många format."
+        },
+        {
+          "title": "Mätbart",
+          "text": "Vi följer upp vad som fungerar."
+        }
+      ],
+      "placeholder": "kontaktark från en produktionsdag",
+      "image": "/assets/services/content-contact-sheet.webp",
+      "alt": "Kontaktark med 24 bilder från en produktionsdag i en keramikverkstad",
+      "width": 1400,
+      "height": 1050
+    },
+    {
+      "type": "faq",
+      "title": "Frågor vi ofta får",
+      "accent": "och våra svar.",
+      "items": [
+        {
+          "q": "Kan ni filma hos oss?",
+          "a": "Ja, vi kommer till er, eller så fotograferar vi i studio."
+        },
+        {
+          "q": "Vilka format levererar ni?",
+          "a": "Liggande, stående och kvadratiska format för webb och alla sociala kanaler."
+        },
+        {
+          "q": "Kan ni sköta våra sociala medier?",
+          "a": "Ja, vi kan planera, producera och publicera åt er varje månad."
+        },
+        {
+          "q": "Ingår musik?",
+          "a": "Vi använder licensierad musik så att ni kan publicera utan problem."
+        }
+      ]
+    },
+    {
+      "type": "related"
+    },
+    {
+      "type": "cta"
+    }
+  ]
+}

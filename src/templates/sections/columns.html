@@ -1,0 +1,15 @@
+<section class="columns {{ s.tone }}" aria-labelledby="columns-{{ section_index }}-title">
+  <div class="section-head">
+    <p class="mono section-label">{{ s.label }}</p>
+    <h2 id="columns-{{ section_index }}-title">{{ s.title }} <em>{{ s.accent }}</em></h2>
+    {% if s.lead %}<p class="lead">{{ s.lead }}</p>{% endif %}
+  </div>
+  <ul class="columns-grid">
+    {% for item in s.items %}<li class="column-item">
+      <span class="mono" aria-hidden="true">0{{ loop.index }}</span>
+      <h3>{{ item.title }}</h3>
+      <p>{{ item.text }}</p>
+    </li>
+    {% endfor %}
+  </ul>
+</section>

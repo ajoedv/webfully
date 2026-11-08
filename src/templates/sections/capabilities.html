@@ -1,0 +1,22 @@
+<section class="capabilities tone-a" aria-labelledby="capabilities-title">
+  <div class="capabilities-head">
+    <p class="mono section-label">{{ common.capabilities_label }} &nbsp;/&nbsp; {{ s.count }}</p>
+    <h2 id="capabilities-title">{{ s.title }} <em>{{ s.accent }}</em></h2>
+    <p class="lead">{{ s.lead }}</p>
+  </div>
+  <ul class="accordion capabilities-list">
+    {% for item in s.items %}<li class="accordion-item">
+      <h3 class="accordion-heading">
+        <button class="accordion-toggle" type="button" aria-expanded="false" aria-controls="capability-{{ loop.index }}" id="capability-{{ loop.index }}-label">
+          <span class="accordion-no mono" aria-hidden="true">{{ loop.index }}</span>
+          <span class="accordion-title">{{ item.title }}</span>
+          <span class="accordion-icon" aria-hidden="true"></span>
+        </button>
+      </h3>
+      <div class="accordion-panel" id="capability-{{ loop.index }}" role="region" aria-labelledby="capability-{{ loop.index }}-label" hidden>
+        <p>{{ item.text }}</p>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</section>

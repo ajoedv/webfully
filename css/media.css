@@ -1,0 +1,51 @@
+/* Media: images with a blueprint placeholder behind them.
+   The placeholder shows while no image is set, and replaces an image that fails to load (media.js). */
+
+.media {
+  position: relative;
+  aspect-ratio: var(--ratio, 4 / 3);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--fg) 3%, transparent);
+}
+
+.media img {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.media.is-broken img {
+  display: none;
+}
+
+.placeholder-art {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: var(--guide);
+  stroke-width: 1;
+  stroke-dasharray: 4 6;
+  vector-effect: non-scaling-stroke;
+}
+
+.media-note {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  right: 12px;
+  color: var(--coral);
+}
+
+.media img ~ .media-note {
+  display: none;
+}
+
+.media.is-broken .media-note {
+  display: block;
+}

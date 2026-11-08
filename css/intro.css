@@ -1,0 +1,81 @@
+/* Intro (Studion): the section the hero window opens into */
+
+.intro {
+  position: relative;
+  z-index: 1;
+  min-height: var(--vh);
+  padding: calc(var(--nav-h) + clamp(40px, 7vw, 110px)) var(--pad) clamp(56px, 6vw, 96px);
+  transform-origin: 0 0;
+  overflow: hidden;
+}
+
+.intro h2 {
+  max-width: 14ch;
+  margin-top: 22px;
+  font-weight: 300;
+  font-size: clamp(40px, 6vw, 108px);
+  line-height: 1.1;
+  letter-spacing: -.045em;
+}
+
+.intro .lead {
+  margin-top: clamp(20px, 2.2vw, 30px);
+}
+
+/* Four short points: what every project gets */
+.intro-points {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(20px, 2.6vw, 48px);
+  margin-top: clamp(48px, 6vw, 100px);
+  list-style: none;
+}
+
+.intro-point {
+  padding-top: 18px;
+  border-top: 1px solid var(--rule);
+}
+
+.intro-point .mono {
+  color: var(--accent);
+}
+
+.intro-point h3 {
+  margin-top: 14px;
+  font-weight: 400;
+  font-size: clamp(19px, 1.6vw, 26px);
+  letter-spacing: -.02em;
+}
+
+.intro-point p {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .intro-points {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 28px;
+  }
+
+  .intro-point p {
+    font-size: 14px;
+  }
+}
+
+/* Short phones: the intro must still fit one screen (the hero window shows exactly one) */
+@media (max-width: 900px) and (max-height: 700px) {
+  .intro {
+    padding-top: calc(var(--nav-h) + 24px);
+  }
+
+  .intro-points {
+    margin-top: 28px;
+  }
+
+  .intro-point p {
+    display: none;
+  }
+}

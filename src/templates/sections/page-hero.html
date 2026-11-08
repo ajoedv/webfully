@@ -1,0 +1,10 @@
+<section class="page-hero tone-b" aria-labelledby="page-title">
+  {% if s.signature_svg %}{{ s.signature_svg|raw }}{% endif %}
+  {% if page.breadcrumb %}{% include "partials/breadcrumb.html" %}{% endif %}
+  <div class="page-hero-body">
+    <p class="mono section-label">{{ s.label }}</p>
+    <h1 class="page-hero-title" id="page-title">{{ s.title }} <em>{{ s.accent }}</em></h1>
+    <p class="lead">{{ s.lead }}</p>
+    {% if s.button %}<div class="page-hero-actions"><a class="btn" href="{{ s.button_href }}"><span>{{ s.button }}</span><i aria-hidden="true"><b>↗</b></i></a></div>{% endif %}
+  </div>
+</section>

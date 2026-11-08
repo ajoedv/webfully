@@ -1,0 +1,194 @@
+{
+  "kind": "service",
+  "meta": {
+    "title": "Webbplatser, butiker och webbappar — WebFully",
+    "description": "Vi designar och bygger snabba webbplatser, webbutiker och webbappar med egen design, stark SEO och kod som håller. Från strategi till lansering."
+  },
+  "chapter": {
+    "name": "Webb",
+    "accent": "som gör jobbet.",
+    "summary": "Webbplatser, butiker och webbappar byggda kring det ni vill uppnå. Inga mallar och inga genvägar: strategi, design och kod i samma hand.",
+    "button": "Utforska webb",
+    "tags": [
+      "Strategi",
+      "UX & UI",
+      "Utveckling",
+      "E-handel",
+      "Webbappar",
+      "Integrationer"
+    ]
+  },
+  "sections": [
+    {
+      "type": "service-hero",
+      "label": "Strategi, design & utveckling",
+      "title": "Webbplatser",
+      "accent": "byggda för att växa.",
+      "lead": "Vi bygger webbplatser och digitala miljöer där strategi, design och teknik arbetar tillsammans. Varje lösning formas efter företaget den ska hjälpa att växa."
+    },
+    {
+      "type": "capabilities",
+      "count": "7 discipliner",
+      "title": "Strategi, design och kod.",
+      "accent": "Ett team.",
+      "lead": "En webbplats blir aldrig starkare än kopplingen mellan vad den ska uppnå och hur den byggs. Därför håller vi ihop hela kedjan.",
+      "items": [
+        {
+          "title": "Strategi",
+          "text": "Mål, målgrupp och innehåll först. Vi bestämmer vad sidan ska åstadkomma innan vi ritar något."
+        },
+        {
+          "title": "UX",
+          "text": "Struktur och flöden som gör det lätt att hitta, förstå och ta kontakt."
+        },
+        {
+          "title": "UI",
+          "text": "Egen visuell design som följer ert varumärke, med typografi, rytm och detaljer som syns."
+        },
+        {
+          "title": "Utveckling",
+          "text": "Ren och lätt kod som laddar snabbt och är enkel att underhålla."
+        },
+        {
+          "title": "E-handel",
+          "text": "Butiker som är lätta att handla i, med betalning, frakt och lager på plats."
+        },
+        {
+          "title": "Webbappar",
+          "text": "Bokning, kundportaler och verktyg som körs direkt i webbläsaren."
+        },
+        {
+          "title": "Integrationer",
+          "text": "Kopplingar till bokningssystem, betalning, CRM och de verktyg ni redan använder."
+        }
+      ]
+    },
+    {
+      "type": "builds",
+      "label": "Vad vi bygger",
+      "title": "Mer än",
+      "accent": "en webbplats.",
+      "lead": "En sida som bara ser färdig ut är en kostnad. Vi bygger delarna som fortsätter att arbeta.",
+      "cards": [
+        {
+          "title": "Företagswebbplats",
+          "text": "Tydlig, snabb och byggd för att ge förfrågningar.",
+          "placeholder": "skärmbild av en företagswebbplats på dator och mobil",
+          "image": "/assets/services/web-company-site-devices.webp",
+          "alt": "Företagswebbplats för ett byggföretag visad på bärbar dator och mobil",
+          "ratio": "4 / 3",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "title": "Webbutik",
+          "text": "Produkter, betalning och frakt i ett enkelt flöde.",
+          "placeholder": "produktsida och varukorg i en webbutik",
+          "image": "/assets/services/web-shop-product-cart.webp",
+          "alt": "Produktsida med varukorg i en webbutik för handgjord keramik",
+          "ratio": "4 / 3",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "title": "Webbapp",
+          "text": "Verktyg som bokning eller kundportal, direkt i webbläsaren.",
+          "placeholder": "gränssnitt för en bokningsapp",
+          "image": "/assets/services/web-booking-app-interface.webp",
+          "alt": "Bokningsgränssnitt för en frisörsalong på en surfplatta",
+          "ratio": "4 / 3",
+          "width": 1200,
+          "height": 900
+        }
+      ]
+    },
+    {
+      "type": "phases",
+      "label": "Från idé till lansering",
+      "title": "Fem steg.",
+      "accent": "Ett bygge.",
+      "lead": "Inga standardpaket och inga mallar. Varje steg utgår från företaget sidan ska hjälpa.",
+      "steps": [
+        {
+          "title": "Insikt",
+          "text": "Vi lär känna verksamheten, målgruppen och konkurrenterna."
+        },
+        {
+          "title": "Struktur",
+          "text": "Sidkarta, innehåll och flöden innan design."
+        },
+        {
+          "title": "Design",
+          "text": "Egen visuell design för dator och mobil."
+        },
+        {
+          "title": "Utveckling",
+          "text": "Ren kod, test på riktiga enheter och SEO från start."
+        },
+        {
+          "title": "Lansering",
+          "text": "Publicering, mätning och finjustering efteråt."
+        }
+      ]
+    },
+    {
+      "type": "proof",
+      "label": "Hantverk & prestanda",
+      "title": "Mätt i",
+      "accent": "millisekunder.",
+      "lead": "Varje element placeras med avsikt: rutnät, typskala och brytpunkter. Ingenting lämnas åt ett standardtema.",
+      "points": [
+        {
+          "title": "Snabb",
+          "text": "Lätt kod och optimerade bilder för korta laddtider."
+        },
+        {
+          "title": "Tillgänglig",
+          "text": "Byggd för alla besökare, med tydlig kontrast och tangentbordsstöd."
+        },
+        {
+          "title": "Mätbar",
+          "text": "Vi mäter med Lighthouse före och efter lansering."
+        }
+      ],
+      "placeholder": "före och efter: en äldre kundsida bredvid den nya",
+      "image": "/assets/services/web-before-after.webp",
+      "alt": "Före och efter: en äldre webbplats bredvid den nya, moderna versionen",
+      "width": 1400,
+      "height": 1050
+    },
+    {
+      "type": "faq",
+      "title": "Frågor vi ofta får",
+      "accent": "och våra svar.",
+      "items": [
+        {
+          "q": "Vad kostar en webbplats?",
+          "a": "Det beror på omfattning. Våra paket börjar på 499 kr i månaden exkl. moms, och större projekt får en egen offert."
+        },
+        {
+          "q": "Hur lång tid tar det?",
+          "a": "En mindre webbplats tar oftast två till fyra veckor. Större projekt planeras med en tidsplan från start."
+        },
+        {
+          "q": "Kan jag uppdatera texter själv?",
+          "a": "Ja. Ni får en enkel panel för texter, bilder och priser."
+        },
+        {
+          "q": "Äger vi vårt innehåll?",
+          "a": "Ja, ert innehåll är alltid ert och kan tas med om ni byter leverantör."
+        },
+        {
+          "q": "Fungerar sidan på mobilen?",
+          "a": "Alltid. Vi designar för mobil och dator parallellt och testar på riktiga enheter."
+        }
+      ]
+    },
+    {
+      "type": "related"
+    },
+    {
+      "type": "cta"
+    }
+  ]
+}

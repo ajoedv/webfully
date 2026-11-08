@@ -1,0 +1,3 @@
+<ul class="lang-switch mono" aria-label="{{ common.lang_switch }}">
+  {% for l in lang_links %}<li>{% if l.current %}<span class="lang-current" aria-current="true">{{ l.label }}</span>{% else %}{% if l.href %}<a href="{{ l.href }}" hreflang="{{ l.lang }}" lang="{{ l.lang }}">{{ l.label }}</a>{% else %}<span class="lang-off" aria-disabled="true">{{ l.label }}</span>{% endif %}{% endif %}</li>{% endfor %}
+</ul>

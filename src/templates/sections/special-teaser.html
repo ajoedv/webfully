@@ -1,0 +1,16 @@
+<section class="special-teaser tone-b" id="{{ common.ids.special }}" aria-labelledby="special-title">
+  <div class="special-teaser-copy">
+    <p class="mono section-label"><b>{{ s.number }}</b> &nbsp;/&nbsp; {{ s.label }}</p>
+    <h2 id="special-title">{{ s.title }} <em>{{ s.accent }}</em></h2>
+    <p class="lead">{{ s.lead }}</p>
+    <ul class="special-teaser-list">
+      {% for item in s.items %}<li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+    <a class="btn" href="{{ special_url }}"><span>{{ s.button }}</span><i aria-hidden="true"><b>↗</b></i></a>
+  </div>
+  <div class="special-teaser-art" aria-hidden="true">
+    <svg viewBox="0 0 1000 1000" focusable="false"><polygon class="special-shape" points="500,120 829,690 171,690"/><polygon class="special-shape" points="500,0 933,750 67,750"/><polygon class="special-shape" points="500,240 725,630 275,630"/><path class="special-cross" d="M500 0V1000M0 500H1000"/></svg>
+    <span class="special-seat" data-journey="special"></span>
+  </div>
+</section>

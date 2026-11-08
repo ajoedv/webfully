@@ -1,0 +1,68 @@
+# Every push to main: build the theme, check it renders exactly like the static site,
+# then publish it to the `deploy` branch. Hostinger (hPanel → Git) pulls `deploy` into
+# public_html/wp-content/themes/webfully.
+name: Build and deploy the theme
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build the static site and the theme
+        run: |
+          python3 src/build.py
+          python3 src/build.py --theme
+
+      - name: Test the theme
+        run: |
+          for f in $(find theme/webfully -name '*.php'); do php -l "$f" > /dev/null; done
+          php wordpress/tests/render.php
+          php wordpress/tests/wp-smoke.php
+
+      - name: Publish to the deploy branch
+        env:
+          REMOTE: https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+        run: |
+          mkdir /tmp/deploy && cd /tmp/deploy
+          if git ls-remote --exit-code --heads "$REMOTE" deploy > /dev/null; then
+            git clone --quiet --branch deploy --depth 1 "$REMOTE" .
+          else
+            git init --quiet -b deploy && git remote add origin "$REMOTE"
+          fi
+          find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+          cp -a "$GITHUB_WORKSPACE/theme/webfully/." .
+          git config user.name "joedev"
+          git config user.email "mamered@gmail.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Theme unchanged"
+          else
+            git commit --quiet -m "Theme from ${GITHUB_SHA::7}"
+            git push --quiet origin deploy
+          fi
+
+      # Hostinger pulls `deploy` on the push above. A fresh URL (never cached) reaches WordPress, which sees the new
+      # theme version and empties the page cache; the step waits until the site answers with the new version.
+      - name: Wait for the live site and empty its cache
+        run: |
+          sha=${GITHUB_SHA::7}
+          for i in $(seq 1 30); do
+            live=$(curl -sI "https://webfully.se/?deploy=$sha-$i" | tr -d '\r' | awk -F': ' 'tolower($1)=="x-wf-version"{print $2}')
+            echo "try $i: ${live:-no answer}"
+            case "$live" in *"$sha"*) echo "Live: $live"; exit 0 ;; esac
+            sleep 10
+          done
+          echo "::warning::The site did not report version $sha within 5 minutes"

@@ -1,0 +1,14 @@
+<section class="page-hero service-hero tone-b" aria-labelledby="page-title">
+  {{ page.service.signature_svg|raw }}
+  <div class="page-hero-number" aria-hidden="true"><span class="chapter-digits">{{ page.service.number }}</span><span class="chapter-dot page-hero-dot"></span></div>
+  {% include "partials/breadcrumb.html" %}
+  <div class="page-hero-body">
+    <p class="mono section-label">{{ page.service.name }} &nbsp;/&nbsp; {{ s.label }}</p>
+    <h1 class="page-hero-title" id="page-title">{{ s.title }} <em>{{ s.accent }}</em></h1>
+    <p class="lead">{{ s.lead }}</p>
+    <div class="page-hero-actions">
+      <a class="btn" href="{{ cta_href }}"><span>{{ common.cta_button }}</span><i aria-hidden="true"><b>↗</b></i></a>
+      <span class="mono page-hero-meta">{{ common.service_label }} {{ page.service.number }} / {{ page.service.total }}</span>
+    </div>
+  </div>
+</section>

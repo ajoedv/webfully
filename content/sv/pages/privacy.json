@@ -1,0 +1,94 @@
+{
+  "kind": "legal",
+  "meta": {
+    "title": "Integritetspolicy — WebFully",
+    "description": "Hur WebFully behandlar personuppgifter och cookies enligt GDPR."
+  },
+  "breadcrumb": [
+    {
+      "name": "Hem",
+      "url": "/"
+    },
+    {
+      "name": "Integritetspolicy",
+      "url": "/privacy/"
+    }
+  ],
+  "sections": [
+    {
+      "type": "page-hero",
+      "label": "Integritet / GDPR",
+      "title": "Integritets",
+      "accent": "policy.",
+      "lead": "Här beskriver vi vilka uppgifter vi samlar in, varför och hur länge, och vilka rättigheter du har."
+    },
+    {
+      "type": "legal",
+      "label": "Integritet / GDPR",
+      "updated": "Senast uppdaterad: 7 november 2026 (utkast)",
+      "parts": [
+        {
+          "id": "controller",
+          "title": "Personuppgiftsansvarig",
+          "paragraphs": [
+            "WebFully drivs av [Företagsnamn AB], org.nr 000000-0000, Mjölby, som är personuppgiftsansvarig för behandlingen av dina uppgifter. Kontakt: info@webfully.se."
+          ]
+        },
+        {
+          "id": "data",
+          "title": "Vilka uppgifter vi samlar in",
+          "paragraphs": [
+            "När du skickar en förfrågan via formuläret behandlar vi de uppgifter du själv lämnar."
+          ],
+          "list": [
+            "Namn och företag",
+            "E-postadress och telefonnummer",
+            "Typ av uppdrag, budget och din beskrivning"
+          ]
+        },
+        {
+          "id": "purpose",
+          "title": "Varför vi behandlar uppgifterna",
+          "paragraphs": [
+            "Vi använder uppgifterna för att svara på din förfrågan, ta fram ett förslag och, om vi inleder ett samarbete, för att fullgöra avtalet. Den rättsliga grunden är ditt samtycke och vårt berättigade intresse av att besvara förfrågningar."
+          ]
+        },
+        {
+          "id": "storage",
+          "title": "Hur länge vi sparar dem",
+          "paragraphs": [
+            "Förfrågningar som inte leder till ett uppdrag raderas efter 12 månader. Uppgifter som krävs för bokföring sparas så länge lagen kräver."
+          ]
+        },
+        {
+          "id": "recipients",
+          "title": "Vem som får ta del av dem",
+          "paragraphs": [
+            "Vi säljer aldrig dina uppgifter. Vi använder leverantörer för drift och e-post som behandlar uppgifter för vår räkning enligt personuppgiftsbiträdesavtal."
+          ]
+        },
+        {
+          "id": "cookies",
+          "title": "Cookies",
+          "paragraphs": [
+            "I dag använder webbplatsen bara nödvändig lagring i din webbläsare: ditt val av färgläge och ditt cookieval. Vi använder inga cookies för statistik eller marknadsföring. Om vi lägger till det frågar vi först, och du kan ändra ditt val via Cookieinställningar längst ned på sidan."
+          ]
+        },
+        {
+          "id": "rights",
+          "title": "Dina rättigheter",
+          "paragraphs": [
+            "Du har rätt att få veta vilka uppgifter vi har om dig, få dem rättade eller raderade, begränsa behandlingen, invända och få ut dem i ett maskinläsbart format. Du kan när som helst återkalla ditt samtycke."
+          ]
+        },
+        {
+          "id": "complaints",
+          "title": "Klagomål",
+          "paragraphs": [
+            "Om du anser att vi behandlar dina uppgifter felaktigt kan du kontakta oss eller lämna klagomål till Integritetsskyddsmyndigheten (IMY), imy.se."
+          ]
+        }
+      ]
+    }
+  ]
+}

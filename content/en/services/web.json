@@ -1,0 +1,194 @@
+{
+  "kind": "service",
+  "meta": {
+    "title": "Websites, online shops and web apps — WebFully",
+    "description": "We design and build fast websites, online shops and web apps with custom design, strong SEO and code that lasts. From strategy to launch."
+  },
+  "chapter": {
+    "name": "Web",
+    "accent": "that does the job.",
+    "summary": "Websites, shops and web apps built around what you want to achieve. No templates and no shortcuts: strategy, design and code in the same hands.",
+    "button": "Explore web",
+    "tags": [
+      "Strategy",
+      "UX & UI",
+      "Development",
+      "E-commerce",
+      "Web apps",
+      "Integrations"
+    ]
+  },
+  "sections": [
+    {
+      "type": "service-hero",
+      "label": "Strategy, design & development",
+      "title": "Websites",
+      "accent": "built to grow.",
+      "lead": "We build websites and digital environments where strategy, design and technology work together. Every solution is shaped around the business it is meant to grow."
+    },
+    {
+      "type": "capabilities",
+      "count": "7 disciplines",
+      "title": "Strategy, design and code.",
+      "accent": "One team.",
+      "lead": "A website is never stronger than the link between what it should achieve and how it is built. That is why we keep the whole chain together.",
+      "items": [
+        {
+          "title": "Strategy",
+          "text": "Goals, audience and content first. We decide what the site must achieve before we draw anything."
+        },
+        {
+          "title": "UX",
+          "text": "Structure and flows that make it easy to find, understand and get in touch."
+        },
+        {
+          "title": "UI",
+          "text": "Custom visual design that follows your brand, with type, rhythm and details that show."
+        },
+        {
+          "title": "Development",
+          "text": "Clean, light code that loads fast and is easy to maintain."
+        },
+        {
+          "title": "E-commerce",
+          "text": "Shops that are easy to buy from, with payment, shipping and stock in place."
+        },
+        {
+          "title": "Web apps",
+          "text": "Booking, customer portals and tools that run straight in the browser."
+        },
+        {
+          "title": "Integrations",
+          "text": "Connections to booking systems, payments, CRM and the tools you already use."
+        }
+      ]
+    },
+    {
+      "type": "builds",
+      "label": "What we build",
+      "title": "More than",
+      "accent": "a website.",
+      "lead": "A site that only looks finished is a cost. We build the parts that keep working.",
+      "cards": [
+        {
+          "title": "Company website",
+          "text": "Clear, fast and built to bring in enquiries.",
+          "placeholder": "screenshot of a company website on desktop and mobile",
+          "image": "/assets/services/web-company-site-devices.webp",
+          "alt": "Company website for a construction firm shown on a laptop and a phone",
+          "ratio": "4 / 3",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "title": "Online shop",
+          "text": "Products, payment and shipping in one simple flow.",
+          "placeholder": "product page and cart in an online shop",
+          "image": "/assets/services/web-shop-product-cart.webp",
+          "alt": "Product page with a shopping cart in a web shop for handmade ceramics",
+          "ratio": "4 / 3",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "title": "Web app",
+          "text": "Tools such as booking or a customer portal, right in the browser.",
+          "placeholder": "interface of a booking app",
+          "image": "/assets/services/web-booking-app-interface.webp",
+          "alt": "Booking interface for a hair salon on a tablet",
+          "ratio": "4 / 3",
+          "width": 1200,
+          "height": 900
+        }
+      ]
+    },
+    {
+      "type": "phases",
+      "label": "From idea to launch",
+      "title": "Five steps.",
+      "accent": "One build.",
+      "lead": "No standard packages and no templates. Every step starts from the business the site is meant to help.",
+      "steps": [
+        {
+          "title": "Insight",
+          "text": "We get to know the business, the audience and the competition."
+        },
+        {
+          "title": "Structure",
+          "text": "Sitemap, content and flows before design."
+        },
+        {
+          "title": "Design",
+          "text": "Custom visual design for desktop and mobile."
+        },
+        {
+          "title": "Development",
+          "text": "Clean code, tests on real devices and SEO from the start."
+        },
+        {
+          "title": "Launch",
+          "text": "Publishing, measuring and fine-tuning afterwards."
+        }
+      ]
+    },
+    {
+      "type": "proof",
+      "label": "Craft & performance",
+      "title": "Measured in",
+      "accent": "milliseconds.",
+      "lead": "Every element is placed on purpose: the grid, the type scale, the breakpoints. Nothing is left to a default theme.",
+      "points": [
+        {
+          "title": "Fast",
+          "text": "Light code and optimised images for short load times."
+        },
+        {
+          "title": "Accessible",
+          "text": "Built for every visitor, with clear contrast and keyboard support."
+        },
+        {
+          "title": "Measurable",
+          "text": "We measure with Lighthouse before and after launch."
+        }
+      ],
+      "placeholder": "before and after: an older client site next to the new one",
+      "image": "/assets/services/web-before-after.webp",
+      "alt": "Before and after: an older website next to the new, modern version",
+      "width": 1400,
+      "height": 1050
+    },
+    {
+      "type": "faq",
+      "title": "Questions we often get",
+      "accent": "and our answers.",
+      "items": [
+        {
+          "q": "What does a website cost?",
+          "a": "It depends on the scope. Our packages start at 499 SEK a month excl. VAT, and larger projects get their own quote."
+        },
+        {
+          "q": "How long does it take?",
+          "a": "A smaller website usually takes two to four weeks. Larger projects get a timeline from the start."
+        },
+        {
+          "q": "Can I update texts myself?",
+          "a": "Yes. You get a simple panel for texts, images and prices."
+        },
+        {
+          "q": "Do we own our content?",
+          "a": "Yes, your content is always yours and goes with you if you change provider."
+        },
+        {
+          "q": "Does the site work on mobile?",
+          "a": "Always. We design for mobile and desktop side by side and test on real devices."
+        }
+      ]
+    },
+    {
+      "type": "related"
+    },
+    {
+      "type": "cta"
+    }
+  ]
+}

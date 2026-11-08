@@ -1,0 +1,182 @@
+{
+  "kind": "service",
+  "meta": {
+    "title": "Konsultation och digital strategi — WebFully",
+    "description": "Oberoende rådgivning om digital strategi, varumärke, marknadsföring och val av verktyg. Vi hjälper er att fatta bättre beslut och göra dem till handling."
+  },
+  "chapter": {
+    "name": "Konsultation",
+    "accent": "för bättre beslut.",
+    "summary": "Digital utveckling handlar inte om fler verktyg utan om bättre beslut. Vi hittar möjligheterna och gör strategin till handling.",
+    "button": "Utforska konsultation",
+    "tags": [
+      "Digital strategi",
+      "Analys",
+      "Varumärke",
+      "Marknadsplan",
+      "Verktyg",
+      "Workshops"
+    ]
+  },
+  "sections": [
+    {
+      "type": "service-hero",
+      "label": "Strategi & utveckling",
+      "title": "Vi tar er",
+      "accent": "framåt.",
+      "lead": "Oberoende råd som hjälper er att fatta välgrundade beslut, lösa verkliga utmaningar och hitta nästa steg."
+    },
+    {
+      "type": "capabilities",
+      "count": "6 discipliner",
+      "title": "Inga fasta paket.",
+      "accent": "Inga dolda avgifter.",
+      "lead": "Vi utgår från en grundlig analys och knyter ihop det viktigaste till en tydlig plan.",
+      "items": [
+        {
+          "title": "Digital strategi",
+          "text": "Vart ska ni, och vilka digitala steg tar er dit?"
+        },
+        {
+          "title": "Analys",
+          "text": "Webbplats, synlighet och konkurrenter under lupp."
+        },
+        {
+          "title": "Varumärke och position",
+          "text": "Vad ni står för och hur det ska märkas."
+        },
+        {
+          "title": "Marknadsplan",
+          "text": "Kanaler, budget och prioriteringar för året."
+        },
+        {
+          "title": "Val av verktyg",
+          "text": "Rätt system för bokning, e-handel och kundkontakt."
+        },
+        {
+          "title": "Workshops",
+          "text": "Halvdagar där vi tar fram beslut tillsammans."
+        }
+      ]
+    },
+    {
+      "type": "builds",
+      "label": "Vad vi bygger",
+      "title": "Ramverk,",
+      "accent": "inte bildspel.",
+      "lead": "Råd är bara värdefulla när de blir handling. Det här är verktygen vi använder.",
+      "cards": [
+        {
+          "title": "Nulägesanalys",
+          "text": "Var ni står i dag, ärligt och konkret.",
+          "placeholder": "diagram över nuläge och mål",
+          "image": "/assets/services/consulting-current-vs-goal.webp",
+          "alt": "Tavla som ställer nuläge mot mål för en webbplats",
+          "ratio": "4 / 3",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "title": "Plan på 90 dagar",
+          "text": "Prioriterade steg med ansvar och tid.",
+          "placeholder": "tidslinje med fyra faser",
+          "image": "/assets/services/consulting-timeline-four-phases.webp",
+          "alt": "Tidslinje med fyra faser: kartläggning, plan, genomförande och uppföljning",
+          "ratio": "4 / 3",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "title": "Workshop",
+          "text": "Beslut som tas tillsammans, på riktigt.",
+          "placeholder": "workshop med post-it och skisser",
+          "image": "/assets/services/consulting-workshop-notes.webp",
+          "alt": "Workshop med post-it-lappar och skisser av webbplatsens sidor",
+          "ratio": "4 / 3",
+          "width": 1200,
+          "height": 900
+        }
+      ]
+    },
+    {
+      "type": "phases",
+      "label": "Från första möte till uppföljning",
+      "title": "Fyra steg.",
+      "accent": "En riktning.",
+      "lead": "Vi börjar med att förstå verksamheten, och varje steg bygger på det förra.",
+      "steps": [
+        {
+          "title": "Genomgång",
+          "text": "Mål, utmaningar och nuläge."
+        },
+        {
+          "title": "Riktning",
+          "text": "Prioriteringar och en tydlig plan."
+        },
+        {
+          "title": "Genomförande",
+          "text": "Vi hjälper till att göra planen verklig."
+        },
+        {
+          "title": "Uppföljning",
+          "text": "Vi mäter och justerar tillsammans."
+        }
+      ]
+    },
+    {
+      "type": "proof",
+      "label": "Oberoende",
+      "title": "Råd som svarar",
+      "accent": "till er.",
+      "lead": "Vi säljer inga system och tar ingen provision. Våra råd utgår bara från vad som är bäst för er.",
+      "points": [
+        {
+          "title": "Ärligt",
+          "text": "Vi säger det vi ser, även när det är obekvämt."
+        },
+        {
+          "title": "Konkret",
+          "text": "Varje råd blir ett steg ni kan ta."
+        },
+        {
+          "title": "Utan bindning",
+          "text": "Ni väljer själva vem som genomför."
+        }
+      ],
+      "placeholder": "illustration av plan och prioriteringar",
+      "image": "/assets/services/consulting-plan-priorities.webp",
+      "alt": "Prioriteringsmatris som visar påverkan mot insats och en rangordnad plan",
+      "width": 1400,
+      "height": 1050
+    },
+    {
+      "type": "faq",
+      "title": "Frågor vi ofta får",
+      "accent": "och våra svar.",
+      "items": [
+        {
+          "q": "Vad kostar en konsultation?",
+          "a": "Ett första samtal är kostnadsfritt. Därefter arbetar vi per timme eller med fast pris."
+        },
+        {
+          "q": "Måste vi köpa något mer?",
+          "a": "Nej. Rådgivningen står på egna ben."
+        },
+        {
+          "q": "Kan ni hjälpa oss välja system?",
+          "a": "Ja, vi jämför alternativen och rekommenderar det som passar er."
+        },
+        {
+          "q": "Arbetar ni på distans?",
+          "a": "Ja, och gärna på plats i Östergötland."
+        }
+      ]
+    },
+    {
+      "type": "related"
+    },
+    {
+      "type": "cta"
+    }
+  ]
+}

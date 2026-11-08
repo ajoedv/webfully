@@ -1,0 +1,132 @@
+/* WebFully fields panel */
+
+.wf-admin .wf-docs {
+  max-width: 980px;
+  margin-bottom: 24px;
+}
+
+.wf-doc-key {
+  color: #787c82;
+  font-family: Menlo, Consolas, monospace;
+  font-size: 12px;
+}
+
+.wf-doc-state,
+.wf-doc-view {
+  width: 120px;
+  color: #50575e;
+  text-align: right;
+}
+
+.wf-editor {
+  max-width: 980px;
+}
+
+.wf-group {
+  margin: 8px 0;
+  border: 1px solid #dcdcde;
+  border-radius: 4px;
+  background: #fff;
+}
+
+.wf-group > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.wf-section > summary {
+  font-size: 14px;
+}
+
+.wf-group-body {
+  padding: 4px 14px 14px;
+  border-top: 1px solid #f0f0f1;
+}
+
+.wf-field {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr) auto;
+  gap: 6px 14px;
+  align-items: start;
+  padding: 8px 0;
+}
+
+.wf-field .large-text,
+.wf-field .regular-text {
+  width: 100%;
+}
+
+.wf-label {
+  padding-top: 6px;
+  color: #1d2327;
+  font-weight: 500;
+}
+
+.wf-field--fixed code {
+  justify-self: start;
+}
+
+.wf-field--check {
+  grid-template-columns: 1fr;
+}
+
+.wf-field--list {
+  grid-template-columns: 180px minmax(0, 1fr);
+}
+
+.wf-list .wf-item {
+  margin: 0 0 6px;
+}
+
+.wf-list > .wf-field.wf-item {
+  grid-template-columns: 40px minmax(0, 1fr) auto;
+}
+
+.wf-tools {
+  display: inline-flex;
+  gap: 10px;
+  font-weight: 400;
+}
+
+.wf-tools .button-link {
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.wf-danger {
+  color: #b32d2e;
+}
+
+.wf-add {
+  margin-top: 4px;
+}
+
+.wf-savebar {
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 980px;
+  margin-top: 16px;
+  padding: 12px 0;
+  border-top: 1px solid #dcdcde;
+  background: #f0f0f1;
+}
+
+.wf-reset {
+  margin-top: 24px;
+}
+
+@media (max-width: 782px) {
+  .wf-field,
+  .wf-field--list {
+    grid-template-columns: 1fr;
+  }
+}

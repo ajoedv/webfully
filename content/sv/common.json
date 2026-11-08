@@ -1,0 +1,93 @@
+{
+  "html_lang": "sv",
+  "locale_tag": "sv-SE",
+  "og_locale": "sv_SE",
+  "org_description": "Digital studio i Mjölby som bygger webbplatser, varumärken och synlighet för företag som vill växa.",
+  "skip_link": "Hoppa till innehållet",
+  "lang_switch": "Språk",
+  "breadcrumb": "Brödsmulor",
+  "ids": {
+    "home": "hem",
+    "services": "tjanster",
+    "process": "arbetssatt",
+    "pricing": "priser",
+    "special": "specialprojekt",
+    "contact": "kontakt",
+    "cookies": "cookies"
+  },
+  "nav": {
+    "label": "Huvudmeny",
+    "home_label": "WebFully, till startsidan",
+    "home": "Hem",
+    "services": "Tjänster",
+    "pricing": "Priser",
+    "special": "Specialprojekt",
+    "contact": "Kontakt",
+    "menu": "Meny"
+  },
+  "theme": {
+    "label": "Färgläge",
+    "auto": "Auto",
+    "light": "Ljus",
+    "dark": "Mörk"
+  },
+  "cta_button": "Starta ett projekt",
+  "service_label": "Tjänst",
+  "capabilities_label": "Kapacitet",
+  "process_label": "Process",
+  "faq_label": "Vanliga frågor",
+  "related_label": "Fler tjänster",
+  "image_label": "Bild",
+  "image_missing": "Bilden kunde inte laddas",
+  "cta": {
+    "label": "Starta här",
+    "icon_label": "Gå till kontaktsidan",
+    "title": "Saknar ni en bit?",
+    "accent": "Vi hittar den.",
+    "text": "Berätta var ni står och vart ni vill. Vi återkommer inom en arbetsdag med ett första förslag.",
+    "button": "Starta ett projekt",
+    "icon_note": "03 — LANSERING"
+  },
+  "footer": {
+    "contact": "Kontakt",
+    "services": "Tjänster",
+    "menu": "Meny",
+    "privacy": "Integritetspolicy",
+    "clock": "Lokal tid i Mjölby",
+    "top": "Till toppen"
+  },
+  "cookie": {
+    "title": "Vi värnar om din integritet",
+    "text": "Vi använder bara nödvändiga cookies i dag. Om vi lägger till statistik eller marknadsföring frågar vi först, och du kan ändra ditt val när som helst.",
+    "read_more": "Läs mer om cookies",
+    "categories": "Välj kategorier",
+    "accept": "Acceptera alla",
+    "reject": "Avvisa alla",
+    "customize": "Anpassa",
+    "save": "Spara val",
+    "settings": "Cookieinställningar",
+    "items": [
+      {
+        "key": "necessary",
+        "name": "Nödvändiga",
+        "text": "Krävs för att webbplatsen ska fungera, till exempel ditt val av färgläge och detta samtycke.",
+        "required": true
+      },
+      {
+        "key": "statistics",
+        "name": "Statistik",
+        "text": "Hjälper oss förstå hur webbplatsen används. Används inte i dag.",
+        "required": false
+      },
+      {
+        "key": "marketing",
+        "name": "Marknadsföring",
+        "text": "Används för att mäta och anpassa annonser. Används inte i dag.",
+        "required": false
+      }
+    ]
+  },
+  "labels": {
+    "new_tab": "öppnas i en ny flik"
+  }
+}

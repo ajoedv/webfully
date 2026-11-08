@@ -1,0 +1,99 @@
+/* Cookie consent: small dark panel, bottom left (tokens from base.css). Reopened from the footer. */
+
+.cookie {
+  position: fixed;
+  left: 16px;
+  bottom: 16px;
+  z-index: 80;
+  width: min(420px, calc(100vw - 32px));
+  max-height: calc(var(--vh) - 32px);
+  padding: 24px;
+  overflow-y: auto;
+  border: 1px solid var(--rule);
+  background: var(--black);
+  color: var(--fg);
+  box-shadow: 0 24px 60px -24px color-mix(in srgb, var(--black) 60%, transparent);
+}
+
+.cookie[hidden] {
+  display: none;
+}
+
+.cookie-title {
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: -.01em;
+}
+
+.cookie-text {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.cookie-text a {
+  color: var(--fg);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.cookie-choices fieldset {
+  margin-top: 18px;
+  border: 0;
+}
+
+.cookie-choices legend {
+  margin-bottom: 8px;
+  color: var(--muted);
+}
+
+.cookie-choice {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  gap: 12px;
+  padding: 10px 0;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.cookie-choice input {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  accent-color: var(--coral);
+}
+
+.cookie-choice b {
+  display: block;
+  color: var(--fg);
+  font-weight: 500;
+}
+
+.cookie-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Accept and reject carry the same weight on purpose */
+.cookie-actions .btn {
+  flex: 1 1 auto;
+  justify-content: center;
+}
+
+.cookie-actions .btn span {
+  width: 100%;
+  justify-content: center;
+}
+
+.cookie-customize {
+  flex-basis: 100%;
+  padding: 6px 0 2px;
+  text-align: left;
+}

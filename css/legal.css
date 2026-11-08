@@ -1,0 +1,36 @@
+/* Legal pages (privacy): readable single column */
+
+.legal {
+  padding: clamp(72px, 8vw, 128px) var(--pad);
+}
+
+.legal-body {
+  max-width: 760px;
+}
+
+.legal-updated {
+  color: var(--muted);
+}
+
+.legal-part {
+  margin-top: clamp(40px, 4vw, 64px);
+  scroll-margin-top: calc(var(--nav-h) + 24px);
+}
+
+.legal-part h2 {
+  font-weight: 400;
+  font-size: clamp(24px, 2.4vw, 36px);
+  letter-spacing: -.025em;
+}
+
+.legal-part p,
+.legal-part li {
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.legal-part ul {
+  padding-left: 20px;
+}

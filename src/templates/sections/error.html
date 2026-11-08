@@ -1,0 +1,21 @@
+<section class="error-page tone-b" aria-labelledby="page-title">
+  <div class="error-art" aria-hidden="true">
+    {% for digit in s.digits %}<span class="error-digit{% if digit.dot %} error-digit--home{% endif %}">{{ digit.d }}{% if digit.dot %}<span class="error-dot"></span>{% endif %}</span>{% endfor %}
+  </div>
+  <div class="error-copy">
+    <p class="mono section-label">{{ s.label }}</p>
+    <h1 id="page-title">{{ s.title }} <em>{{ s.accent }}</em></h1>
+    <p class="lead">{{ s.lead }}</p>
+    {% if s.lead_en %}<p class="lead" lang="en">{{ s.lead_en }}</p>{% endif %}
+    <div class="page-hero-actions">
+      <a class="btn" href="{{ home_url }}"><span>{{ s.button }}</span><i aria-hidden="true"><b>↗</b></i></a>
+      <a class="link mono" href="{{ contact_url }}">{{ s.contact }}</a>
+    </div>
+    <nav class="error-links" aria-label="{{ common.footer.services }}">
+      <ul>
+        {% for service in services %}<li><a href="{{ service.url }}">{{ service.name }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</section>

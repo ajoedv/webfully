@@ -1,0 +1,92 @@
+/* Error pages (404, 500): outlined code; the coral zero holds the logo dot, which follows the pointer inside it (error.js) */
+
+.error-page {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(40px, 6vw, 112px);
+  min-height: var(--vh);
+  padding: calc(var(--nav-h) + 40px) var(--pad) 80px;
+}
+
+.error-art {
+  display: flex;
+  justify-content: center;
+  font-weight: 300;
+  font-size: clamp(8rem, 22vw, 20rem);
+  line-height: .9;
+  letter-spacing: -.06em;
+  user-select: none;
+}
+
+.error-digit {
+  position: relative;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--rule);
+}
+
+.error-digit--home {
+  -webkit-text-stroke-color: var(--brand-coral);
+}
+
+/* the dot lives inside the zero; error.js keeps it within the inner oval */
+.error-dot {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: .1em;
+  height: .1em;
+  margin: -.05em 0 0 -.05em;
+  border-radius: 50%;
+  background: var(--brand-coral);
+  will-change: transform;
+}
+
+.error-copy h1 {
+  margin-top: 22px;
+  font-weight: 300;
+  font-size: clamp(44px, 6vw, 104px);
+  line-height: 1.02;
+  letter-spacing: -.05em;
+}
+
+.error-copy h1 em {
+  display: block;
+}
+
+.error-copy .lead {
+  margin-top: 20px;
+}
+
+.error-links ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  list-style: none;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.error-links a {
+  transition: color .25s;
+}
+
+.error-links a:hover {
+  color: var(--coral);
+}
+
+/* Mobile: the code is centered and as wide as the floating nav (the content width) */
+@media (max-width: 900px) {
+  .error-page {
+    grid-template-columns: 1fr;
+    align-content: center;
+    gap: 40px;
+  }
+
+  .error-art {
+    font-size: calc((100vw - 2 * var(--pad)) / 1.62);
+  }
+}

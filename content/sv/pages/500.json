@@ -1,0 +1,34 @@
+{
+  "kind": "error",
+  "noindex": true,
+  "output": "/500.html",
+  "meta": {
+    "title": "Något gick fel — WebFully",
+    "description": "Ett tekniskt fel uppstod."
+  },
+  "sections": [
+    {
+      "type": "error",
+      "code": "500",
+      "label": "Fel 500",
+      "title": "Något gick",
+      "accent": "isär.",
+      "lead": "Ett tekniskt fel uppstod hos oss. Vi lägger ihop bitarna igen. Försök om en stund.",
+      "lead_en": "A technical error occurred on our side. Please try again in a moment.",
+      "button": "Till startsidan",
+      "contact": "Kontakta oss",
+      "digits": [
+        {
+          "d": "5"
+        },
+        {
+          "d": "0"
+        },
+        {
+          "d": "0",
+          "dot": true
+        }
+      ]
+    }
+  ]
+}

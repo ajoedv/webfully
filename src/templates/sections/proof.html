@@ -1,0 +1,16 @@
+<section class="proof tone-b" aria-labelledby="proof-title">
+  <div class="proof-copy">
+    <p class="mono section-label">{{ s.label }}</p>
+    <h2 id="proof-title">{{ s.title }} <em>{{ s.accent }}</em></h2>
+    <p class="lead">{{ s.lead }}</p>
+    <ul class="proof-points">
+      {% for point in s.points %}<li><b>{{ point.title }}</b><span>{{ point.text }}</span></li>
+      {% endfor %}
+    </ul>
+  </div>
+  <figure class="media proof-media" style="--ratio: 4 / 3">
+    {% if s.image %}<img src="{{ asset_url }}{{ s.image }}" alt="{{ s.alt }}"{% if s.width %} width="{{ s.width }}" height="{{ s.height }}"{% endif %} loading="lazy" decoding="async">{% endif %}
+    {% include "partials/image-placeholder.html" %}
+    <figcaption class="media-note mono">{{ common.image_label }}: {{ s.placeholder }}</figcaption>
+  </figure>
+</section>

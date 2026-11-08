@@ -1,0 +1,186 @@
+{
+  "kind": "service",
+  "meta": {
+    "title": "Photo, video and social media — WebFully",
+    "description": "Photography, film, motion and social media content in one visual language. From concept and script to finished files."
+  },
+  "chapter": {
+    "name": "Photo, video & social media",
+    "accent": "that stops the scroll.",
+    "summary": "Images, film and posts that make people stop. Concept, production and publishing in one language.",
+    "button": "Explore content",
+    "tags": [
+      "Photography",
+      "Video",
+      "Motion",
+      "Social media",
+      "Content plan",
+      "Editing"
+    ]
+  },
+  "sections": [
+    {
+      "type": "service-hero",
+      "label": "Photo, film & social media",
+      "title": "Content",
+      "accent": "in one voice.",
+      "lead": "A photo, a film and a post made separately look like three different companies. Made together they look like one."
+    },
+    {
+      "type": "capabilities",
+      "count": "6 disciplines",
+      "title": "The whole picture.",
+      "accent": "Under one roof.",
+      "lead": "From idea and script to finished formats for every channel.",
+      "items": [
+        {
+          "title": "Photography",
+          "text": "Products, places and portraits in your visual language."
+        },
+        {
+          "title": "Video",
+          "text": "Short films that show what you do, without feeling like advertising."
+        },
+        {
+          "title": "Motion",
+          "text": "Animated graphics and logos in motion."
+        },
+        {
+          "title": "Social media",
+          "text": "Posts, templates and formats for every platform."
+        },
+        {
+          "title": "Content plan",
+          "text": "A plan for what to publish, when and where."
+        },
+        {
+          "title": "Editing",
+          "text": "Cutting, colour, sound and subtitles."
+        }
+      ]
+    },
+    {
+      "type": "builds",
+      "label": "What we build",
+      "title": "One idea.",
+      "accent": "Every format.",
+      "lead": "We plan so that one shoot day gives material for months.",
+      "cards": [
+        {
+          "title": "Photo",
+          "text": "Images for web, ads and print.",
+          "placeholder": "product photo in a studio",
+          "image": "/assets/services/content-product-studio.webp",
+          "alt": "Handmade ceramic vase photographed in a studio against a grey backdrop",
+          "ratio": "4 / 5",
+          "width": 960,
+          "height": 1200
+        },
+        {
+          "title": "Video",
+          "text": "Film in landscape and portrait formats.",
+          "placeholder": "still from a short commercial",
+          "image": "/assets/services/content-ad-film-still.webp",
+          "alt": "Still from a short ad film: plane, chisels and timber in a workshop",
+          "ratio": "16 / 9",
+          "width": 1600,
+          "height": 900
+        },
+        {
+          "title": "Social media",
+          "text": "Posts and reels in one consistent feed.",
+          "placeholder": "feed with posts in the same style",
+          "image": "/assets/services/content-social-feed.webp",
+          "alt": "A social feed with posts in one style for a ceramics studio, on a phone",
+          "ratio": "4 / 5",
+          "width": 960,
+          "height": 1200
+        }
+      ]
+    },
+    {
+      "type": "phases",
+      "label": "From idea to publishing",
+      "title": "Five steps.",
+      "accent": "One visual voice.",
+      "lead": "Nothing improvised and nothing without purpose. Every step is planned around the channel.",
+      "steps": [
+        {
+          "title": "Idea",
+          "text": "What should the content achieve, and for whom?"
+        },
+        {
+          "title": "Script and plan",
+          "text": "Shot list, script and schedule."
+        },
+        {
+          "title": "Production",
+          "text": "Photo and film on location or in the studio."
+        },
+        {
+          "title": "Editing",
+          "text": "Cutting, colour and adaptation to every format."
+        },
+        {
+          "title": "Publishing",
+          "text": "The right format in the right channel, and follow-up."
+        }
+      ]
+    },
+    {
+      "type": "proof",
+      "label": "Planned content",
+      "title": "One day.",
+      "accent": "Material for months.",
+      "lead": "With a clear plan, one production day becomes content for a whole season.",
+      "points": [
+        {
+          "title": "Consistent",
+          "text": "Everything follows the same visual language."
+        },
+        {
+          "title": "Efficient",
+          "text": "One shoot, many formats."
+        },
+        {
+          "title": "Measurable",
+          "text": "We follow up what works."
+        }
+      ],
+      "placeholder": "contact sheet from a production day",
+      "image": "/assets/services/content-contact-sheet.webp",
+      "alt": "Contact sheet with 24 frames from a production day in a ceramics studio",
+      "width": 1400,
+      "height": 1050
+    },
+    {
+      "type": "faq",
+      "title": "Questions we often get",
+      "accent": "and our answers.",
+      "items": [
+        {
+          "q": "Can you film at our place?",
+          "a": "Yes, we come to you, or we shoot in a studio."
+        },
+        {
+          "q": "Which formats do you deliver?",
+          "a": "Landscape, portrait and square formats for the web and every social channel."
+        },
+        {
+          "q": "Can you run our social media?",
+          "a": "Yes, we can plan, produce and publish for you every month."
+        },
+        {
+          "q": "Is music included?",
+          "a": "We use licensed music so you can publish without issues."
+        }
+      ]
+    },
+    {
+      "type": "related"
+    },
+    {
+      "type": "cta"
+    }
+  ]
+}

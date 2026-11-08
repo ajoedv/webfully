@@ -1,0 +1,187 @@
+{
+  "kind": "service",
+  "meta": {
+    "title": "Annonsering på Google och Meta — WebFully",
+    "description": "Datadrivna kampanjer på Google, Facebook och Instagram. Tydlig budget, egna annonser och fokus på affärsresultat, inte bara klick."
+  },
+  "chapter": {
+    "name": "Annonser",
+    "accent": "som når rätt.",
+    "summary": "Kampanjer på Google och Meta med tydlig budget och egna annonser. Vi mäter det som räknas: förfrågningar och försäljning.",
+    "button": "Utforska annonser",
+    "tags": [
+      "Google Ads",
+      "Meta Ads",
+      "Sökannonser",
+      "Display",
+      "Video",
+      "Retargeting",
+      "Analys"
+    ]
+  },
+  "sections": [
+    {
+      "type": "service-hero",
+      "label": "Annonsering & mätning",
+      "title": "Varje krona",
+      "accent": "ska synas i resultatet.",
+      "lead": "Från lokal precision till bred räckvidd. Kampanjer som kombinerar kreativ ambition, öppen budget och fokus på affärsresultat."
+    },
+    {
+      "type": "capabilities",
+      "count": "6 discipliner",
+      "title": "Ingen kund får",
+      "accent": "samma lösning.",
+      "lead": "Varje kampanj får egen struktur, egna annonser och en budget som följer målet.",
+      "items": [
+        {
+          "title": "Sökannonser",
+          "text": "Synlighet när kunden söker efter just det ni säljer."
+        },
+        {
+          "title": "Sociala annonser",
+          "text": "Facebook och Instagram med rätt målgrupp och budskap."
+        },
+        {
+          "title": "Display",
+          "text": "Banners som bygger igenkänning där er målgrupp finns."
+        },
+        {
+          "title": "Video",
+          "text": "Korta filmer för YouTube, Reels och Stories."
+        },
+        {
+          "title": "Retargeting",
+          "text": "Påminnelser till dem som redan visat intresse."
+        },
+        {
+          "title": "Analys",
+          "text": "Mätning av förfrågningar, samtal och försäljning."
+        }
+      ]
+    },
+    {
+      "type": "builds",
+      "label": "Vad vi bygger",
+      "title": "En brief.",
+      "accent": "Varje format.",
+      "lead": "En kampanj är aldrig starkare än sin svagaste placering. Därför tar vi fram hela uppsättningen.",
+      "cards": [
+        {
+          "title": "Sökannons",
+          "text": "Text som matchar exakt vad kunden söker.",
+          "placeholder": "sökannons på Google",
+          "image": "/assets/services/ads-search-ad.webp",
+          "alt": "Sökannons på Google för ett byggföretag, visad på bärbar dator",
+          "ratio": "4 / 3",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "title": "Social annons",
+          "text": "Bild eller film som stoppar flödet.",
+          "placeholder": "annons i Instagram-flödet",
+          "image": "/assets/services/ads-instagram-ad.webp",
+          "alt": "Annons i Instagram-flödet för keramik på mobil",
+          "ratio": "4 / 5",
+          "width": 960,
+          "height": 1200
+        },
+        {
+          "title": "Rapport",
+          "text": "Tydliga siffror varje månad.",
+          "placeholder": "kampanjrapport med kostnad per förfrågan",
+          "image": "/assets/services/ads-campaign-report.webp",
+          "alt": "Kampanjrapport med annonskostnad, förfrågningar och kostnad per förfrågan",
+          "ratio": "4 / 3",
+          "width": 1200,
+          "height": 900
+        }
+      ]
+    },
+    {
+      "type": "phases",
+      "label": "Från brief till skala",
+      "title": "Fem steg.",
+      "accent": "En egen kampanj.",
+      "lead": "Inga återanvända upplägg. Varje steg formas efter företaget den ska hjälpa.",
+      "steps": [
+        {
+          "title": "Mål och budget",
+          "text": "Vad räknas som ett resultat, och vad får det kosta?"
+        },
+        {
+          "title": "Målgrupp och plan",
+          "text": "Vem vi når, var och med vilket budskap."
+        },
+        {
+          "title": "Annonser",
+          "text": "Text, bild och film för varje placering."
+        },
+        {
+          "title": "Lansering",
+          "text": "Kampanjen startar med mätning på plats."
+        },
+        {
+          "title": "Optimering",
+          "text": "Vi justerar varje vecka och skalar det som fungerar."
+        }
+      ]
+    },
+    {
+      "type": "proof",
+      "label": "Öppen budget",
+      "title": "Ni ser",
+      "accent": "varje krona.",
+      "lead": "Annonsbudgeten betalas direkt till Google och Meta. Ni ser vad som spenderas och vad det ger.",
+      "points": [
+        {
+          "title": "Öppet",
+          "text": "Annonskonton i ert namn."
+        },
+        {
+          "title": "Tydligt",
+          "text": "Kostnad per förfrågan, inte bara per klick."
+        },
+        {
+          "title": "Flexibelt",
+          "text": "Pausa eller skala när ni vill."
+        }
+      ],
+      "placeholder": "kampanjöversikt med budget, klick och förfrågningar",
+      "image": "/assets/services/ads-campaign-overview.webp",
+      "alt": "Kampanjöversikt med budget, klick, visningar och förfrågningar",
+      "width": 1400,
+      "height": 1050
+    },
+    {
+      "type": "faq",
+      "title": "Frågor vi ofta får",
+      "accent": "och våra svar.",
+      "items": [
+        {
+          "q": "Hur stor budget behövs?",
+          "a": "Det beror på bransch och mål. Vi föreslår en startbudget efter en genomgång."
+        },
+        {
+          "q": "Vem äger annonskontona?",
+          "a": "Ni. Kontona skapas i ert namn och ni har alltid full insyn."
+        },
+        {
+          "q": "Hur snabbt kommer resultat?",
+          "a": "Sökannonser kan ge förfrågningar redan första veckan. Sociala kampanjer behöver ofta några veckor för att optimeras."
+        },
+        {
+          "q": "Gör ni annonserna själva?",
+          "a": "Ja, text, bild och film tas fram av oss."
+        }
+      ]
+    },
+    {
+      "type": "related"
+    },
+    {
+      "type": "cta"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+<footer class="footer">
+  <div class="footer-cols">
+    <div class="footer-col">
+      <h2 class="footer-heading">{{ common.footer.contact }}</h2>
+      {% if site.contact.email %}<a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a>{% endif %}
+      {% if site.contact.phone %}<a href="tel:{{ site.contact.phone_e164 }}">{{ site.contact.phone }}</a>{% endif %}
+      <span>{{ site.contact.city }}</span>
+    </div>
+    <nav class="footer-col" aria-label="{{ common.footer.services }}">
+      <h2 class="footer-heading">{{ common.footer.services }}</h2>
+      {% for service in services %}<a href="{{ service.url }}">{{ service.name }}</a>
+      {% endfor %}
+    </nav>
+    <nav class="footer-col footer-menu" aria-label="{{ common.footer.menu }}">
+      <h2 class="footer-heading">{{ common.footer.menu }}</h2>
+      <a href="{{ home_url }}" data-nav="home"><span>{{ common.nav.home }}</span></a>
+      <a href="{{ home_url }}#{{ common.ids.services }}" data-nav="services"><span>{{ common.nav.services }}</span></a>
+      <a href="{{ home_url }}#{{ common.ids.pricing }}" data-nav="pricing"><span>{{ common.nav.pricing }}</span></a>
+      <a href="{{ special_url }}" data-nav="special"><span>{{ common.nav.special }}</span></a>
+      <a href="{{ contact_url }}" data-nav="contact"><span>{{ common.nav.contact }}</span></a>
+    </nav>
+  </div>
+  <div class="social footer-social"></div>
+  <div class="footer-logo">{% include "partials/logo-horizontal.html" %}</div>
+  <div class="footer-bottom mono">
+    <span><b>©</b> 2026 {{ site.brand }}</span>
+    <span>{{ site.contact.city }} <span class="footer-clock" aria-label="{{ common.footer.clock }}"></span></span>
+    <a href="{{ privacy_url }}">{{ common.footer.privacy }}</a>
+    <button class="cookie-open" type="button">{{ common.cookie.settings }}</button>
+    {% include "partials/lang-switch.html" %}
+    <a href="#main">{{ common.footer.top }} <b aria-hidden="true">↑</b></a>
+  </div>
+</footer>

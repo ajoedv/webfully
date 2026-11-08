@@ -1,0 +1,182 @@
+{
+  "kind": "service",
+  "meta": {
+    "title": "Support, drift och flytt av domän och e-post — WebFully",
+    "description": "Hosting, uppdateringar, bokningssystem, flytt av domän och e-post. Vi sköter driften så att er webbplats alltid fungerar."
+  },
+  "chapter": {
+    "name": "Support",
+    "accent": "som alltid svarar.",
+    "summary": "Drift, uppdateringar, bokning och flytt av domän och e-post. Vi tar hand om tekniken så att ni kan driva företaget.",
+    "button": "Utforska support",
+    "tags": [
+      "Drift",
+      "Uppdateringar",
+      "Bokning",
+      "E-postflytt",
+      "Domänflytt",
+      "Säkerhet"
+    ]
+  },
+  "sections": [
+    {
+      "type": "service-hero",
+      "label": "Drift, underhåll & flytt",
+      "title": "Tekniken sköts.",
+      "accent": "Ni driver företaget.",
+      "lead": "En webbplats behöver skötas för att fortsätta fungera. Vi håller den säker, snabb och uppdaterad, och hjälper till när något ska flyttas eller kopplas ihop."
+    },
+    {
+      "type": "capabilities",
+      "count": "6 discipliner",
+      "title": "Allt det tekniska.",
+      "accent": "På ett ställe.",
+      "lead": "Från dagliga säkerhetskopior till en flytt av hela e-posten. En kontakt, ett ansvar.",
+      "items": [
+        {
+          "title": "Drift och hosting",
+          "text": "Snabb hosting, SSL och övervakning dygnet runt."
+        },
+        {
+          "title": "Uppdateringar",
+          "text": "Säkerhetsuppdateringar och ändringar utan att något går sönder."
+        },
+        {
+          "title": "Bokningssystem",
+          "text": "Bokning online kopplad till er kalender och påminnelser."
+        },
+        {
+          "title": "Flytt av e-post",
+          "text": "Vi flyttar brevlådor till ny leverantör utan att mejl försvinner."
+        },
+        {
+          "title": "Flytt av domän",
+          "text": "Domän och DNS flyttas säkert, utan avbrott."
+        },
+        {
+          "title": "Säkerhet och backup",
+          "text": "Dagliga säkerhetskopior och snabb återställning."
+        }
+      ]
+    },
+    {
+      "type": "builds",
+      "label": "Vad vi bygger",
+      "title": "Det som",
+      "accent": "håller igång.",
+      "lead": "Det mesta av supporten märks inte. Det är meningen.",
+      "cards": [
+        {
+          "title": "Övervakning",
+          "text": "Vi ser problem innan era kunder gör det.",
+          "placeholder": "panel med drifttid och svarstider",
+          "image": "/assets/services/support-uptime-dashboard.webp",
+          "alt": "Panel med drifttid på 99,98 procent och svarstider för en webbplats",
+          "ratio": "4 / 3",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "title": "Bokning",
+          "text": "Kunder bokar själva, dygnet runt.",
+          "placeholder": "bokningskalender på mobil",
+          "image": "/assets/services/support-booking-calendar-mobile.webp",
+          "alt": "Bokningskalender för en frisörsalong på mobil",
+          "ratio": "4 / 3",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "title": "Flytt",
+          "text": "E-post och domän flyttas planerat och säkert.",
+          "placeholder": "schema för flytt av e-post och domän",
+          "image": "/assets/services/support-migration-plan.webp",
+          "alt": "Plan för flytt av webbplats: domän, e-post och webbplats från gammal till ny server",
+          "ratio": "4 / 3",
+          "width": 1200,
+          "height": 900
+        }
+      ]
+    },
+    {
+      "type": "phases",
+      "label": "Från överlämning till drift",
+      "title": "Fyra steg.",
+      "accent": "Inga avbrott.",
+      "lead": "Vi börjar med att förstå vad ni har i dag, och flyttar eller tar över utan att något stannar.",
+      "steps": [
+        {
+          "title": "Genomgång",
+          "text": "Vi går igenom domän, e-post, hosting och system."
+        },
+        {
+          "title": "Plan",
+          "text": "En tydlig plan med tider, så att inget kommer som en överraskning."
+        },
+        {
+          "title": "Flytt eller övertagande",
+          "text": "Vi flyttar och testar, steg för steg."
+        },
+        {
+          "title": "Löpande drift",
+          "text": "Uppdateringar, backup och support varje månad."
+        }
+      ]
+    },
+    {
+      "type": "proof",
+      "label": "Trygg drift",
+      "title": "Ett nummer att",
+      "accent": "ringa.",
+      "lead": "När något krånglar vill ni prata med någon som känner er webbplats. Det gör vi.",
+      "points": [
+        {
+          "title": "Snabbt svar",
+          "text": "Svar inom en arbetsdag, oftast samma dag."
+        },
+        {
+          "title": "Planerat",
+          "text": "Ändringar görs när de stör minst."
+        },
+        {
+          "title": "Dokumenterat",
+          "text": "Ni vet alltid vad som gjorts och varför."
+        }
+      ],
+      "placeholder": "illustration av drift: server, lås och kalender",
+      "image": "/assets/services/support-hosting-illustration.webp",
+      "alt": "Teknisk skiss av en server, ett lås och en kalender som symboliserar drift och trygghet",
+      "width": 1400,
+      "height": 1050
+    },
+    {
+      "type": "faq",
+      "title": "Frågor vi ofta får",
+      "accent": "och våra svar.",
+      "items": [
+        {
+          "q": "Kan ni ta över en befintlig webbplats?",
+          "a": "Ja, efter en genomgång tar vi över drift och support för de flesta webbplatser."
+        },
+        {
+          "q": "Försvinner mejl när e-posten flyttas?",
+          "a": "Nej. Vi flyttar innehållet och ställer om i rätt ordning så att inget försvinner."
+        },
+        {
+          "q": "Blir sidan nere när domänen flyttas?",
+          "a": "Med rätt planering blir det inget märkbart avbrott."
+        },
+        {
+          "q": "Vad ingår i drift?",
+          "a": "Hosting, SSL, säkerhetskopior, uppdateringar, övervakning och support."
+        }
+      ]
+    },
+    {
+      "type": "related"
+    },
+    {
+      "type": "cta"
+    }
+  ]
+}
